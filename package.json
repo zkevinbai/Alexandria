@@ -4,6 +4,7 @@
   "description": "# Background and Overview Alexandria is a book app.  It aims to help readers keep track of their books, and to help them discover new reads.",
   "main": "app.js",
   "dependencies": {
+    "axios": "^0.18.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
