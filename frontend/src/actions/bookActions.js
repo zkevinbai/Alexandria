@@ -3,7 +3,7 @@ import {
     getBooks,
     addBook,
     deleteBook
-} from '../util/book_api_util';
+} from '../util/bookApiUtil';
 
 // Constants
 export const SEARCH_BOOKS = "SEARCH_BOOKS";
