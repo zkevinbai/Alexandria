@@ -7,6 +7,8 @@ import { setAuthToken } from './util/sessionApiUtil';
 import { logout } from './actions/sessionActions';
 import {narrowSearchResults} from './util/searchParseUtil';
 
+import * as BookApiUtil from './util/bookApiUtil';
+
 document.addEventListener('DOMContentLoaded', () => {
     let store;
     const root = document.getElementById('root');
@@ -29,6 +31,19 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         store = configureStore({});
     }
+
+    // #########################################################################
+    // --------------------------TESTING START------------------------------
+    // Window Actions ----------------------------------------------------------
+    //* Book Actions -------------------------------------------------------
+    window.queryBooks = BookApiUtil.queryBooks;
+
+    // Window Store ------------------------------------------------------------
+    window.store = store;
+    window.getState = store.getState;
+    window.dispatch = store.dispatch;
+        // --------------------------TESTING END-----qy---------------------------
+    // #########################################################################
 
     ReactDOM.render(
         <Root store={store} />,
