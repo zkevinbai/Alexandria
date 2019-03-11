@@ -10,7 +10,7 @@ const booksReducer = (oldState = {}, action) => {
 
     switch(action.type) {
         case RECEIVE_BOOKS:
-            newState.all = action.books;
+            newState = action.books;
             return newState;
 
         case RECEIVE_BOOK:
