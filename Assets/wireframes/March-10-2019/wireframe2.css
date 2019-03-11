@@ -1,0 +1,75 @@
+html, body {
+    margin:0;
+    padding:0;
+}
+
+.main{
+    max-height: 100vh;
+    min-height: 100vh;
+    
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+div{
+    border: 1.5px solid black;
+}
+    /* ////////////////////////////////////////////////////////////////////// */
+/* -------------------------- NAVIGATION SECTION ---------------------------- */
+    /* ////////////////////////////////////////////////////////////////////// */
+.navigation{
+    grid-column: 1/11;
+    grid-row: 1;
+    background: lightblue;
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.addbook{
+    grid-column: 8/10;
+    grid-row: 1;
+}
+
+.search{
+    grid-column: 4/7;
+    grid-row: 1;
+}
+
+    /* ////////////////////////////////////////////////////////////////////// */
+/* ---------------------------- SHELF SECTION ------------------------------- */
+    /* ////////////////////////////////////////////////////////////////////// */
+.bookshelf{
+    grid-column: 1/11;
+    grid-row: 2/10;
+    background: lightcoral;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.bookshelf-navigation{
+    grid-row: 1;
+    grid-column: 1/6;
+}
+
+.bookshelf-books-index{
+    grid-row: 2/7;
+    grid-column: 1/6;
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+    /* ////////////////////////////////////////////////////////////////////// */
+/* --------------------------- INSIGHTS SECTION ----------------------------- */
+    /* ////////////////////////////////////////////////////////////////////// */
+.insights{
+    grid-column: 1/11;
+    grid-row: 10;
+    background: lightgreen;
+}
