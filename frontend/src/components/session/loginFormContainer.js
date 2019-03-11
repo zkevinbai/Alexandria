@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import LoginForm from './LoginForm'
+import LoginForm from './LoginForm';
+import { login } from '../../actions/sessionActions'
 
 const mstp = state => ({
     errors: state.errors.session
