@@ -15,11 +15,16 @@ router.get('/user/:user_id', (req, res) => {
 router.post('/', passport.authenticate('jwt', {session: false}), 
   (req, res) => {
     const newBook = new Book({
-      // user: 
-      // author:
-      // genre:
-      // description:
-      // publishedDate:
-      // imageUrl:
+      user: req.body.volumeInfo.title,
+      author: req.body.volumeInfo.authors[0],
+      genre: req.body.volumeInfo.categories[0],
+      description: req.body.volumeInfo.description,
+      publishedDate: req.body.volumeInfo.publishedDate,
+      pageCount: req.body.volumeInfo.pageCount,
+      imageUrl: req.body.volumeInfo.imageLinks.thumbnail
     })
   })
+
+router.get(`https://www.googleapis.com/books/v1/volumes?q={${searchparams}}`, (req, res) => {
+  
+})

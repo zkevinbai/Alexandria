@@ -26,9 +26,17 @@ const BookSchema = new Schema({
     type: Date,
     required: true
   },
+  pageCount: {
+    type: Number,
+    required: true
+  },
   imageUrl: {
     type: String,
     required: true 
+  },
+  reading: {
+    type: Boolean,
+    required: false
   }
 });
 
