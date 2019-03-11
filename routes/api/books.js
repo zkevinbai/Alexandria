@@ -6,16 +6,17 @@ const passport = require('passport');
 const Book = require('../../models/Book');
 
 
-router.get('/user/:user_id', (req, res) => {
-  Book.find({ user: req.params.user_id})
+router.get('/user/:userId', (req, res) => {
+  Book.find({ user: req.params.userId})
     .then(books => res.json(books))
     .catch(err => res.status(404).json({ nobooksfound: 'No books found for that user'}))
 });
 
-router.post('/', passport.authenticate('jwt', {session: false}), 
+router.post('/user/:userId', passport.authenticate('jwt', {session: false}), 
   (req, res) => {
     const newBook = new Book({
-      user: req.body.volumeInfo.title,
+      user: req.params.userId,
+      title: req.body.volumeInfo.title,
       author: req.body.volumeInfo.authors[0],
       genre: req.body.volumeInfo.categories[0],
       description: req.body.volumeInfo.description,
@@ -23,8 +24,14 @@ router.post('/', passport.authenticate('jwt', {session: false}),
       pageCount: req.body.volumeInfo.pageCount,
       imageUrl: req.body.volumeInfo.imageLinks.thumbnail
     })
+    newBook.save().then(book => res.json(book));
   })
 
-router.get(`https://www.googleapis.com/books/v1/volumes?q={${searchparams}}`, (req, res) => {
-  
+router.delete('/user/:user_id', (req, res) => {
+  const bookId = req.body.bookId;
+  Book.find({id: bookId})
+    .remove(book => res.send('Book deleted'))
+    .catch(err => console.log(err));
 })
+
+module.exports = router;
