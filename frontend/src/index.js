@@ -1,8 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Root from './components/Root.jsx';
+import configureStore from './store/store';
+import jwt_decode from 'jwt-decode';
+import { setAuthToken } from './util/sessionApiUtil';
+import { logout } from './actions/sessionActions'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+document.addEventListener('DOMContentLoaded', () => {
+    let store;
+
+    if (localStorage.jwtToken) {
+        setAuthToken(localStorage.jwtToken);
+
+        const decodedUser = jwt_decode(localStorage.jwtToken);
+        const preloadedState = { session: { isAuthenticated: true, user: decodedUser } };
+
+        store = configureStore(preloadedState);
+
+        const currentTime = Date.now() / 1000;
+
+        if (decodedUser.exp < currentTime) {
+            store.dispatch(logout());
+            window.location.href = '/login';
+        }
+    } else {
+        store = configureStore({});
+    }
+
+    ReactDOM.render(<Root store={store} />, document.getElementById('root'));
+})
 
