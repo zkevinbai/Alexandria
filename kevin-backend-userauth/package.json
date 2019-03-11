@@ -4,6 +4,9 @@
   "description": "# Background and Overview Alexandria is a book app.  It aims to help readers keep track of their books, and to help them discover new reads.",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "server:debug": "nodemon --inspect app.js",
+    "server": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +22,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
+    "eslint": "^5.15.1",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.5.0",
     "mongoose": "^5.4.18",
