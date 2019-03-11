@@ -37,8 +37,16 @@ router.post('/user/:userId', passport.authenticate('jwt', {session: false}),
 
 router.delete('/user/:user_id', (req, res) => {
   const bookId = req.body.bookId;
-  Book.find({id: bookId})
-    .remove(book => res.send('Book deleted'))
+  Book.findById( bookId )
+  .then(book => {
+    if(book){
+      book.remove();
+      return res.send('Book deleted');
+    }
+    else{
+      return res.status(404).json({ booknotfound: 'book not found'})
+    }
+  })
     .catch(err => console.log(err));
 })
 
