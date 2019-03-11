@@ -75,6 +75,7 @@ export default class SignupForm extends Component {
                 onChange={this.handleChange('password2')}
                 placeholder="Confirm Password" />
             <button>Sign Up</button>
+            {this.renderErrors()}
         </form>
       </div>
     )
