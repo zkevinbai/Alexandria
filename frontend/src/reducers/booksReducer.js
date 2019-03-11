@@ -10,11 +10,11 @@ const booksReducer = (oldState = {}, action) => {
 
     switch(action.type) {
         case RECEIVE_BOOKS:
-            newState = action.books;
+            newState = action.books.data;
             return newState;
 
         case RECEIVE_BOOK:
-            newState[action.book.id] = action.book;
+            newState[action.book.data.id] = action.book.data;
             return newState;
 
         case REMOVE_BOOK:
