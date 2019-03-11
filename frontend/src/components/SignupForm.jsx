@@ -9,9 +9,22 @@ export default class SignupForm extends Component {
           handle: '',
           password: '',
           password2: '',
-          errors: {},
-
+          errors: {}
       }
+
+      this.handleChange = this.handleChange.bind(this)
+      this.handleSubmit = this.handleSubmit.bind(this)
+      this.renderErrors = this.renderErrors.bind(this)
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.signedIn === true) {
+      this.props.history.push('/login');
+    }
+
+    this.setState({
+        errors: nextProps.errors
+    })
   }
 
   handleChange(field) {
@@ -40,20 +53,28 @@ export default class SignupForm extends Component {
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
             <input 
                 type="text" 
                 value={this.state.email}
-                onChange />
+                onChange={this.handleChange('email')}
+                placeholder="Email" />
             <input 
                 type="text" 
-                value={this.state.handle} />
+                value={this.state.handle}
+                onChange={this.handleChange('handle')}
+                placeholder="Email" />
             <input 
                 type="password" 
-                value={this.state.password} />
+                value={this.state.password}
+                onChange={this.handleChange('password')}
+                placeholder="Password" />
             <input 
                 type="password" 
-                value={this.state.password2} />
+                value={this.state.password2}
+                onChange={this.handleChange('password2')}
+                placeholder="Confirm Password" />
+            <button>Sign Up</button>
         </form>
       </div>
     )
