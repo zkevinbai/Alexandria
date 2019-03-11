@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import LoginFormContainer from './session/loginFormContainer';
+import SignupFormContainer from './session/signupFormContainer';
+
 import { Switch, Route } from 'react-router-dom';
 
 // App
@@ -21,6 +24,7 @@ class App extends Component {
       <div className="App">
         <Switch>
           <Route path="/login" component={LoginFormContainer} />
+          <Route path="/signup" component={SignupFormContainer} />
         </Switch>
       </div>
     );
