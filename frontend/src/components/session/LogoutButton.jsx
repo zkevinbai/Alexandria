@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export default function LogoutButton(props) {
-  return (
-    <div>
-        <button onClick={props.logout}>Logout</button>
-    </div>
-  )
+export default class LogoutButton extends Component {
+
+  handleLogout() {
+    this.props.logout()
+    this.props.history.push("/")
+  }
+
+  render() {
+    return (
+      <div>
+          <button onClick={this.handleLogout.bind(this)}>Logout</button>
+      </div>
+    )
+  }
 }
