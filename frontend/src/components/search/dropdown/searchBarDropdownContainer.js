@@ -3,9 +3,13 @@ import { addUserBook } from '../../../actions/bookActions';
 import SearchBarDropdown from './searchBarDropdown';
 
 const mapStateToProps = (storeState) => {
-    return {
-        userId: storeState.session.user.id
-    };
+
+    if (storeState.session.user){
+        return {
+            userId: storeState.session.user.id
+        };
+    }
+
 };
 
 const mapDispatchToProps = (dispatch) => {
