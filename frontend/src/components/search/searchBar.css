@@ -2,7 +2,7 @@
     margin: 5px;
 
     display: grid;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 48px 1fr;
     grid-template-columns: 1fr;
 }
 
