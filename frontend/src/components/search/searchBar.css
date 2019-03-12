@@ -5,7 +5,8 @@
     grid-template-rows: 48px 1fr;
     grid-template-columns: 1fr;
 
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 .searchbar{
