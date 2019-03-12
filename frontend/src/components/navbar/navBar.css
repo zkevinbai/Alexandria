@@ -24,7 +24,12 @@
 .nav-content > div {
   margin-right: 15px;
   display: grid;
-  grid-template-columns: 1fr 1fr
+  grid-template-columns: 1fr 1fr;
+  color: white
+}
+
+.nav-content a:hover {
+  text-decoration: underline
 }
 
 .logout-button{
