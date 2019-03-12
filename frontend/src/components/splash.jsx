@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import SearchBarContainer from './search/searchBarContainer';
 
 
 export default class Splash extends Component {
@@ -8,7 +8,7 @@ export default class Splash extends Component {
     return (
       <div>
         <div className="splash-page">
-          Splash Page
+          <SearchBarContainer/>
         </div>
       </div>
     )
