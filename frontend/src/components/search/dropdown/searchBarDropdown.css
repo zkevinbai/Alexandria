@@ -29,7 +29,6 @@
     grid-template-columns: 1fr 4fr;
 
     justify-items: start;
-    align-items: start;
 }
 
 .query-dropdown-index-item img{
@@ -39,8 +38,9 @@
 }
 
 .query-dropdown-index-item h1{
+    align-items: start;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 500;
     margin-left: 1px;
 }
 .query-dropdown-index-item:hover{
