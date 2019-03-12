@@ -1,24 +1,22 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
-import NavBarContainer from './navbar/navBarContainer';
 
 // App
   import Splash from './splash';
+  import NavBarContainer from './navbar/navBarContainer';
   // navBarContainer
   // MainPage
 
 // Auth Related
   import SignupFormContainer from './session/signupFormContainer';
   import LoginFormContainer from './session/loginFormContainer';
-  import LogoutButtonContainer from './session/logoutButtonContainer';
+
   
 
 // Book Related
   import BooksIndexContainer from './books/booksIndexContainer';
 
-// Search Related
-  import SearchBarContainer from './search/searchBarContainer';
 
 class App extends Component {
   render() {
@@ -26,11 +24,11 @@ class App extends Component {
       <div className="App">
         < NavBarContainer />
         <Switch>
-          <Route exact path="/" component={Splash} />
+          <AuthRoute exact path="/" component={Splash} />
           <AuthRoute path="/login" component={LoginFormContainer} />
           <AuthRoute path="/signup" component={SignupFormContainer} />
         </Switch>
-        <Route path="/" component={SearchBarContainer} />
+        {/* <Route path="/" component={SearchBarContainer} /> */}
         <Route path="/shelf/:userId" component={BooksIndexContainer} />
       </div>
     );

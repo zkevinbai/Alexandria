@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import BooksIndexItem from './BooksIndexItem';
+import BooksIndexItem from './booksIndexItem';
 
 export default class BooksIndex extends Component {
   
