@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 export const queryBooks = (queryString) => {
-
     return fetch(`https://www.googleapis.com/books/v1/volumes?q={${queryString}}`)
         .then( res => res.json())
         .then( json => ({data: json}) );

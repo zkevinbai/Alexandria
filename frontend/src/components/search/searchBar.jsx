@@ -30,7 +30,6 @@ export default class searchBar extends Component {
     }
 
     render() {
-        // debugger
         return (
         <div className="query">
             <form 
