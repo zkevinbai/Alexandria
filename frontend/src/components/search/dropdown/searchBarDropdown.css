@@ -1,18 +1,30 @@
 .query-dropdown-index{
+    background: rgba(37, 61, 91, 0.5);
+    /* border-radius: 20px; */
+    border-top-right-radius: none;
+    border-top-left-radius: none;
+    max-width: 420px;
+
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: 1fr;
-
-    background: blue;
-    max-width: 420px;
 }
 
 .query-dropdown-index-item{
+    margin: 10px;
+    border-radius: 15px;
+    max-height: 320px;
+    max-width: 400px;
+    background: blue;
+
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
 }
 
 .query-dropdown-index-item img{
-    max-height: 230px;
+    max-height: 200px;
+    align-self: center;
+
+    background: lightblue
 }
