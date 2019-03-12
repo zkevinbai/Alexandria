@@ -10,19 +10,24 @@ export default class searchBar extends Component {
             queryResults: this.props.searchResults,
             queryString: ""
         };
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
     
     handleSubmit(e) {
         e.preventDefault();
-        this.props.action(this.state);
+        this.props.queryGoogleBooks(this.state.queryString);
     }
 
-    handleChange(field) {
-        return (e) => (
-            this.setState({
-                [field]: e.target.value
-            })
-        );
+    handleChange(e) {
+        e.preventDefault();
+
+        let queryString = e.target.value;
+
+        this.setState({
+            queryString
+        });
     }
 
     render() {
