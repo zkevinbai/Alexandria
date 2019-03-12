@@ -4,35 +4,41 @@ import SignupFormContainer from '../session/signupFormContainer';
 import LoginFormContainer from '../session/loginFormContainer';
 import LogoutButtonContainer from '../session/logoutButtonContainer';
 import SearchBarContainer from '../search/searchBarContainer';
-
+import './navBar.css';
 export default class NavBar extends Component {
 
   
   render() {
     const authButtons = (
       this.props.signedIn ? (
-        <div>
-          <div>
+        <div className="nav-content">
+          <div className="nav-search-bar">
             <SearchBarContainer />
           </div>
-          <Route path="/" component={LogoutButtonContainer} />
+
+          <div className='logout-button'>
+            <LogoutButtonContainer />
+          </div>
+
         </div>
       ) : (
-        <div>
+          <div className="nav-content">
           <Link to='/login' component={LoginFormContainer}>
-            Login
+            <div>
+              Login
+            </div>
           </Link>
           <Link to='/signup' component={SignupFormContainer}>
-            Sign Up
+            <div>
+              Sign Up
+            </div>
           </Link>
         </div>
       )
     )
     return (
-      <nav>
-        <div>
+      <nav className="navbar">
           {authButtons}
-        </div>
       </nav>
     )
   }
