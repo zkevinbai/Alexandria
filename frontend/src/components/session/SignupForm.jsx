@@ -36,6 +36,7 @@ export default class SignupForm extends Component {
   handleSubmit(e) {
       e.preventDefault();
       this.props.signup(this.state)
+      this.props.history.push("/")
   }
 
   renderErrors() {
