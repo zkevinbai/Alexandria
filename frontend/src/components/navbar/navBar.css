@@ -1,11 +1,19 @@
-
-.navbar{
-  
+.navbar {
+  border-bottom: 1px solid black;
 }
 
 .nav-content{
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, auto);
+  justify-items: end; 
+  grid-column-gap: .75rem;
+  margin: 10px 0;
+}
+
+.nav-content > div:first {
+  justify-self: start
 }
 
 .nav-search-bar{
