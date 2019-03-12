@@ -21,8 +21,7 @@
     color: rgba(37, 61, 91, 1);
     margin: 10px;
     border-radius: 15px;
-    max-height: 75px;
-    max-width: 400px;
+    max-width: 90%;
 
     display: grid;
     grid-template-rows: 1fr;
@@ -32,9 +31,10 @@
 }
 
 .query-dropdown-index-item img{
-    max-height: 100px;
-    max-height: 75px;
+    max-height: 100%;
     max-width: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .query-dropdown-index-item h1{
