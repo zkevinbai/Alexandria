@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 export const queryBooks = (queryString) => {
-    return axios.get(`https://www.googleapis.com/books/v1/volumes?q={${queryString}}&key=AIzaSyBr5Rk9pokZ0OI5EpKv3ah4JGpnUb3Dk6E`);
+    return fetch(`https://www.googleapis.com/books/v1/volumes?q={${queryString}}`)
+        .then( res => res.json())
+        .then( json => ({data: json}) );
 };
 
 export const getBooks = (userId) => {
