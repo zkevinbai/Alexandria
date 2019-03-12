@@ -1,5 +1,8 @@
-.navbar {
-  border-bottom: 1px solid black;
+#site-title {
+  font-family: "Arbutus Slab";
+  margin-left: 15px;
+  font-size: 20px;
+  justify-self: start
 }
 
 .nav-content{
@@ -9,15 +12,19 @@
   grid-template-columns: repeat(2, auto);
   justify-items: end; 
   grid-column-gap: .75rem;
-  margin: 10px 0;
+  padding: 15px 0;
+  background-color: #253d5b;
+  color: white;
 }
 
-.nav-content > div:first {
-  justify-self: start
-}
-
-.nav-search-bar{
+.nav-search-bar {
   justify-self: center;
+}
+
+.nav-content > div {
+  margin-right: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr
 }
 
 .logout-button{

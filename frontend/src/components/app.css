@@ -2,3 +2,21 @@ a:hover, a:focus, a:link, a:visited {
     text-decoration: none;
     color: inherit
 }
+
+h3 {
+    margin: 0
+}
+
+a {
+    font-family: "Cairo"
+}
+
+#root {
+    /* margin: 0 */
+    /* display: grid; */
+    /* justify-content: stretch */
+}
+
+body {
+    margin: 0
+}

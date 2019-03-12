@@ -23,7 +23,7 @@ export default class NavBar extends Component {
         </div>
       ) : (
         <div className="nav-content">
-          <h3>Alexandria</h3>
+          <h3 id="site-title">Alexandria</h3>
           <div>
             <Link to='/login' component={LoginFormContainer}>Login</Link>
             <Link to='/signup' component={SignupFormContainer}>Sign Up</Link>
