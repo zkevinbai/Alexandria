@@ -51,7 +51,7 @@ div{
     grid-template-rows: repeat(6, 1fr);
 }
 
-.bookshelf-navigation{
+.bookshelf-navigation{ 
     grid-row: 1;
     grid-column: 1/6;
 }
