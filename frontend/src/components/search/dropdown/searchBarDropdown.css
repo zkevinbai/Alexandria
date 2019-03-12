@@ -28,3 +28,7 @@
     max-height: 100%;
     align-self: center;
 }
+
+.query-dropdown-index-item h1{
+    font-size: 25px;
+}
