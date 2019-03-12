@@ -1,20 +1,17 @@
 import { connect } from 'react-redux';
-import { 
-    fetchUserBooks,
-} from '../../actions/bookActions';
-import BooksIndex from './booksIndex';
-import BooksIndexItem from './booksIndexItem';
+import { fetchUserBooks } from '../../actions/bookActions';
+import BooksIndex from './BooksIndex';
 
-const mapStateToProps = (storeState) => {
+const mapStateToProps = state => {
     return {
-        books: Object.values(storeState.books)
+        books: Object.values(state.books)
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchUserBooks: (u) => dispatch(fetchUserBooks())
+        fetchUserBooks: user => dispatch(fetchUserBooks(user))
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Tweets);
+export default connect(mapStateToProps, mapDispatchToProps)(BooksIndex);

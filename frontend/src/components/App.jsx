@@ -12,7 +12,7 @@ import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
   import LogoutButtonContainer from './session/logoutButtonContainer';
 
 // Book Related
-  // bookIndex
+  import BooksIndexContainer from './books/booksIndexContainer';
 
 // Search Related
   // searchBar
@@ -27,6 +27,7 @@ class App extends Component {
           <AuthRoute path="/login" component={LoginFormContainer} />
           <AuthRoute path="/signup" component={SignupFormContainer} />
         </Switch>
+        <Route path="/" component={BooksIndexContainer} />
       </div>
     );
   }
