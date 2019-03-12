@@ -36,7 +36,6 @@ export const removeBook = (book) => ({
 
 // Thunk Action Creators
 export const queryGoogleBooks = (queryString) => (dispatch) => {
-    debugger
     return queryBooks(queryString)
         .then( resData => dispatch(searchBooks(narrowSearchResults(resData))) )
         .catch( resErr => console.log(resErr) )

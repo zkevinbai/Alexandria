@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchBarDropdownContainer from './dropdown/userSearchBarDropdownContainer';
+import SearchBarDropdownContainer from './dropdown/searchBarDropdownContainer';
 
 export default class searchBar extends Component {
 
@@ -30,7 +30,6 @@ export default class searchBar extends Component {
     }
 
     render() {
-        // debugger
         return (
         <div className="query">
             <form 
