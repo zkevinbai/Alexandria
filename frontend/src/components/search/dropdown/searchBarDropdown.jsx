@@ -9,7 +9,10 @@ export default class searchBarDropdown extends Component {
     }
 
     handleClick(book){
-        this.props.addUserBook(book);
+        this.props.addUserBook({
+            userId: this.props.userId,
+            book
+        });
     }
     
     render() {
