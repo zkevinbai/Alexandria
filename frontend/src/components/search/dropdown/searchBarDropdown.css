@@ -43,6 +43,7 @@
     font-weight: 500;
     margin-left: 1px;
 }
+
 .query-dropdown-index-item:hover{
     cursor: pointer;
     background: rgba(200, 200, 200, 0.5);

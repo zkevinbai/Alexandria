@@ -9,6 +9,8 @@ import { narrowSearchResults } from '../util/searchParseUtil';
 
 // Constants
 export const SEARCH_BOOKS = "SEARCH_BOOKS";
+export const CLEAR_SEARCH = "CLEAR_SEARCH";
+
 export const RECEIVE_BOOKS = "RECEIVE_BOOKS";
 export const RECEIVE_BOOK = "RECEIVE_BOOK";
 export const REMOVE_BOOK = "RECEIVE_BOOK";
@@ -17,6 +19,10 @@ export const REMOVE_BOOK = "RECEIVE_BOOK";
 export const searchBooks = (books) => ({
     type: SEARCH_BOOKS,
     books
+});
+
+export const clearSearch = () => ({
+    type: CLEAR_SEARCH
 });
 
 export const receiveBooks = (books) => ({

@@ -1,5 +1,6 @@
 import {
-    SEARCH_BOOKS
+    SEARCH_BOOKS,
+    CLEAR_SEARCH
 } from '../actions/bookActions';
 
 const searchReducer = (oldState = {}, action) => {
@@ -10,6 +11,9 @@ const searchReducer = (oldState = {}, action) => {
         case SEARCH_BOOKS:
             newState = action.books;
             return newState;
+
+        case CLEAR_SEARCH:
+            return oldState;
 
         default:
             return oldState;
