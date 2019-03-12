@@ -12,7 +12,6 @@ import * as BookApiUtil from './util/bookApiUtil';
 document.addEventListener('DOMContentLoaded', () => {
     let store;
     const root = document.getElementById('root');
-    window.narrowSearchResults = narrowSearchResults;
 
     if (localStorage.jwtToken) {
         setAuthToken(localStorage.jwtToken);
@@ -37,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Window Actions ----------------------------------------------------------
     //* Book Actions -------------------------------------------------------
     window.queryBooks = BookApiUtil.queryBooks;
-
+    window.narrowSearchResults = narrowSearchResults;
     // Window Store ------------------------------------------------------------
     window.store = store;
     window.getState = store.getState;
