@@ -8,6 +8,7 @@ import { logout } from './actions/sessionActions';
 import {narrowSearchResults} from './util/searchParseUtil';
 
 import * as BookApiUtil from './util/bookApiUtil';
+import * as BookActions from './actions/bookActions';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Window Actions ----------------------------------------------------------
     //* Book Actions -------------------------------------------------------
     window.queryBooks = BookApiUtil.queryBooks;
+    window.queryGoogleBooks = BookActions.queryGoogleBooks;
 
     // Window Store ------------------------------------------------------------
     window.store = store;
