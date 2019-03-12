@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
+import NavBarContainer from './navbar/navBarContainer';
 
 // App
   import Splash from './splash';
@@ -23,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ProtectedRoute path="/" component={LogoutButtonContainer} />
+        < NavBarContainer />
         <Switch>
           <Route exact path="/" component={Splash} />
           <AuthRoute path="/login" component={LoginFormContainer} />
