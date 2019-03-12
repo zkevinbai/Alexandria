@@ -21,12 +21,12 @@
     color: rgba(37, 61, 91, 1);
     margin: 10px;
     border-radius: 15px;
-    max-height: 100px;
+    max-height: 75px;
     max-width: 400px;
 
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 4fr;
 
     justify-items: start;
     align-items: start;
@@ -34,11 +34,12 @@
 
 .query-dropdown-index-item img{
     max-height: 100px;
+    max-height: 75px;
     max-width: 100%;
 }
 
 .query-dropdown-index-item h1{
-    font-size: 23px;
+    font-size: 18px;
     font-weight: 300;
     margin-left: 1px;
 }
