@@ -1,0 +1,18 @@
+.query-dropdown-index{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr;
+
+    background: blue;
+    max-width: 420px;
+}
+
+.query-dropdown-index-item{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.query-dropdown-index-item img{
+    max-height: 230px;
+}
