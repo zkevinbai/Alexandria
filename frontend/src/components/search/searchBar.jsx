@@ -38,6 +38,7 @@ export default class searchBar extends Component {
             >
                 <span className="searchbar">
                     <input 
+                        className="query-form-input"
                         onChange={this.handleChange}
                         type="text" 
                         placeholder="Search for any book" 
