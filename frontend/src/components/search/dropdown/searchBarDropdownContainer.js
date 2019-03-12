@@ -10,7 +10,7 @@ const mapStateToProps = (storeState) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addUserBook: (book) => dispatch(addUserBook(book))
+        addUserBook: (data) => dispatch(addUserBook(data))
     };
 };
 
