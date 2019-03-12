@@ -8,7 +8,6 @@ export default class searchBarDropdown extends Component {
     
     render() {
         if (this.props.queryResults){
-            debugger
         return (
         <div className="query-dropdown-index" >
             {this.props.queryResults.map( book => (

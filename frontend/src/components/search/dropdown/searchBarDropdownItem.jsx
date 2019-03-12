@@ -18,7 +18,6 @@ export default class searchBarDropdownItem extends Component {
     }   
 
     render() {
-        debugger
         return (
             <div
                 className="query-dropdown-index-item"
