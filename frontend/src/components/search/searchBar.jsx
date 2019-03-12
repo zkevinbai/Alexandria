@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchBarDropdownContainer from './dropdown/userSearchBarDropdownContainer';
+import SearchBarDropdownContainer from './dropdown/searchBarDropdownContainer';
 
 export default class searchBar extends Component {
 
