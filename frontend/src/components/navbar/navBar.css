@@ -1,0 +1,17 @@
+
+.navbar{
+  
+}
+
+.nav-content{
+  width: 100%;
+  display: flex;
+}
+
+.nav-search-bar{
+  justify-self: center;
+}
+
+.logout-button{
+  justify-self: end;
+}
