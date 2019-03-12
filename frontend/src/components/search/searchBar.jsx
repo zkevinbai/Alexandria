@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchBarDropdownContainer from './dropdown/searchBarDropdownContainer';
-
+import './searchBar.css';
 export default class searchBar extends Component {
 
     constructor(props) {
@@ -38,14 +38,15 @@ export default class searchBar extends Component {
             >
                 <span className="searchbar">
                     <input 
+                        className="query-form-input"
                         onChange={this.handleChange}
                         type="text" 
                         placeholder="Search for any book" 
                     />
-
+                    <div className="fas fa-search"></div>
                     <input 
-                        className="fas fa-search"
-                        type="submit" 
+                        type="submit"
+                        className="query-form-submit"
                     />
                 </span>
                 
