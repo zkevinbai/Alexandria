@@ -7,7 +7,6 @@ export default class searchBar extends Component {
         super(props);
     
         this.state = {
-            queryResults: this.props.searchResults,
             queryString: ""
         };
 
@@ -31,6 +30,7 @@ export default class searchBar extends Component {
     }
 
     render() {
+        // debugger
         return (
         <div className="query">
             <form 
@@ -52,7 +52,7 @@ export default class searchBar extends Component {
                 
             </form>
 
-            <SearchBarDropdown queryResults={this.props.queryResults} />
+            <SearchBarDropdown queryResults={this.props.searchResults} />
         </div>
         )
     }
