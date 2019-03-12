@@ -4,11 +4,11 @@ import Root from './components/Root.jsx';
 import configureStore from './store/store';
 import jwt_decode from 'jwt-decode';
 import { setAuthToken } from './util/sessionApiUtil';
-import { logout, logoutUser } from './actions/sessionActions';
-
+import { logout } from './actions/sessionActions';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
+    const root = document.getElementById('root');
 
     if (localStorage.jwtToken) {
         setAuthToken(localStorage.jwtToken);
