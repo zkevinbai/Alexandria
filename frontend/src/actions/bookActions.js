@@ -14,9 +14,9 @@ export const RECEIVE_BOOK = "RECEIVE_BOOK";
 export const REMOVE_BOOK = "RECEIVE_BOOK";
 
 // Action Creators
-export const searchBooks = (data) => ({
+export const searchBooks = (books) => ({
     type: SEARCH_BOOKS,
-    data
+    books
 });
 
 export const receiveBooks = (books) => ({

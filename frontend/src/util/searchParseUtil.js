@@ -60,6 +60,6 @@ const translateBook = bookResult => {
   }
 
   return book;
-}
+};
 
 

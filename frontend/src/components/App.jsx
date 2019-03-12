@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import LoginFormContainer from './session/loginFormContainer';
-import SignupFormContainer from './session/signupFormContainer';
-
 import { Switch, Route } from 'react-router-dom';
-import LogoutButtonContainer from './session/logoutButtonContainer';
 import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
 
 // App
@@ -11,8 +7,9 @@ import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
   // MainPage
 
 // Auth Related
-// import LoginFormContainer from './session/loginFormContainer';
-  // SignupFormContainer
+  import SignupFormContainer from './session/signupFormContainer';
+  import LoginFormContainer from './session/loginFormContainer';
+  import LogoutButtonContainer from './session/logoutButtonContainer';
 
 // Book Related
   // bookIndex
