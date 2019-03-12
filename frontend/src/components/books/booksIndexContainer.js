@@ -2,15 +2,16 @@ import { connect } from 'react-redux';
 import { fetchUserBooks } from '../../actions/bookActions';
 import BooksIndex from './booksIndex';
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
     return {
-        books: Object.values(state.books)
+        books: Object.values(state.books),
+        userId: ownProps.match.params.userId
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchUserBooks: user => dispatch(fetchUserBooks(user))
+        fetchUserBooks: userId => dispatch(fetchUserBooks(userId))
     };
 };
 
