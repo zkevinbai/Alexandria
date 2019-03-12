@@ -8,7 +8,7 @@ const searchReducer = (oldState = {}, action) => {
 
     switch (action.type) {
         case SEARCH_BOOKS:
-            newState = action.books.data;
+            newState = action.books;
             return newState;
 
         default:

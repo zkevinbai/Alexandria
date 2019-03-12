@@ -22,6 +22,6 @@ const translateBook = bookResult => {
   book.imageUrl = bookResult.volumeInfo.imageLinks.thumbnail;
 
   return book;
-}
+};
 
 
