@@ -4,6 +4,12 @@ import SearchBarDropdownItem from './searchBarDropdownItem';
 export default class searchBarDropdown extends Component {
     constructor(props) {
       super(props);
+
+      this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(book){
+        this.props.addUserBook(book);
     }
     
     render() {
@@ -13,6 +19,7 @@ export default class searchBarDropdown extends Component {
                 <SearchBarDropdownItem 
                     book={book} 
                     key={book.id}
+                    onClick={() => this.handleClick(book)}
                 />
             )
             )}
