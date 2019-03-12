@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
 
 // App
+  import Splash from './splash';
   // navBarContainer
   // MainPage
 
@@ -10,6 +11,7 @@ import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
   import SignupFormContainer from './session/signupFormContainer';
   import LoginFormContainer from './session/loginFormContainer';
   import LogoutButtonContainer from './session/logoutButtonContainer';
+  
 
 // Book Related
   // bookIndex
@@ -23,7 +25,7 @@ class App extends Component {
       <div className="App">
         <ProtectedRoute path="/" component={LogoutButtonContainer} />
         <Switch>
-          <Route exact path="/" render={() => <h1>It worked!</h1>} />
+          <Route exact path="/" component={Splash} />
           <AuthRoute path="/login" component={LoginFormContainer} />
           <AuthRoute path="/signup" component={SignupFormContainer} />
         </Switch>
