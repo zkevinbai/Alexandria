@@ -25,6 +25,7 @@ export default class searchBarDropdownItem extends Component {
             >
                 <img src={this.props.book.imageUrl} />
                 <h1>{this.props.book.title}</h1>
+                <p>{this.props.book.description.slice(0,100) + '...'}</p>
             </div>
         )
     }
