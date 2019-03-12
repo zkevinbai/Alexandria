@@ -13,7 +13,7 @@ const searchReducer = (oldState = {}, action) => {
             return newState;
 
         case CLEAR_SEARCH:
-            return oldState;
+            return [];
 
         default:
             return oldState;
