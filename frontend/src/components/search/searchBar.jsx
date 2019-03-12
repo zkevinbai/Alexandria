@@ -37,13 +37,13 @@ export default class searchBar extends Component {
                 className="query-form"  
             >
                 <span className="searchbar">
+                        <i class="fas fa-search"></i>
                     <input 
                         className="query-form-input"
                         onChange={this.handleChange}
                         type="text" 
                         placeholder="Search for any book" 
                     />
-                    <div className="fas fa-search"></div>
                     <input 
                         type="submit"
                         className="query-form-submit"

@@ -1,8 +1,12 @@
 .searchbar{
-    background: rgba(37, 61, 91, 0.5);
-    padding: 10px 10px;
-    padding-top: 13px;
+    background: rgb(37, 61, 91);
+    padding: 20px 20px;
+    padding-top: 30px;
     border-radius: 20px;
+}
+
+.searchbar i{
+    color: rgb(183, 157, 148);
 }
 
 .query-form-input{
@@ -12,8 +16,8 @@
 
     margin: 5px;
     border-radius: 3px;
-    color: rgb(255, 255, 255);
-    font-size: 25px;
+    color: rgb(183, 157, 148);
+    font-size: 35px;
 }
 
 .query-form-submit{
