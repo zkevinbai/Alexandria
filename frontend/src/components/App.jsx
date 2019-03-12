@@ -15,7 +15,7 @@ import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
   import BooksIndexContainer from './books/booksIndexContainer';
 
 // Search Related
-  // searchBar
+  import SearchBarContainer from './search/searchBarContainer';
 
 class App extends Component {
   render() {
@@ -27,7 +27,8 @@ class App extends Component {
           <AuthRoute path="/login" component={LoginFormContainer} />
           <AuthRoute path="/signup" component={SignupFormContainer} />
         </Switch>
-        <Route path="/" component={BooksIndexContainer} />
+        <Route path="/" component={SearchBarContainer} />
+        <Route path="/shelf/:userId" component={BooksIndexContainer} />
       </div>
     );
   }
