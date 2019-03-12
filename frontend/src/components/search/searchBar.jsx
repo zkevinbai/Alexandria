@@ -43,7 +43,10 @@ export default class searchBar extends Component {
                         placeholder="Search for any book" 
                     />
                     <div className="fas fa-search"></div>
-                    <input type="submit"/>
+                    <input 
+                        type="submit"
+                        className="query-form-submit"
+                    />
                 </span>
                 
             </form>
