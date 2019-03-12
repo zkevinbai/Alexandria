@@ -13,7 +13,6 @@ import * as BookActions from './actions/bookActions';
 document.addEventListener('DOMContentLoaded', () => {
     let store;
     const root = document.getElementById('root');
-    window.narrowSearchResults = narrowSearchResults;
 
     if (localStorage.jwtToken) {
         setAuthToken(localStorage.jwtToken);
@@ -39,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //* Book Actions -------------------------------------------------------
     window.queryBooks = BookApiUtil.queryBooks;
     window.queryGoogleBooks = BookActions.queryGoogleBooks;
-
+    window.narrowSearchResults = narrowSearchResults;
     // Window Store ------------------------------------------------------------
     window.store = store;
     window.getState = store.getState;

@@ -5,6 +5,8 @@ import {
     deleteBook
 } from '../util/bookApiUtil';
 
+import { narrowSearchResults } from '../util/searchParseUtil';
+
 // Constants
 export const SEARCH_BOOKS = "SEARCH_BOOKS";
 export const RECEIVE_BOOKS = "RECEIVE_BOOKS";
@@ -35,7 +37,7 @@ export const removeBook = (book) => ({
 // Thunk Action Creators
 export const queryGoogleBooks = (queryString) => (dispatch) => (
     queryBooks(queryString)
-        .then( resData => dispatch(searchBooks(resData)) )
+        .then( resData => dispatch(searchBooks(narrowSearchResults(resData))) )
         .catch( resErr => console.log(resErr) )
 );
 
