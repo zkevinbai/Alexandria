@@ -11,6 +11,8 @@
     grid-template-columns: 1fr;
 
     align-items: center;
+
+    overflow: scroll;
 }
 
 .query-dropdown-index-item{
@@ -23,7 +25,7 @@
 
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 75px repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     justify-items: start;
     align-items: start;
@@ -31,7 +33,7 @@
 
 .query-dropdown-index-item img{
     max-height: 100px;
-    max-width: 75px;
+    max-width: 100%;
 }
 
 .query-dropdown-index-item h1{
