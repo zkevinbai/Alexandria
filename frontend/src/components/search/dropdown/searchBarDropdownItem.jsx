@@ -23,8 +23,12 @@ export default class searchBarDropdownItem extends Component {
                 onClick={this.handleClick(this.props.book)}
             >
                 <img src={this.props.book.imageUrl} />
-                <h1>{this.props.book.title.slice(0,42)}</h1>
-                <h1>{this.props.book.author}</h1>
+                <div
+                    className="query-dropdown-index-item-text"
+                >
+                    <h1>{this.props.book.title.slice(0,42)}</h1>
+                    <h1>{this.props.book.author}</h1>
+                </div>
             </div>
         )
     }
