@@ -10,7 +10,8 @@ const mapStateToProps = (storeState) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addUserBook: (data) => dispatch(addUserBook(data))
+        addUserBook: (data) => dispatch(addUserBook(data)), 
+        cat: () => console.log("cat")
     };
 };
 
