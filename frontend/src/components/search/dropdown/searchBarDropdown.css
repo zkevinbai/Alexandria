@@ -9,6 +9,8 @@
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: 1fr;
+
+    align-items: center;
 }
 
 .query-dropdown-index-item{
@@ -16,19 +18,25 @@
     color: rgba(37, 61, 91, 1);
     margin: 10px;
     border-radius: 15px;
-    max-height: 320px;
+    max-height: 100px;
     max-width: 400px;
 
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 75px repeat(2, 1fr);
+
+    justify-items: start;
+    align-items: start;
 }
 
 .query-dropdown-index-item img{
-    max-height: 100%;
-    align-self: center;
+    max-height: 100px;
+    max-width: 75px;
 }
 
 .query-dropdown-index-item h1{
-    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 10%;
+    font-size: 23px;
 }
