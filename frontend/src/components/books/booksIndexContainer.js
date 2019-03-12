@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchUserBooks } from '../../actions/bookActions';
-import BooksIndex from './booksIndex';
+import BooksIndex from './BooksIndex';
 
 const mapStateToProps = state => {
     return {

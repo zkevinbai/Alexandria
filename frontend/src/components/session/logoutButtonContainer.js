@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { login, logout } from '../../actions/sessionActions';
+import { logout } from '../../actions/sessionActions';
 import LogoutButton from './LogoutButton';
 
 const mstp = state => ({

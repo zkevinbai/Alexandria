@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function booksIndexItem(props) {
+export default function BooksIndexItem(props) {
   return (
-    <div>
-      <img src={props.imageUrl} />
+    <div className="books-index-item">
+      <img src={props.book.imageUrl} alt=""/>
       {props.book.title}
       {props.book.author}
     </div>
