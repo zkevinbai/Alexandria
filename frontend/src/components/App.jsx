@@ -11,7 +11,7 @@ import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
   // MainPage
 
 // Auth Related
-import LoginFormContainer from './session/loginFormContainer';
+// import LoginFormContainer from './session/loginFormContainer';
   // SignupFormContainer
 
 // Book Related
