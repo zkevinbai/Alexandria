@@ -47,7 +47,7 @@ export default class searchBar extends Component {
                 
             </form>
 
-            <SearchBarDropdown />
+            <SearchBarDropdown queryResults={this.props.queryResults} />
         </div>
         )
     }
