@@ -1,5 +1,6 @@
 import {
     queryBooks,
+    queryBook,
     getBooks,
     addBook,
     deleteBook,
@@ -7,9 +8,11 @@ import {
 } from '../util/bookApiUtil';
 
 import { narrowSearchResults } from '../util/searchParseUtil';
+import { translateBook } from '../util/singleBookSearchParseUtil';
 
 // Constants
 export const SEARCH_BOOKS = "SEARCH_BOOKS";
+export const SEARCH_BOOK = "SEARCH_BOOK";
 export const CLEAR_SEARCH = "CLEAR_SEARCH";
 
 export const RECEIVE_BOOKS = "RECEIVE_BOOKS";
@@ -17,15 +20,23 @@ export const RECEIVE_BOOK = "RECEIVE_BOOK";
 export const REMOVE_BOOK = "RECEIVE_BOOK";
 
 // Action Creators
+
+    // Search Actions 
 export const searchBooks = (books) => ({
     type: SEARCH_BOOKS,
     books
+});
+
+export const searchBook = (book) => ({
+    type: SEARCH_BOOK,
+    book
 });
 
 export const clearSearch = () => ({
     type: CLEAR_SEARCH
 });
 
+    // Book Actions 
 export const receiveBooks = (books) => ({
     type: RECEIVE_BOOKS,
     books
@@ -42,12 +53,21 @@ export const removeBook = (book) => ({
 });
 
 // Thunk Action Creators
+
+    // Search Actions 
 export const queryGoogleBooks = (queryString) => (dispatch) => {
     return queryBooks(queryString)
         .then( resData => dispatch(searchBooks(narrowSearchResults(resData))) )
         .catch( resErr => console.log(resErr) );
 };
 
+export const queryGoogleBook = (queryBookId) => (dispatch) => {
+    return queryBook(queryBookId)
+        .then(resBook => dispatch(searchBook(translateBook(resBook.volumeInfo))) )
+        .catch( resErr => console.log(resErr) );
+};
+
+    // Book Actions 
 export const fetchUserBooks = (userId) => (dispatch) => (
     getBooks(userId)
         .then( resBooks => dispatch(receiveBooks(resBooks)) )

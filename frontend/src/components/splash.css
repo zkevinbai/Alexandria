@@ -42,11 +42,11 @@
     display: grid;
     justify-content: center;
     align-content: center;
-    margin: 0 80px;
     font-size: 24px;
     font-family: "Arbutus Slab";
     line-height: 2.5rem;
     text-align: center;
+    margin: 40px;
 }
 
 .splash-info-box {

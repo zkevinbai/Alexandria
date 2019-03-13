@@ -13,12 +13,12 @@ const mapStateToProps = (storeState, ownProps) => {
             modalType: "public"
         };
     }
-
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
         addUserBook: (data) => dispatch(addUserBook(data)), 
+        clearSearch: () => dispatch(clearSearch())
     };
 };
 

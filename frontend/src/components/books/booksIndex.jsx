@@ -27,9 +27,11 @@ export default class BooksIndex extends Component {
     render() {
         if (this.props.books) {
             return (
-            <div className="books-index-wrapper">
-                {this.renderBooks()}
-            </div>
+            <>
+                <div className="books-index-wrapper">
+                    {this.renderBooks()}
+                </div>
+            </>
             )
         } else return <div></div>
     }

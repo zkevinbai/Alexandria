@@ -48,6 +48,7 @@ export default class BookShow extends Component {
     );
 
     return (
+      <>
       <div className="show-page-wrapper">
         <div className="show-page-book-image">
           <img src={this.props.book.imageUrl} alt=""/>
@@ -79,6 +80,7 @@ export default class BookShow extends Component {
           {this.props.book.description}
         </div>
       </div>
+      </>
     )
 
   }
