@@ -44,7 +44,7 @@ export const removeBook = (book) => ({
 export const queryGoogleBooks = (queryString) => (dispatch) => {
     return queryBooks(queryString)
         .then( resData => dispatch(searchBooks(narrowSearchResults(resData))) )
-        .catch( resErr => console.log(resErr) )
+        .catch( resErr => console.log(resErr) );
 };
 
 export const fetchUserBooks = (userId) => (dispatch) => (

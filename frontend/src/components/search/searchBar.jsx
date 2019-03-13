@@ -23,6 +23,7 @@ export default class searchBar extends Component {
         e.preventDefault();
 
         let queryString = e.target.value;
+        
         if (queryString.length === 0) {
             this.props.clearSearch();
         } else {
