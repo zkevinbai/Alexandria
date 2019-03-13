@@ -6,7 +6,7 @@ Alexandria is a book app.  We aim to help readers keep track of their books, and
 # Functionality
 1. keep track of the books you have read
 2. find great new books to read
-3. learn about your reading interest
+3. learn about the books you're reading
 4. share your library
 
 # MVP
@@ -30,6 +30,10 @@ Alexandria is a book app.  We aim to help readers keep track of their books, and
 # Methodologies
 * Standup
   * Team meetings every morning and afternoon, highs and lows, learn about eachother
+  * No Bad Ideas
+      * every thought is valid, every idea is welcome
+  * Democratic Decision Making
+      * vote on new directions as a team
 * TDD
   * Test Driven Development, accounting for edge cases before production
 * BEM
@@ -53,3 +57,15 @@ Alexandria is a book app.  We aim to help readers keep track of their books, and
         * defined search action, and created a search reducer
         * defined custom parser for search results 
 * Week 10 Day 2 - Alexandria Frontend
+    * complete searchbar functionality
+        * queries the googlebooks api with on enter
+            * succeeded in building auto-search, but hit the free api limit
+        * displays results in clean dropdown, in the same style as google
+        * clears the query once the user deletes their search query
+    * complete splash page
+      * integrate search bar to demonstrate functionality
+      * consistent and clear design philosophy
+          * muted color theme in light of library theme
+    * complete user auth components
+        * modal signup and login
+* Week 10 Day 3 - Alexandria Deployment
