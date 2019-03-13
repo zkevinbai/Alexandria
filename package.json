@@ -23,7 +23,8 @@
     "server:debug": "nodemon --inspect app.js",
     "frontend-install": "npm install --prefix frontend",
     "frontend": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run frontend\""
+    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
@@ -34,5 +35,9 @@
   "bugs": {
     "url": "https://github.com/zkevinbai/Alexandria/issues"
   },
-  "homepage": "https://github.com/zkevinbai/Alexandria#readme"
+  "homepage": "https://github.com/zkevinbai/Alexandria#readme",
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
+  }
 }
