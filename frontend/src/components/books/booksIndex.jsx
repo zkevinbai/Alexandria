@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import BooksIndexItem from './booksIndexItem';
-import { withRouter } from 'react-router-dom';
+import './booksIndex.css'
 
 export default class BooksIndex extends Component {
   

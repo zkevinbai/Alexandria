@@ -10,6 +10,8 @@ import { narrowSearchResults } from '../util/searchParseUtil';
 
 // Constants
 export const SEARCH_BOOKS = "SEARCH_BOOKS";
+export const CLEAR_SEARCH = "CLEAR_SEARCH";
+
 export const RECEIVE_BOOKS = "RECEIVE_BOOKS";
 export const RECEIVE_BOOK = "RECEIVE_BOOK";
 export const REMOVE_BOOK = "RECEIVE_BOOK";
@@ -18,6 +20,10 @@ export const REMOVE_BOOK = "RECEIVE_BOOK";
 export const searchBooks = (books) => ({
     type: SEARCH_BOOKS,
     books
+});
+
+export const clearSearch = () => ({
+    type: CLEAR_SEARCH
 });
 
 export const receiveBooks = (books) => ({
@@ -39,7 +45,7 @@ export const removeBook = (book) => ({
 export const queryGoogleBooks = (queryString) => (dispatch) => {
     return queryBooks(queryString)
         .then( resData => dispatch(searchBooks(narrowSearchResults(resData))) )
-        .catch( resErr => console.log(resErr) )
+        .catch( resErr => console.log(resErr) );
 };
 
 export const fetchUserBooks = (userId) => (dispatch) => (

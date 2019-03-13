@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import SignupFormContainer from '../session/signupFormContainer';
 import LoginFormContainer from '../session/loginFormContainer';
 import LogoutButtonContainer from '../session/logoutButtonContainer';
@@ -16,23 +16,18 @@ export default class NavBar extends Component {
             <SearchBarContainer />
           </div>
 
-          <div className='logout-button'>
+          <div>
             <LogoutButtonContainer />
           </div>
 
         </div>
       ) : (
-          <div className="nav-content">
-          <Link to='/login' component={LoginFormContainer}>
-            <div>
-              Login
-            </div>
-          </Link>
-          <Link to='/signup' component={SignupFormContainer}>
-            <div>
-              Sign Up
-            </div>
-          </Link>
+        <div className="nav-content">
+          <a id="site-title" href="/"><h3>Alexandria</h3></a>
+          <div className='login-signup-buttons'>
+            <Link to='/login' component={LoginFormContainer}>Login</Link>
+            <Link to='/signup' component={SignupFormContainer}>Sign Up</Link>
+          </div>
         </div>
       )
     )

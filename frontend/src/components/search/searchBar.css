@@ -1,0 +1,42 @@
+.query{
+    margin: 5px;
+
+    display: grid;
+    grid-template-rows: 48px 1fr;
+    grid-template-columns: 1fr;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    position: absolute;
+    left: 10px;
+    top: -1px;
+}
+
+.searchbar{
+    grid-row: 1;
+
+    background: rgb(37, 61, 91);
+    border-radius: 20px;
+    padding: 20px 20px;
+    padding-top: 30px;
+}
+
+.searchbar i{
+    color: rgb(183, 157, 148);
+    font-size: 30px;
+}
+
+.query-form-input{
+    border: none;
+    background: none;
+    outline: none;
+
+    margin: 5px;
+    border-radius: 3px;
+    color: rgb(183, 157, 148);
+    font-size: 35px;
+}
+
+.query-form-submit{
+    display: none;
+}

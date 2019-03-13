@@ -1,0 +1,81 @@
+.splash-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 643px 200px 500px;
+    justify-content: stretch;
+}
+
+.splash-image {
+    background-image: url('../assets/Alexandria.jpg');
+    background-size: 134%;
+    background-repeat: no-repeat;
+    display: inherit;
+    background-position: center 0%;
+    display: grid;
+    justify-content: center;
+}
+
+.splash-image-text {
+    align-self: end;
+    color: white;
+    font-family: "Arbutus Slab";
+    font-size: 20px;
+}
+
+.splash-search-bar {
+    justify-self: center;
+    position: relative;
+    top: 5%
+}
+
+.splash-search-bar ::placeholder {
+    color: rgba(255, 255, 255, 0.568)
+}
+
+.splash-middle-text {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin: 0 80px;
+    font-size: 24px;
+    font-family: "Arbutus Slab";
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+.splash-info-box {
+    background-color: #b79d94;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+    grid-column-gap: 2rem;
+    padding: 0 100px
+}
+
+.splash-info-box div {
+    font-family: "Source Sans Pro";
+    font-size: 23px;
+    color: white;
+    /* border: 1px solid white; */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.splash-info-box h3 {
+    font-size: 35px
+}
+
+.splash-info-box p {
+    line-height: 2rem;
+    color: #253d5b
+
+}
+
+.splash-info-box i {
+    margin-bottom: 10px;
+    font-size: 50px;
+    color: #253d5b
+}

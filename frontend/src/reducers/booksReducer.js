@@ -18,8 +18,7 @@ const booksReducer = (oldState = {}, action) => {
             return newState;
 
         case REMOVE_BOOK:
-        debugger;
-            delete newState[action.book.id];
+            delete newState(action.book._id);
             return newState;
 
         default:
