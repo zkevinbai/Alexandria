@@ -5,13 +5,9 @@ import SearchBarDropdown from './searchBarDropdown';
 const mapStateToProps = (storeState, ownProps) => {
     if (storeState.session.user){
         return {
-            userId: storeState.session.user.id
-        } 
-    } else return {}
-  
             userId: storeState.session.user.id,
             modalType: "userNew"
-        };
+        } 
     } else {
         return {
             modalType: "public"
