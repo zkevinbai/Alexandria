@@ -1,19 +1,24 @@
 .show-page-wrapper {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 1fr 2fr;
     grid-template-rows: repeat(6, auto);
     background-color: #c6878f;
     grid-gap: 1rem;
     font-family: "Source Sans Pro";
     padding: 20px;
+    align-content: start;
+    height: 85vh;
 }
 
 .show-page-book-image {
     grid-column: 1 / 2;
     grid-row: 1 / 5;
     justify-self: center;
-    align-self: end;
+    align-self: start;
+    border: 10px solid rgba(103, 105, 124, .4);
+    border-radius: 5px;
 }
+
 
 .show-page-buttons {
     grid-column: 1 / 2;
@@ -23,7 +28,8 @@
 }
 
 .show-page-description {
-    grid-column: 1 / 3;
+    grid-column: 3 / 4;
+    grid-row: 1 / 6
 }
 
 .show-page-wrapper button {

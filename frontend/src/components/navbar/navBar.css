@@ -7,6 +7,10 @@
   grid-template-columns: repeat(2, auto)
 }
 
+#title-letter {
+  font-size: 28px;
+}
+
 #site-title:hover {
   text-decoration: none;
 }
@@ -36,6 +40,14 @@
 
 .nav-search-bar {
   justify-self: start;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.nav-search-bar img {
+  width: 41px;
+  margin-right: 10px;
+  filter: grayscale(1);
 }
 
 .nav-search-bar .query {
