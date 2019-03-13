@@ -45,8 +45,17 @@ export default class searchBarDropdownItem extends Component {
                 <div
                     className="query-dropdown-index-item-text"
                 >
-                    <h1>{this.props.book.title.slice(0,50)}</h1>
-                    <h1>{this.props.book.author}</h1>
+                    <h1
+                        className="query-dropdown-index-item-title"
+                    >
+                        {this.props.book.title.slice(0,50)}
+                    </h1>
+
+                    <h1
+                        className="query-dropdown-index-item-author"
+                    >
+                        {this.props.book.author}
+                    </h1>
                 </div>
             </div>
         )
