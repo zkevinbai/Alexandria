@@ -9,7 +9,7 @@ const searchReducer = (oldState = {}, action) => {
 
     switch (action.type) {
         case SEARCH_BOOK:
-            newState = action.book.volumeInfo;
+            newState = action.book;
             return newState;
 
         case CLEAR_SEARCH:
