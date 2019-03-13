@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { addUserBook } from '../../../actions/bookActions';
+import { addUserBook, clearSearch } from '../../../actions/bookActions';
 import SearchBarDropdown from './searchBarDropdown';
 
 const mapStateToProps = (storeState) => {
@@ -15,7 +15,6 @@ const mapStateToProps = (storeState) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         addUserBook: (data) => dispatch(addUserBook(data)), 
-        cat: () => console.log("cat")
     };
 };
 

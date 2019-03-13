@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './bookShow.css';
 
 export default class BookShow extends Component {
   constructor(props){
@@ -47,19 +48,36 @@ export default class BookShow extends Component {
     );
 
     return (
-      <div className="show-page">
-        <div>
+      <div className="show-page-wrapper">
+        <div className="show-page-book-image">
           <img src={this.props.book.imageUrl} alt=""/>
         </div>
-        <div>
+        <div className="show-page-buttons">
           {userActionButtons}
         </div>
-        <div>{this.props.book.title}</div>
-        <div>{this.props.book.author}</div>
-        <div>Published: {this.props.book.publishedDate}</div>
-        <div>Genre: {this.props.book.genre}</div>
-        <div>PageCount: {this.props.book.pageCount}</div>
-        <div>Description: {this.props.book.description}</div>
+        <div>
+          <h3>Title</h3>
+          {this.props.book.title}
+        </div>
+        <div>
+          <h3>Author</h3>
+          {this.props.book.author}
+        </div>
+        <div>
+          <h3>Published</h3>
+          {this.props.book.publishedDate}
+        </div>
+        <div>
+          <h3>Genre</h3>
+          {this.props.book.genre}
+        </div>
+        <div>
+          <h3>Page Count</h3>
+          {this.props.book.pageCount}
+        </div>
+        <div className="show-page-description">
+          {this.props.book.description}
+        </div>
       </div>
     )
 

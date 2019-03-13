@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 
 export default class searchBarDropdownItem extends Component {
     constructor(props) {
         super(props);
+        
+        this.handleClick = this.handleClick.bind(this)
     
-        this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(book) {
@@ -18,17 +20,14 @@ export default class searchBarDropdownItem extends Component {
 
     render() {
         return (
-            <div
+            <div 
                 className="query-dropdown-index-item"
-                onClick={this.handleClick(this.props.book)}
-            >
-                <img src={this.props.book.imageUrl} />
-                <div
-                    className="query-dropdown-index-item-text"
-                >
-                    <h1>{this.props.book.title.slice(0,75)}</h1>
-                    <h1>{this.props.book.author}</h1>
-                </div>
+                onClick={this.handleClick(this.props.book)}>
+                    <img src={this.props.book.imageUrl} />
+                    <div className="query-dropdown-index-item-text">
+                        <h1>{this.props.book.title.slice(0,75)}</h1>
+                        <h1>{this.props.book.author}</h1>
+                    </div>
             </div>
         )
     }
