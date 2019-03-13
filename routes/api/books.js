@@ -15,7 +15,8 @@ router.get('/user/:userId', (req, res) => {
 router.post('/user/:userId', passport.authenticate('jwt', {session: false}), 
   (req, res) => {
     const title = req.body.title
-    Book.findOne({title})
+    const user = req.body.user
+    Book.findOne({title, user})
       .then(book => {
         if (!book) {
           const newBook = new Book({

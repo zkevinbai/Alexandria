@@ -13,7 +13,7 @@ export default class NavBar extends Component {
       this.props.signedIn ? (
         <div className="nav-content">
           <div className="nav-search-bar">
-            <SearchBarContainer />
+          <SearchBarContainer />
           </div>
 
           <div>

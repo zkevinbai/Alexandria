@@ -1,9 +1,19 @@
 .books-index-wrapper {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     display: grid;
     padding: 20px;
-    background-color: #c6878f;
+    background-color: #b79d94;
     align-self: stretch;
     justify-items: center;
+    grid-gap: 1.5rem;
+    overflow-y: scroll;
+    height: 85vh;
+    -webkit-align-items: baseline;
+    align-items: baseline;
+}
+
+.books-index-item {
+    border: 10px solid rgba(103, 105, 124, .4);
+    border-radius: 5px;
 }
