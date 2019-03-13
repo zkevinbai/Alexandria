@@ -8,8 +8,7 @@ export const queryBooks = (queryString) => {
 
 export const queryBook = (queryBookId) => {
     return fetch(`https://www.googleapis.com/books/v1/volumes/${queryBookId}`)
-        .then( res => res.json())
-        .then( json => ({data: json}) );
+        .then( res => res.json());
 };
 
 export const getBooks = (userId) => {

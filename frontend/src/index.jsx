@@ -6,7 +6,7 @@ import jwt_decode from 'jwt-decode';
 import { setAuthToken } from './util/sessionApiUtil';
 import { logout } from './actions/sessionActions';
 import {narrowSearchResults} from './util/searchParseUtil';
-import { queryGoogleBooks} from './actions/bookActions';
+import { queryGoogleBooks } from './actions/bookActions';
 
 import * as BookApiUtil from './util/bookApiUtil';
 import * as BookActions from './actions/bookActions';
