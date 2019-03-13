@@ -25,6 +25,14 @@ export default class searchBarDropdownItem extends Component {
         return < BookUserNewShowContainer book={book} />
     }
 
+    whichModa(){
+        if (this.props.modalType === "public") {
+            return this.publicBookShowModal;
+        } else if (this.props.modalType === "new") {
+            return this.userBookNewShowModal;
+        }
+    }
+
     render() {
         return (
             <div
