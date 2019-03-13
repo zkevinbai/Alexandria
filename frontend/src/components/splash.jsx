@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchBarContainer from './search/searchBarContainer';
-import './splash.css'
+import './splash.css';
 
 
 export default class Splash extends Component {

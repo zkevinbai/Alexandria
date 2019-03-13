@@ -13,9 +13,6 @@ import './app.css'
 
 // Book Related
   import BooksIndexContainer from './books/booksIndexContainer';
-  import BookPublicShowContainer from './books/bookshow/bookPublicShowContainer';
-  import BookUserNewShowContainer from './books/bookshow/bookUserNewShowContainer';
-  import BookUserShowContainer from './books/bookshow/bookUserShowContainer';
 
 class App extends Component {
   render() {
@@ -23,14 +20,11 @@ class App extends Component {
       <div className="App">
           <NavBarContainer />
           <AuthRoute path="/" component={Splash} />
-        <AuthRoute path="/book/:bookId" component={BookPublicShowContainer} />
         <Switch>
           <AuthRoute path="/login" component={LoginFormContainer} />
           <AuthRoute path="/signup" component={SignupFormContainer} />
         </Switch>
           <Route path="/shelf/:userId" component={BooksIndexContainer} />
-          <Route path="/shelf/:userId/userBook/:bookId" component={BookUserNewShowContainer} />
-          <Route path="/shelf/:userId/newBook/:bookId" component={BookUserShowContainer} />
       </div>
     );
   }
