@@ -1,6 +1,6 @@
 .show-page-wrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: repeat(6, auto);
     background-color: #c6878f;
     grid-gap: 1rem;
@@ -12,6 +12,7 @@
     grid-column: 1 / 2;
     grid-row: 1 / 5;
     justify-self: center;
+    align-self: end;
 }
 
 .show-page-buttons {

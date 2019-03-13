@@ -7,9 +7,7 @@
 
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    position: absolute;
-    left: 10px;
-    top: -1px;
+
 }
 
 .searchbar{
@@ -35,6 +33,11 @@
     border-radius: 3px;
     color: rgb(183, 157, 148);
     font-size: 35px;
+    padding-left: 10px;
+}
+
+.query-form-input ::placeholder {
+    text-align: center;
 }
 
 .query-form-submit{
