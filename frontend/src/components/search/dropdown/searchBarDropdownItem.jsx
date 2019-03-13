@@ -7,7 +7,7 @@ export default class searchBarDropdownItem extends Component {
         super(props);
     
         this.handleClick = this.handleClick.bind(this);
-        this.whichModal = this.whichModal.bind(this);
+        // this.whichModal = this.whichModal.bind(this);
     }
 
     handleClick(book) {
