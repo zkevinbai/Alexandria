@@ -4,7 +4,7 @@
     border-top-left-radius: none;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    width: 420px;
+    width: 428px;
     max-height: 420px;
     display: grid;
     grid-template-rows: repeat(5, 1fr);

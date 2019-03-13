@@ -19,6 +19,7 @@ export default class searchBarDropdown extends Component {
                     userId={this.props.userId}
                     addUserBook={this.props.addUserBook}
                     modalType={this.props.modalType}
+                    clearSearch={this.props.clearSearch}
                 />
             )
             )}

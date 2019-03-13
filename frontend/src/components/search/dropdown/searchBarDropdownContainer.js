@@ -19,6 +19,7 @@ const mapStateToProps = (storeState, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         addUserBook: (data) => dispatch(addUserBook(data)), 
+        clearSearch: () => dispatch(clearSearch())
     };
 };
 

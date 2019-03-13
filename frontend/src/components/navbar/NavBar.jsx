@@ -28,8 +28,8 @@ export default class NavBar extends Component {
             <a href="/"><h3>Alexandria</h3></a>
           </div>
           <div className='login-signup-buttons'>
-            <Link to='/login' component={LoginFormContainer}>Login</Link>
-            <Link to='/signup' component={SignupFormContainer}>Sign Up</Link>
+            <Link to='/login'>Login</Link>
+            <Link to='/signup'>Sign Up</Link>
           </div>
         </div>
       )

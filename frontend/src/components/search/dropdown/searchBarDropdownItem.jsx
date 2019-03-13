@@ -10,30 +10,22 @@ export default class searchBarDropdownItem extends Component {
         // this.whichModal = this.whichModal.bind(this);
     }
 
+    // handleClick(book) {
+    //     return (e) => {
+    //         this.props.addUserBook({
+    //             userId: this.props.userId,
+    //             book
+    //         });
+    //     };
+    // }
     handleClick(book) {
         return (e) => {
             this.props.addUserBook({
                 userId: this.props.userId,
                 book
-            });
+            }).then(this.props.clearSearch())
         };
     }
-
-    // handleClick(book) {
-    //     return (e) => {
-    //         console.log("click");
-    //         debugger
-    //         this.whichModal(book);
-    //     };
-    // }
-
-    // whichModal(book){
-    //     if (this.props.modalType === "public") {
-    //         return < BookPublicShowContainer book={book} />
-    //     } else if (this.props.modalType === "userNew") {
-    //         return < BookUserNewShowContainer book={book} />
-    //     }
-    // }
 
     render() {
         return (
