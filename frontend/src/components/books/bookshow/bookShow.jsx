@@ -6,6 +6,10 @@ export default class bookShow extends Component {
         super(props);
     }
 
+    componentDidMount(){
+        this.props.fetchBooks();
+    }
+
     render() {
         return (
         <div className="book-show">

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-
+import BookPublicShowContainer from '../../books/bookshow/bookPublicShowContainer';
+import BookUserNewShowContainer from '../../books/bookshow/bookUserNewShowContainer';
 export default class searchBarDropdownItem extends Component {
     constructor(props) {
         super(props);
@@ -14,7 +15,15 @@ export default class searchBarDropdownItem extends Component {
                 book
             });
         };
-    }   
+    }
+    
+    publicBookShowModal(book){
+        return < BookPublicShowContainer book={book} />
+    }
+
+    userBookNewShowModal(book){
+        return < BookUserNewShowContainer book={book} />
+    }
 
     render() {
         return (

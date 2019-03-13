@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import BookShow from './bookShow';
 import { addUserBook } from '../../../actions/bookActions';
 
-const mapStateToProps = (storeState) => {
+const mapStateToProps = (storeState, ownProps) => {
     return {
         actionType: "addUserBook"
     };
