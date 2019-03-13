@@ -28,8 +28,14 @@ router.post('/user/:userId', passport.authenticate('jwt', {session: false}),
     newBook.save().then(book => res.json(book));
   })
 
-router.delete('/user/:user_id', (req, res) => {
-  const bookId = req.body.bookId;
+  router.get('/:bookId', (req, res) => {
+    Book.findById( req.params.bookId)
+      .then(book => res.json(book))
+      .catch(err => res.status(404).json({nobooksfound: 'No book found for that id'}))
+  })
+
+router.delete('/:bookId', (req, res) => {
+  const bookId = req.params.bookId;
   Book.findById( bookId )
   .then(book => {
     if(book){
