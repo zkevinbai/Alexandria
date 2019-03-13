@@ -27,7 +27,9 @@ export default class searchBar extends Component {
         if (queryString.length === 0) {
             this.props.clearSearch();
         } else {
-            this.props.queryGoogleBooks(queryString);
+            // comment this in to test auto search, but don't keep it
+            // google needs money for prolonged search
+            // this.props.queryGoogleBooks(queryString);
         }
 
         this.setState({
