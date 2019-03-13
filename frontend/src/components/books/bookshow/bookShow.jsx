@@ -6,8 +6,11 @@ export default class bookShow extends Component {
         super(props);
     }
 
-    render() {
+    componentDidMount(){
         debugger
+    }
+
+    render() {
         return (
         <div className="book-show">
 
