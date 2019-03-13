@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
+import './app.css'
 
 // App
   import Splash from './splash';
@@ -20,9 +21,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        < NavBarContainer />
+        <NavBarContainer />
+        <AuthRoute path="/" component={Splash} />
         <Switch>
-          <AuthRoute exact path="/" component={Splash} />
           <AuthRoute path="/login" component={LoginFormContainer} />
           <AuthRoute path="/signup" component={SignupFormContainer} />
         </Switch>

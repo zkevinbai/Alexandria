@@ -24,14 +24,6 @@ export const receiveUserLogin = () => ({
     type: RECEIVE_USER_LOGIN
 })
 
-export const signup = user => dispatch => (
-    ApiUtil.signup(user).then(() => (
-        dispatch(receiveUserLogin())
-    ), err => (
-        dispatch(receiveErrors(err.response.data))
-    ))
-)
-
 export const login = user => dispatch => (
     ApiUtil.login(user).then(res => {
         const { token } = res.data;
@@ -43,6 +35,15 @@ export const login = user => dispatch => (
         dispatch(receiveErrors(err.response.data));
     })
 )
+
+export const signup = user => dispatch => (
+    ApiUtil.signup(user).then(() => (
+        dispatch(receiveUserLogin())
+    ), err => (
+        dispatch(receiveErrors(err.response.data))
+    ))
+)
+
 
 export const logout = () => dispatch => {
     localStorage.removeItem('jwtToken')
