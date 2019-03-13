@@ -13,7 +13,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   addBook: data => dispatch(addUserBook(data)),
-  deleteBook: data => dispatch(removeUserBook(data)),
+  deleteBook: bookId => dispatch(removeUserBook(bookId)),
   fetchBook: bookId => dispatch(fetchUserBook(bookId)),
   fetchShelf: userId => dispatch(fetchUserBooks(userId))
 });
