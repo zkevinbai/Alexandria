@@ -3,7 +3,7 @@
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 700px 200px 500px;
+    grid-template-rows: 643px 200px 500px;
     justify-content: stretch;
 }
 

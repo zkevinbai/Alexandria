@@ -1,0 +1,9 @@
+.books-index-wrapper {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    display: grid;
+    padding: 20px;
+    background-color: #c6878f;
+    align-self: stretch;
+
+}
