@@ -8,6 +8,7 @@ import {
 } from '../util/bookApiUtil';
 
 import { narrowSearchResults } from '../util/searchParseUtil';
+import { translateBook } from '../util/singleBookSearchParseUtil';
 
 // Constants
 export const SEARCH_BOOKS = "SEARCH_BOOKS";
@@ -62,7 +63,7 @@ export const queryGoogleBooks = (queryString) => (dispatch) => {
 
 export const queryGoogleBook = (queryBookId) => (dispatch) => {
     return queryBook(queryBookId)
-        .then(resBook => dispatch(searchBook(resBook)) )
+        .then(resBook => dispatch(searchBook(translateBook(resBook.volumeInfo))) )
         .catch( resErr => console.log(resErr) );
 };
 

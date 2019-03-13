@@ -10,11 +10,12 @@ import './app.css'
 // Auth Related
   import SignupFormContainer from './session/signupFormContainer';
   import LoginFormContainer from './session/loginFormContainer';
-
+  
 // Book Related
   import BooksIndexContainer from './books/booksIndexContainer';
   import BookShowContainer from './books/bookShowContainer';
-
+  import BookPublicShowContainer from './books/bookshow/bookPublicShowContainer';
+  
 class App extends Component {
   render() {
     return (
@@ -22,6 +23,7 @@ class App extends Component {
           <NavBarContainer />
           <AuthRoute path="/" component={Splash} />
         <Switch>
+          <AuthRoute path="/book/:volumeId" component={BookPublicShowContainer} />
           <AuthRoute path="/login" component={LoginFormContainer} />
           <AuthRoute path="/signup" component={SignupFormContainer} />
         </Switch>

@@ -13,7 +13,6 @@ const mapStateToProps = (storeState, ownProps) => {
             modalType: "public"
         };
     }
-
 };
 
 const mapDispatchToProps = (dispatch) => {
