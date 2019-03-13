@@ -11,15 +11,9 @@ export default class bookShow extends Component {
     }
 
     render() {
-        debugger
         return (
         <div className="book-show">
-            {
-                this.props.book.imageLinks ? 
-                    <img src={this.props.book.imageUrl} />
-                :
-                    <img src="" />
-            }
+            <img src={this.props.book.imageUrl} />
             <div
                 className="book-show-heading-text"
             >
@@ -32,7 +26,7 @@ export default class bookShow extends Component {
             >
                 <h1>Published: {this.props.book.publishedDate}</h1>
                 <h1>Genre: {this.props.book.genre}</h1>
-                <h1>PageCount: {this.props.book.pageCount}</h1>
+                <h1>Page Count: {this.props.book.pageCount}</h1>
             </div>
 
             <p
