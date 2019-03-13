@@ -7,7 +7,7 @@ export default class bookShow extends Component {
     }
 
     componentDidMount(){
-        debugger
+        this.props.queryGoogleBook(this.props.match.params.volumeId)
     }
 
     render() {
