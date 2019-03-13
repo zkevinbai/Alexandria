@@ -1,0 +1,22 @@
+a:hover, a:focus, a:link, a:visited {
+    text-decoration: none;
+    color: inherit
+}
+
+h3, h2, h1, p {
+    margin: 0
+}
+
+a, p {
+    font-family: "Source Sans Pro"
+}
+
+#root {
+    /* margin: 0 */
+    /* display: grid; */
+    /* justify-content: stretch */
+}
+
+body {
+    margin: 0
+}
