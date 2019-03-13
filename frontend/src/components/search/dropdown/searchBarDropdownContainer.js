@@ -3,7 +3,7 @@ import { addUserBook, clearSearch } from '../../../actions/bookActions';
 import SearchBarDropdown from './searchBarDropdown';
 
 const mapStateToProps = (storeState, ownProps) => {
-    if (storeState.session.user.id){
+    if (storeState.session.user){
         return {
             userId: storeState.session.user.id,
             modalType: "userNew"
@@ -13,7 +13,6 @@ const mapStateToProps = (storeState, ownProps) => {
             modalType: "public"
         };
     }
-
 };
 
 const mapDispatchToProps = (dispatch) => {
