@@ -14,6 +14,7 @@ import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
 
 // Book Related
   import BooksIndexContainer from './books/booksIndexContainer';
+  import BookShowContainer from './books/bookShowContainer';
 
 
 class App extends Component {
@@ -27,6 +28,7 @@ class App extends Component {
           <AuthRoute path="/signup" component={SignupFormContainer} />
         </Switch>
           <Route path="/shelf/:userId" component={BooksIndexContainer} />
+          <Route path={"/books/:bookId"} component={BookShowContainer} />
       </div>
     );
   }

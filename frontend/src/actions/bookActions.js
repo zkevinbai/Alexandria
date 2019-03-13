@@ -2,7 +2,8 @@ import {
     queryBooks,
     getBooks,
     addBook,
-    deleteBook
+    deleteBook,
+    fetchBook
 } from '../util/bookApiUtil';
 
 import { narrowSearchResults } from '../util/searchParseUtil';
@@ -53,8 +54,15 @@ export const addUserBook = (data) => (dispatch) => (
         .catch( resErr => console.log(resErr) )
 );
 
-export const removeUserBook = (data) => (dispatch) => (
-    deleteBook(data)
+export const fetchUserBook = bookId => (dispatch) => {
+    return (
+    fetchBook(bookId)
+        .then( resBook => dispatch(receiveBook(resBook)))
+        .catch( resErr => console.log(resErr) )
+)};
+
+export const removeUserBook = bookId => (dispatch) => (
+    deleteBook(bookId)
         .then( resBook => dispatch(removeBook(resBook)) )
         .catch( resErr => console.log(resErr) )
 );

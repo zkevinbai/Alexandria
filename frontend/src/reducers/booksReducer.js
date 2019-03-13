@@ -14,11 +14,11 @@ const booksReducer = (oldState = {}, action) => {
             return newState;
 
         case RECEIVE_BOOK:
-            newState[action.book.data.id] = action.book.data;
+            newState[action.book.data._id] = action.book.data;
             return newState;
 
         case REMOVE_BOOK:
-            delete newState(action.book.id);
+            delete newState[action.book.id];
             return newState;
 
         default:
