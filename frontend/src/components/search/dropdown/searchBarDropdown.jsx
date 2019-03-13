@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SearchBarDropdownItem from './searchBarDropdownItem';
+import './searchBarDropdown.css';
 
 export default class searchBarDropdown extends Component {
     constructor(props) {

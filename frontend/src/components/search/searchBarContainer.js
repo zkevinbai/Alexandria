@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { queryGoogleBooks } from '../../actions/bookActions';
+import { queryGoogleBooks, clearSearch } from '../../actions/bookActions';
 import SearchBar from './searchBar';
 
 const mapStateToProps = (storeState) => {
@@ -10,6 +10,7 @@ const mapStateToProps = (storeState) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
+        clearSearch: () => dispatch(clearSearch()),
         queryGoogleBooks: (queryString) => dispatch(queryGoogleBooks(queryString))
     };
 };

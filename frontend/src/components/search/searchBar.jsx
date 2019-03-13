@@ -23,6 +23,14 @@ export default class searchBar extends Component {
         e.preventDefault();
 
         let queryString = e.target.value;
+        
+        if (queryString.length === 0) {
+            this.props.clearSearch();
+        } else {
+            // comment this in to test auto search, but don't keep it
+            // google needs money for prolonged search
+            // this.props.queryGoogleBooks(queryString);
+        }
 
         this.setState({
             queryString
@@ -37,13 +45,14 @@ export default class searchBar extends Component {
                 className="query-form"  
             >
                 <span className="searchbar">
+                        <i className="fas fa-search"></i>
                     <input 
                         className="query-form-input"
                         onChange={this.handleChange}
                         type="text" 
+                        value={this.state.queryString}
                         placeholder="Search for any book" 
                     />
-                    <div className="fas fa-search"></div>
                     <input 
                         type="submit"
                         className="query-form-submit"
@@ -51,7 +60,6 @@ export default class searchBar extends Component {
                 </span>
                 
             </form>
-
             <SearchBarDropdownContainer queryResults={this.props.searchResults} />
         </div>
         )
