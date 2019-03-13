@@ -2,14 +2,17 @@ import { connect } from 'react-redux';
 import { addUserBook } from '../../../actions/bookActions';
 import SearchBarDropdown from './searchBarDropdown';
 
-const mapStateToProps = (storeState) => {
-
+const mapStateToProps = (storeState, ownProps) => {
     if (storeState.session.user){
         return {
-            userId: storeState.session.user.id
+            userId: storeState.session.user.id,
+            modalType: "userNew"
+        };
+    } else {
+        return {
+            modalType: "public"
         };
     }
-
 };
 
 const mapDispatchToProps = (dispatch) => {
