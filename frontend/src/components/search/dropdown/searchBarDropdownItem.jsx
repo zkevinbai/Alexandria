@@ -7,7 +7,8 @@ export default class searchBarDropdownItem extends Component {
         super(props);
     
         this.handleClick = this.handleClick.bind(this);
-        // this.whichModal = this.whichModal.bind(this);
+        this.publicShow = this.publicShow.bind(this);
+        this.userNew = this.userNew.bind(this);
     }
 
     handleClick(book) {
@@ -19,32 +20,63 @@ export default class searchBarDropdownItem extends Component {
         };
     }
 
-    render() {
-        debugger
-        return (
-
-            <Link 
-                className="query-dropdown-index-item"
-                to={`book/${this.props.book.volumeId}`}
+    publicShow(){
+        return(
+        <Link
+            className="query-dropdown-index-item"
+            to={`book/${this.props.book.volumeId}`}
+        >
+            <img src={this.props.book.imageUrl} />
+            <div
+                className="query-dropdown-index-item-text"
             >
-                <img src={this.props.book.imageUrl} />
-                <div
-                    className="query-dropdown-index-item-text"
+                <h1
+                    className="query-dropdown-index-item-title"
                 >
-                    <h1
-                        className="query-dropdown-index-item-title"
-                    >
-                        {this.props.book.title.slice(0, 50)}
-                    </h1>
+                    {this.props.book.title.slice(0, 50)}
+                </h1>
 
-                    <h1
-                        className="query-dropdown-index-item-author"
-                    >
-                        {this.props.book.author}
-                    </h1>
-                </div>
-            </Link>
-        )
+                <h1
+                    className="query-dropdown-index-item-author"
+                >
+                    {this.props.book.author}
+                </h1>
+            </div>
+        </Link>
+    )}
+
+    userNew(){
+        return(
+        <Link
+            className="query-dropdown-index-item"
+            to={`shelf/${this.props.userId}/book/${this.props.book.volumeId}`}
+        >
+            <img src={this.props.book.imageUrl} />
+            <div
+                className="query-dropdown-index-item-text"
+            >
+                <h1
+                    className="query-dropdown-index-item-title"
+                >
+                    {this.props.book.title.slice(0, 50)}
+                </h1>
+
+                <h1
+                    className="query-dropdown-index-item-author"
+                >
+                    {this.props.book.author}
+                </h1>
+            </div>
+        </Link>
+    )}
+
+
+    render() {
+        if(this.props.modalType === "public"){
+            return this.publicShow()
+        } else if (this.props.modalType === "userNew"){
+            return this.userNew()
+        }
     }
 }
 
