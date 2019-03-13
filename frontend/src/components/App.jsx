@@ -1,0 +1,36 @@
+import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
+import './app.css'
+
+// App
+  import Splash from './splash';
+  import NavBarContainer from './navbar/navBarContainer';
+  // navBarContainer
+  // MainPage
+
+// Auth Related
+  import SignupFormContainer from './session/signupFormContainer';
+  import LoginFormContainer from './session/loginFormContainer';
+
+// Book Related
+  import BooksIndexContainer from './books/booksIndexContainer';
+
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <NavBarContainer />
+        <AuthRoute path="/" component={Splash} />
+        <Switch>
+          <AuthRoute path="/login" component={LoginFormContainer} />
+          <AuthRoute path="/signup" component={SignupFormContainer} />
+        </Switch>
+          <Route path="/shelf/:userId" component={BooksIndexContainer} />
+      </div>
+    );
+  }
+}
+
+export default App;
