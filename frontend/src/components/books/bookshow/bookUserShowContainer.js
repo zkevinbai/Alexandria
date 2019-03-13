@@ -1,13 +1,17 @@
-import {connect} from 'redux';
+import { connect } from 'react-redux';
 import BookShow from './bookShow';
 import { removeUserBook } from '../../../actions/bookActions';
 
-const mapStateToProps = (storeState) = {
-
+const mapStateToProps = (storeState) => {
+    return {
+        actionType: "removeUserBook"
+    };
 };
 
-const mapDispatchToProps = (dispatch) = ({
-    action: (data) => dispatch(removeUserBook(data)) 
-});
+const mapDispatchToProps = (dispatch) => {
+    return {
+        action: (data) => dispatch(removeUserBook(data))
+    };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookShow);
