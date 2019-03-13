@@ -6,6 +6,12 @@ export const queryBooks = (queryString) => {
         .then( json => ({data: json}) );
 };
 
+export const queryBook = (queryBookId) => {
+    return fetch(`https://www.googleapis.com/books/v1/volumes/${queryBookId}`)
+        .then( res => res.json())
+        .then( json => ({data: json}) );
+};
+
 export const getBooks = (userId) => {
     return axios.get(`api/books/user/${userId}`);
 };
