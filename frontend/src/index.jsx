@@ -6,7 +6,7 @@ import jwt_decode from 'jwt-decode';
 import { setAuthToken } from './util/sessionApiUtil';
 import { logout } from './actions/sessionActions';
 import {narrowSearchResults} from './util/searchParseUtil';
-import { queryGoogleBooks } from './actions/bookActions';
+import { queryGoogleBooks, queryGoogleBook } from './actions/bookActions';
 
 import * as BookApiUtil from './util/bookApiUtil';
 import * as BookActions from './actions/bookActions';
@@ -38,9 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Window Actions ----------------------------------------------------------
     //* Book Actions -------------------------------------------------------
     window.queryBooks = BookApiUtil.queryBooks;
-    window.queryGoogleBooks = BookActions.queryGoogleBooks;
+    window.queryBook = BookApiUtil.queryBook;
     window.narrowSearchResults = narrowSearchResults;
+
     window.queryGoogleBooks = queryGoogleBooks;
+    window.queryGoogleBook = queryGoogleBook;
     // Window Store ------------------------------------------------------------
     window.store = store;
     window.getState = store.getState;
