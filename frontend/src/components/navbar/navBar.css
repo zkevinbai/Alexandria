@@ -1,12 +1,17 @@
 #site-title {
   font-family: "Arbutus Slab";
   margin-left: 15px;
-  font-size: 20px;
+  font-size: 28px;
   justify-self: start
+}
+
+#site-title:hover {
+  text-decoration: none;
 }
 
 .nav-content{
   width: 100%;
+  min-height: 38px;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(2, auto);
@@ -21,17 +26,52 @@
   justify-self: center;
 }
 
-.nav-content > div {
+.nav-content .login-signup-buttons {
   margin-right: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  color: white
+  color: white;
+  align-content: center
+}
+
+.nav-content .logout-button {
+  margin-right: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  color: white;
+  align-content: center
+}
+
+.login-signup-buttons > *, .logout-button {
+  border-radius: 5px;
+  padding: 7px;
+  text-align: center;
+  margin: 0 8px;
+  background-color: #969696;
+  color: white;
 }
 
 .nav-content a:hover {
-  text-decoration: underline
+  text-decoration: underline;
 }
 
 .logout-button{
   justify-self: end;
+}
+
+.logout-button button {
+  background: none;
+  border: none;
+  font-family: "Source Sans Pro";
+  font-size: 16px;
+  color: white;
+}
+
+.logout-button button:hover {
+  text-decoration: underline;
+  cursor: pointer
+}
+
+.nav-search-bar {
+  background: none;
 }

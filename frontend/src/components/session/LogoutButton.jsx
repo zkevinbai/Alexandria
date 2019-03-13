@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './session.css'
+import './session.css';
+import '../navbar/navBar.css'
 
 export default class LogoutButton extends Component {
   constructor(props){
@@ -14,7 +15,7 @@ export default class LogoutButton extends Component {
 
   render() {
     return (
-      <div>
+      <div className="logout-button">
           <button onClick={this.handleLogout}>Logout</button>
       </div>
     )

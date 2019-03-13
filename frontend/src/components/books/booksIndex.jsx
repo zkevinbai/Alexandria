@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import BooksIndexItem from './booksIndexItem';
+import './booksIndex.css'
 
 export default class BooksIndex extends Component {
   
