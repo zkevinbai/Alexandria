@@ -12,7 +12,7 @@ export default class Splash extends Component {
           
           <div className="splash-image">
             <div className="splash-image-text">
-              <h1>Track your reading with Alexandria</h1>
+              <h1>Track your books with Alexandria</h1>
             </div>
             <div className="splash-search-bar">
               <SearchBarContainer />
@@ -20,7 +20,9 @@ export default class Splash extends Component {
           </div>
           
           <div className="splash-middle-text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed lectus felis. Duis vitae nisi turpis. Curabitur in ligula nec nisi bibendum auctor. Duis pellentesque nunc at dictum ullamcorper. Pellentesque dictum viverra est vestibulum hendrerit. </p>
+            <p>
+              The Library of Alexandria was the most significant library of antiquity, we aim to bring it back.  Alexandria is built by readers for readers.  We help you keep track of your reading interest.  Share your books with your friends, and recommend you new books based on what you’ve read. 
+            </p>
           </div>
           
           <div className="splash-info-box">
