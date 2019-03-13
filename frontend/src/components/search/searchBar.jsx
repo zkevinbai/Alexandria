@@ -51,7 +51,7 @@ export default class searchBar extends Component {
                         onChange={this.handleChange}
                         type="text" 
                         value={this.state.queryString}
-                        placeholder="Search for any book" 
+                        placeholder="Search for a book" 
                     />
                     <input 
                         type="submit"

@@ -1,12 +1,24 @@
 #site-title {
-  font-family: "Arbutus Slab";
   margin-left: 15px;
   font-size: 28px;
-  justify-self: start
+  justify-self: start;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, auto)
 }
 
 #site-title:hover {
   text-decoration: none;
+}
+
+#site-title img {
+  width: 41px;
+  margin-right: 10px;
+  filter: grayscale(1);
+}
+
+#site-title h3 {
+  font-family: "Arbutus Slab"
 }
 
 .nav-content{
@@ -17,13 +29,17 @@
   grid-template-columns: repeat(2, auto);
   justify-items: end; 
   grid-column-gap: .75rem;
-  padding: 15px 0;
   background-color: #253d5b;
   color: white;
+  padding-bottom: 12px;
 }
 
 .nav-search-bar {
-  justify-self: center;
+  justify-self: start;
+}
+
+.nav-search-bar .query {
+  padding: 0
 }
 
 .nav-content .login-signup-buttons {
@@ -31,11 +47,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: white;
-  align-content: center
+  align-content: center;
+  margin-top: 15px
 }
 
 .nav-content .logout-button {
   margin-right: 15px;
+  margin-top: 15px;
   display: grid;
   grid-template-columns: 1fr;
   color: white;

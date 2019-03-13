@@ -7,8 +7,9 @@ const mapStateToProps = (storeState) => {
     if (storeState.session.user){
         return {
             userId: storeState.session.user.id
-        };
-    }
+        } 
+    } else return {}
+   
 
 };
 
