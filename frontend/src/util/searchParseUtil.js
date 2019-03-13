@@ -1,13 +1,11 @@
-
-
 export const narrowSearchResults = searchResults => {
-  const firstFiveResults = searchResults.data.items.slice(0, 5);
-  let firstFiveBooks = [];
-  for(let i = 0; i < 5; i++){
-    firstFiveBooks.push(translateBook(firstFiveResults[i]));
+  const firstTenResults = searchResults.data.items;
+  let firstTenBooks = [];
+  for (let i = 0; i < 10; i++) {
+    firstTenBooks.push(translateBook(firstTenResults[i]));
   }
-  return firstFiveBooks;
-}
+  return firstTenBooks;
+};
 
 const translateBook = bookResult => {
   let book = {};
