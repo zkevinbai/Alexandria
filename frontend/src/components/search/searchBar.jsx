@@ -37,6 +37,10 @@ export default class searchBar extends Component {
         });
     }
 
+    componentWillUnmount(){
+        this.props.clearSearch();
+    }
+
     render() {
         return (
         <div className="query">

@@ -6,8 +6,6 @@ import './app.css'
 // App
   import Splash from './splash';
   import NavBarContainer from './navbar/navBarContainer';
-  // navBarContainer
-  // MainPage
 
 // Auth Related
   import SignupFormContainer from './session/signupFormContainer';
@@ -17,13 +15,12 @@ import './app.css'
   import BooksIndexContainer from './books/booksIndexContainer';
   import BookShowContainer from './books/bookShowContainer';
 
-
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavBarContainer />
-        <AuthRoute path="/" component={Splash} />
+          <NavBarContainer />
+          <AuthRoute path="/" component={Splash} />
         <Switch>
           <AuthRoute path="/login" component={LoginFormContainer} />
           <AuthRoute path="/signup" component={SignupFormContainer} />
