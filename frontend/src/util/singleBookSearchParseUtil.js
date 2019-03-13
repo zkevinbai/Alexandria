@@ -22,7 +22,7 @@ export const translateBook = bookResult => {
     }
 
     if (bookResult.description) {
-        book.description = bookResult.description;
+        book.description = bookResult.description.slice(3, bookResult.description.length - 3);
     } else {
         book.description = 'A great read!';
     }

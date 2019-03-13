@@ -11,10 +11,15 @@ export default class bookShow extends Component {
     }
 
     render() {
+        debugger
         return (
         <div className="book-show">
-
-            <img src={this.props.book.imageUrl} />
+            {
+                this.props.book.imageLinks ? 
+                    <img src={this.props.book.imageUrl} />
+                :
+                    <img src="" />
+            }
             <div
                 className="book-show-heading-text"
             >
