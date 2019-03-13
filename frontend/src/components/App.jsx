@@ -22,8 +22,8 @@ class App extends Component {
     return (
       <div className="App">
         <NavBarContainer />
+        <AuthRoute path="/" component={Splash} />
         <Switch>
-          <AuthRoute exact path="/" component={Splash} />
           <AuthRoute path="/login" component={LoginFormContainer} />
           <AuthRoute path="/signup" component={SignupFormContainer} />
         </Switch>

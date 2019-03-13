@@ -25,17 +25,17 @@ export default class Splash extends Component {
           
           <div className="splash-info-box">
             <div>
-              <i class="fas fa-search"></i>
+              <i className="fas fa-search"></i>
               <h3>Track your reading</h3>
               <p>Keep track of what you're reading, what you've read, and what you want to read. </p>
             </div>
             <div>
-              <i class="fas fa-book"></i>
+              <i className="fas fa-book"></i>
               <h3>Meet your goals</h3>
               <p>Set and track reading goals to help you read more.</p>
             </div>
             <div>
-              <i class="fas fa-bolt"></i>
+              <i className="fas fa-bolt"></i>
               <h3>Find new books</h3>
               <p>Get reading suggestions tailored to your taste along with curated picks from our team.</p>
             </div>

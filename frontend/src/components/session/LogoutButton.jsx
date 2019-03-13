@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './session.css'
 
 export default class LogoutButton extends Component {
   constructor(props){

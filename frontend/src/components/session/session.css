@@ -1,0 +1,70 @@
+.session-form-wrapper {
+    position: fixed;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-content: start
+}
+
+.session-form-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.900);
+}
+
+.session-form {
+    width: 300px;
+    height: auto;
+    padding: 20px 0;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-row-gap: 1.5rem;
+    grid-template-columns: 80%;
+    border-radius: 5px;
+    top: 175px;
+    z-index: 2;
+    position: relative;
+    background-color: #c6878f;
+    font-family: "Source Sans Pro";
+}
+
+.session-form i {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+}
+
+.session-form h1 {
+    font-weight: 600;
+    /* color: #9199da */
+}
+
+.session-form input {
+    padding-left: 10px;
+    height: 40px;
+    font-size: 20px
+}
+
+.session-form ::placeholder {
+    font-size: 20px;
+    font-family: "Source Sans Pro"
+}
+
+.session-form-buttons {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: stretch;
+    grid-row-gap: .25rem
+}
+
+.session-form button {
+    height: 40px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Source Sans Pro"
+}

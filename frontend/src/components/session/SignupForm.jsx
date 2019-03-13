@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import './session.css'
+
 
 export default class SignupForm extends Component {
   
@@ -19,7 +22,7 @@ export default class SignupForm extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.signedIn === true) {
-      this.props.history.push('/login');
+      this.props.login(this.state)
     }
 
     this.setState({
@@ -36,7 +39,12 @@ export default class SignupForm extends Component {
   handleSubmit(e) {
       e.preventDefault();
       this.props.signup(this.state)
-      this.props.history.push("/")
+        // .then(() => this.props.login(this.state))
+        .then(() => {
+          if (this.state.errors === {}) {
+            this.props.history.push("/")
+          }
+      })
   }
 
   renderErrors() {
@@ -53,8 +61,15 @@ export default class SignupForm extends Component {
   
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
+      <div className="session-form-wrapper">
+        <div className="session-form-background"></div>
+        <form
+            className="session-form" 
+            onSubmit={this.handleSubmit}>
+            <NavLink to="/">
+              <i className="fas fa-window-close"></i>
+            </NavLink>
+            <h1>Sign Up</h1>
             <input 
                 type="text" 
                 value={this.state.email}
@@ -64,7 +79,7 @@ export default class SignupForm extends Component {
                 type="text" 
                 value={this.state.handle}
                 onChange={this.handleChange('handle')}
-                placeholder="Email" />
+                placeholder="Username" />
             <input 
                 type="password" 
                 value={this.state.password}
@@ -75,7 +90,12 @@ export default class SignupForm extends Component {
                 value={this.state.password2}
                 onChange={this.handleChange('password2')}
                 placeholder="Confirm Password" />
-            <button>Sign Up</button>
+            <div className="session-form-buttons">
+                <button>Sign Up</button>
+                <NavLink to="/login">
+                    <button>Already a user? Log in instead!</button>
+                </NavLink>
+              </div>
             {this.renderErrors()}
         </form>
       </div>
