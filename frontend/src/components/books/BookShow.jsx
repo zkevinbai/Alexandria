@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './bookShow.css';
 
 export default class BookShow extends Component {
   constructor(props){
@@ -47,11 +48,11 @@ export default class BookShow extends Component {
     );
 
     return (
-      <div className="show-page">
-        <div>
+      <div className="show-page-wrapper">
+        <div className="show-page-book-image">
           <img src={this.props.book.imageUrl} alt=""/>
         </div>
-        <div>
+        <div className="show-page-buttons">
           {userActionButtons}
         </div>
         <div>{this.props.book.title}</div>

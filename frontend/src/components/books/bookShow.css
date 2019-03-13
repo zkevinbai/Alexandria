@@ -1,0 +1,15 @@
+.show-page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(6, auto);
+}
+
+.show-page-book-image {
+    grid-column: 1 / 2;
+    grid-row: 1 / 6
+}
+
+.show-page-buttons {
+    grid-column: 1 / 2;
+    grid-row: 6 / 7
+}
