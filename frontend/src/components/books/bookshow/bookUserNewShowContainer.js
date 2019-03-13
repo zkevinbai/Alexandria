@@ -4,7 +4,8 @@ import { addUserBook } from '../../../actions/bookActions';
 
 const mapStateToProps = (storeState, ownProps) => {
     return {
-        actionType: "addUserBook"
+        actionType: "addUserBook",
+        userId: storeState.session.user.id
     };
 };
 

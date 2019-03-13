@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Route, Redirect} from 'react-router-dom';
 import BookPublicShowContainer from '../../books/bookshow/bookPublicShowContainer';
 import BookUserNewShowContainer from '../../books/bookshow/bookUserNewShowContainer';
 export default class searchBarDropdownItem extends Component {
@@ -6,31 +7,33 @@ export default class searchBarDropdownItem extends Component {
         super(props);
     
         this.handleClick = this.handleClick.bind(this);
+        this.whichModal = this.whichModal.bind(this);
+    }
+
+    handleClick(book) {
+        return (e) => {
+            this.props.addUserBook({
+                userId: this.props.userId,
+                book
+            });
+        };
     }
 
     // handleClick(book) {
     //     return (e) => {
-    //         this.props.addUserBook({
-    //             userId: this.props.userId,
-    //             book
-    //         });
+    //         console.log("click");
+    //         debugger
+    //         this.whichModal(book);
     //     };
     // }
 
-    handleClick(book) {
-        return (e) => {
-            console.log("click");
-            this.whichModal(book);
-        };
-    }
-
-    whichModal(book){
-        if (this.props.modalType === "public") {
-            return < BookPublicShowContainer book={book} />
-        } else if (this.props.modalType === "userNew") {
-            return < BookUserNewShowContainer book={book} />
-        }
-    }
+    // whichModal(book){
+    //     if (this.props.modalType === "public") {
+    //         return < BookPublicShowContainer book={book} />
+    //     } else if (this.props.modalType === "userNew") {
+    //         return < BookUserNewShowContainer book={book} />
+    //     }
+    // }
 
     render() {
         return (

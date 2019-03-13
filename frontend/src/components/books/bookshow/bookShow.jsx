@@ -6,11 +6,8 @@ export default class bookShow extends Component {
         super(props);
     }
 
-    componentDidMount(){
-        this.props.fetchBooks();
-    }
-
     render() {
+        debugger
         return (
         <div className="book-show">
 
@@ -25,7 +22,7 @@ export default class bookShow extends Component {
             <div
                 className="book-show-info-text"
             >
-                <h1>Published Date: {this.props.book.publishedDate}</h1>
+                <h1>Published: {this.props.book.publishedDate}</h1>
                 <h1>Genre: {this.props.book.genre}</h1>
                 <h1>PageCount: {this.props.book.pageCount}</h1>
             </div>
