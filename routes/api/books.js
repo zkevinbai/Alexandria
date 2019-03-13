@@ -14,18 +14,23 @@ router.get('/user/:userId', (req, res) => {
 
 router.post('/user/:userId', passport.authenticate('jwt', {session: false}), 
   (req, res) => {
-    console.log(req.body);
-    const newBook = new Book({
-      user: req.params.userId,
-      title: req.body.title,
-      author: req.body.author,
-      genre: req.body.genre,
-      description: req.body.description,
-      publishedDate: req.body.publishedDate,
-      pageCount: req.body.pageCount,
-      imageUrl: req.body.imageUrl
-    })
-    newBook.save().then(book => res.json(book));
+    const title = req.body.title
+    Book.findOne({title})
+      .then(book => {
+        if (!book) {
+          const newBook = new Book({
+            user: req.params.userId,
+            title: req.body.title,
+            author: req.body.author,
+            genre: req.body.genre,
+            description: req.body.description,
+            publishedDate: req.body.publishedDate,
+            pageCount: req.body.pageCount,
+            imageUrl: req.body.imageUrl
+          })
+          newBook.save().then(book => res.json(book));
+        } else return
+      })
   })
 
   router.get('/:bookId', (req, res) => {
