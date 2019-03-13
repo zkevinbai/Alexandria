@@ -14,20 +14,27 @@ export default class bookShow extends Component {
         return (
         <div className="book-show">
             <div className="book-show-content">
-                <img src={this.props.book.imageUrl} />
-                <div
-                    className="book-show-heading-text"
-                >
-                    <h1>{this.props.book.title}</h1>
-                    <h1>{this.props.book.author}</h1>
-                </div>
+                <div className="book-show-head">
+                    <img src={this.props.book.imageUrl} />
 
-                <div
-                    className="book-show-info-text"
-                >
-                    <h1>Published: {this.props.book.publishedDate}</h1>
-                    <h1>Genre: {this.props.book.genre}</h1>
-                    <h1>Page Count: {this.props.book.pageCount}</h1>
+                    <div
+                        className="book-show-header"
+                    >
+                        <div
+                            className="book-show-heading-text"
+                        >
+                            <h1>{this.props.book.title}</h1>
+                            <h1>{this.props.book.author}</h1>
+                        </div>
+
+                        <div
+                            className="book-show-info-text"
+                        >
+                            <h1>{this.props.book.publishedDate}</h1>
+                            <h1>Genre: {this.props.book.genre}</h1>
+                            <h1>Page Count: {this.props.book.pageCount}</h1>
+                        </div>
+                    </div>
                 </div>
 
                 <p

@@ -21,4 +21,19 @@
 
     display: grid;
     align-items: center;
+    grid-template-rows: 2fr 1fr;
+}
+
+.book-show-head{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.book-show-head img{
+    grid-column: 1;
+
+    margin-left: 25px;
+    height: 120%;
 }
