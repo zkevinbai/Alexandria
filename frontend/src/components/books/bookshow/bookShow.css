@@ -47,6 +47,7 @@
 
     margin-left: 25px;
     height: 120%;
+    max-height: 350px;
 }
 
 .book-show-description {
