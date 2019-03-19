@@ -21,10 +21,21 @@
 
     display: grid;
     align-items: center;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 1fr, 2fr 1fr;
+    grid-template-rows: 0.1fr, 2fr 1fr;
+}
+
+.book-show-content i{
+    grid-row: 1;
+    justify-self: end;
+    padding-right: 3vw;
+    font-size: 35px;
+    cursor: pointer;
 }
 
 .book-show-head{
+    grid-row: 2;
+
     display: grid;
     align-items: center;
     justify-content: center;
@@ -36,4 +47,8 @@
 
     margin-left: 25px;
     height: 120%;
+}
+
+.book-show-description {
+    grid-row: 3;
 }
