@@ -16,6 +16,7 @@
     grid-row: 1;
     height: 100%;
     padding: 5px;
+    padding: 15px;
     background: rgb(248, 248, 248);
     border-radius: 10px;
 
@@ -25,6 +26,10 @@
     grid-template-rows: 0.1fr, 2fr 1fr;
 
     font-family: "Source Sans Pro"
+}
+
+.book-show-content h1{
+    font-size: 2.5vh;
 }
 
 .book-show-content i{

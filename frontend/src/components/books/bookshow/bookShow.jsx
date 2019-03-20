@@ -14,10 +14,13 @@ export default class bookShow extends Component {
         return (
         <div className="book-show">
             <div className="book-show-content">
+                <div className="book-show-headline">                
+                <h1>{this.props.book.title}</h1>
                 <i 
                     className="fas fa-times"
                     onClick={() => this.props.history.goBack()}
                 ></i>
+                </div>
                 <div className="book-show-head">
                     <img src={this.props.book.imageUrl} />
                     <div
@@ -26,7 +29,6 @@ export default class bookShow extends Component {
                         <div
                             className="book-show-heading-text"
                         >
-                            <h1>{this.props.book.title}</h1>
                             <h1>{this.props.book.author}</h1>
                         </div>
 
