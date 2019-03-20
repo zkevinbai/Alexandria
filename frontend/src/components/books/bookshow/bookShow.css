@@ -34,9 +34,10 @@
 
 .book-show-headline{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 15fr 1fr;
 
     align-self: center;
+    justify-items: center;
 }  
 
 .book-show-headline i{
@@ -53,8 +54,12 @@
 
     display: grid;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     grid-template-columns: 1fr 1fr;
+}
+
+.book-show-header{
+    justify-self: start;
 }
 
 .book-show-head img{
