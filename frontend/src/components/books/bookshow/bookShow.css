@@ -32,8 +32,16 @@
     font-size: 2.5vh;
 }
 
-.book-show-content i{
+.book-show-headline{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+    align-self: center;
+}  
+
+.book-show-headline i{
     grid-row: 1;
+    grid-column: 2;
     justify-self: end;
     padding-right: 3vw;
     font-size: 35px;
