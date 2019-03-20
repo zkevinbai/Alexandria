@@ -10,7 +10,7 @@
     overflow-y: scroll;
     height: 85vh;
     -webkit-align-items: baseline;
-    align-items: baseline;
+    align-items: center;
 }
 
 .books-index-item {

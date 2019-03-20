@@ -35,6 +35,7 @@ export default class LoginForm extends Component {
   
     handleSubmit(e) {
         e.preventDefault();
+        console.log('logging in!')
         this.props.login(this.state).then(() => {
             if (this.state.errors === {}) {
               this.props.history.push("/")

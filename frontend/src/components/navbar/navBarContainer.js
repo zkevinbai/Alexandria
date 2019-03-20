@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import NavBar from './NavBar';
 
 const mstp = state => ({
-  signedIn: state.session.isAuthenticated,
+  session: state.session
 })
 
 const mdtp = dispatch => ({
