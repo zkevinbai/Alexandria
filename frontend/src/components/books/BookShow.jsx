@@ -58,15 +58,15 @@ export default class BookShow extends Component {
         </div>
         <div className="show-page-description">
           <div>
-            {this.props.book.description}
-          </div>
-          <div>
             <h3>Title</h3>
               {this.props.book.title}
           </div>
           <div>
            <h3>Author</h3>
             {this.props.book.author}
+          </div>
+          <div>
+            {this.props.book.description}
           </div>
           <div>
           <h3>Published</h3>

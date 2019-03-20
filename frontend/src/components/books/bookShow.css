@@ -9,7 +9,7 @@
     padding-top: 50px;
     align-content: start;
     min-height: 100%;
-
+    box-shadow: inset 2px 0px 113px -12px rgb(253, 98, 98)
 }
 
 .show-page-book-image {
@@ -42,7 +42,7 @@
     padding-bottom: 15px
 }
 
-.show-page-description > div:first-child {
+.show-page-description > div:nth-child(3) {
     padding-bottom: 30px
 }
 
