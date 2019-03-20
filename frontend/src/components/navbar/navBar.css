@@ -42,12 +42,11 @@
   justify-self: start;
   display: grid;
   grid-template-columns: auto auto;
+  color: #253d5b;
 }
 
 .nav-search-bar img {
-  width: 41px;
   margin-right: 10px;
-  filter: grayscale(1);
 }
 
 .nav-search-bar .query {
