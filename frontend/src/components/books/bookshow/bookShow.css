@@ -29,7 +29,7 @@
 }
 
 .book-show-content h1{
-    font-size: 2.5vh;
+    font-size: 30px;
 }
 
 .book-show-headline{
@@ -62,7 +62,7 @@
 
     margin-left: 25px;
     height: 120%;
-    max-height: 350px;
+    height: 250px;
 }
 
 .book-show-description {
