@@ -6,6 +6,7 @@ export default class BookShow extends Component {
     super(props)
     this.handleAdd = this.handleAdd.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.back = this.back.bind(this);
   }
 
   componentDidMount(){
@@ -25,6 +26,10 @@ export default class BookShow extends Component {
     this.props.history.replace(`/shelf/${this.props.currentUserId}`);
   }
 
+  back(){
+    this.props.history.replace(`/shelf/${this.props.currentUserId}`);
+  }
+
   render () {
     if(!this.props.book){
       return null;
@@ -34,11 +39,11 @@ export default class BookShow extends Component {
           this.props.currentUserId ? 
             (
               this.props.onShelf ? (
-                <button className="delete-book-button" onClick={this.handleDelete}>
+                <button className="delete-button" onClick={this.handleDelete}>
                   Delete Book
                 </button>
                 ) : ( 
-                <button className="add-book-button" onClick={this.handleAdd}>
+                <button className="add-button" onClick={this.handleAdd}>
                   Add Book
                 </button>
                 ) 
@@ -55,6 +60,9 @@ export default class BookShow extends Component {
         </div>
         <div className="show-page-buttons">
           {userActionButtons}
+          <button className="back-button" onClick={this.back}>
+            Back to Bookshelf 
+          </button>
         </div>
         <div>
           <h3>Title</h3>

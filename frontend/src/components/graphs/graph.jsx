@@ -2,7 +2,7 @@ import * as d3 from 'd3';
 import React, { Component } from 'react';
 import {withRouter} from 'react-router-dom';
 
-class Graph extends Component {
+class Graph extends React.Component {
 
   constructor(props){
     super(props)
@@ -75,7 +75,7 @@ class Graph extends Component {
     this.makeChart();
   }
 
-  componentDidUpdate(){
+  shouldComponentUpdate(){
     debugger;    
   }
   
