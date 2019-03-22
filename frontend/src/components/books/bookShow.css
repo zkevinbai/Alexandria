@@ -26,11 +26,12 @@
     width: 100%
 }
 
-
 .show-page-buttons {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     justify-self: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .show-page-description {
@@ -50,8 +51,20 @@
     border-radius: 5px;
     padding: 7px;
     text-align: center;
-    margin: 0 8px;
+    margin: 8px;
     background-color: #969696;
     color: white;
     border: none;
 }
+
+.back-button:hover {
+    text-decoration: underline;
+}
+.delete-button:hover {
+    text-decoration: underline;
+}
+
+.show-page-buttons button:active {
+    outline: none;
+}
+
