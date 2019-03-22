@@ -9,7 +9,7 @@
     grid-gap: 1.5rem;
     height: fit-content;
     -webkit-align-items: baseline;
-    align-items: baseline;
+    align-items: center;
 }
 
 .books-index-item {

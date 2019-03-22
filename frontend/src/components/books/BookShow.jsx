@@ -64,28 +64,30 @@ export default class BookShow extends Component {
             Back to Bookshelf 
           </button>
         </div>
-        <div>
-          <h3>Title</h3>
-          {this.props.book.title}
-        </div>
-        <div>
-          <h3>Author</h3>
-          {this.props.book.author}
-        </div>
-        <div>
-          <h3>Published</h3>
-          {this.props.book.publishedDate}
-        </div>
-        <div>
-          <h3>Genre</h3>
-          {this.props.book.genre}
-        </div>
-        <div>
-          <h3>Page Count</h3>
-          {this.props.book.pageCount}
-        </div>
         <div className="show-page-description">
-          {this.props.book.description}
+          <div>
+            <h3>Title</h3>
+              {this.props.book.title}
+          </div>
+          <div>
+           <h3>Author</h3>
+            {this.props.book.author}
+          </div>
+          <div>
+            {this.props.book.description}
+          </div>
+          <div>
+          <h3>Published</h3>
+            {this.props.book.publishedDate}
+          </div>
+          <div>
+          <h3>Genre</h3>
+            {this.props.book.genre}
+          </div>
+          <div>
+          <h3>Page Count</h3>
+            {this.props.book.pageCount}
+          </div>
         </div>
       </div>
       </>
