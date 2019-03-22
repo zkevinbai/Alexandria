@@ -7,8 +7,7 @@
     align-self: stretch;
     justify-items: center;
     grid-gap: 1.5rem;
-    overflow-y: scroll;
-    height: 85vh;
+    height: fit-content;
     -webkit-align-items: baseline;
     align-items: baseline;
 }
@@ -16,4 +15,27 @@
 .books-index-item {
     border: 10px solid rgba(103, 105, 124, .4);
     border-radius: 5px;
+}
+
+.book-shelf {
+    overflow-y: scroll;
+}
+
+.graph {
+    background-color: rgb(90, 151, 151);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.graph svg {
+   
+}
+
+.graph-label {
+    font-size: 28px;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
