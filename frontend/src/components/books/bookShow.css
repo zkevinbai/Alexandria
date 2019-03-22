@@ -22,13 +22,9 @@
     border-radius: 5px;
 }
 
-
-
 .show-page-book-image img {
     width: 100%
 }
-
-
 
 .show-page-buttons {
     grid-column: 1 / 2;
@@ -66,5 +62,9 @@
 }
 .delete-button:hover {
     text-decoration: underline;
+}
+
+.show-page-buttons button:active {
+    outline: none;
 }
 

@@ -11,7 +11,7 @@ class Graph extends React.Component {
   }
  
   makeChart(){
-    const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+    const colorScale = d3.scaleOrdinal(d3.schemePaired);
     const data = this.getGenreArray();
     const r = 275; // outer radius 
     //put pie chart in graph div from books index
