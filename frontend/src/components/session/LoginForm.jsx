@@ -10,7 +10,7 @@ export default class LoginForm extends Component {
             password: '',
             errors: {}
         }
-  
+      document.body.className = 'modal-open';
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.renderErrors = this.renderErrors.bind(this)
@@ -36,7 +36,8 @@ export default class LoginForm extends Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.login(this.state).then(() => {
-            if (this.state.errors === {}) {
+          if (Object.keys(this.state.errors).length === 0) {
+              document.body.className = "";
               this.props.history.replace("/")
             }
         })
@@ -46,14 +47,16 @@ export default class LoginForm extends Component {
       e.preventDefault();
       this.setState({
         email: 'demo@user.com',
-        password: 'booksrule'
+        password: 'booksrule', 
+        errors: {}
       });
       this.props.login({
         email: 'demo@user.com',
         password: 'booksrule'
       }).then(() => {
-        if (this.state.errors === {}) {
-          this.props.history.replace("/")
+        if (Object.keys(this.state.errors).length === 0) {
+          document.body.className = "";
+          // this.props.history.replace("/")
         }
     }) 
       
@@ -70,6 +73,10 @@ export default class LoginForm extends Component {
             </ul>
         )
     }
+
+    resetScroll(){
+      document.body.className = "";
+    }
     
     render() {
       return (
@@ -78,7 +85,7 @@ export default class LoginForm extends Component {
           <form 
             onSubmit={this.handleSubmit}
             className="session-form">
-              <NavLink to="/">
+              <NavLink to="/" onClick={this.resetScroll} >
                 <i className="fas fa-window-close"></i>
               </NavLink>
               <h1>Log In</h1>
@@ -94,7 +101,7 @@ export default class LoginForm extends Component {
                   placeholder="Password" />
               <div className="session-form-buttons">
                 <button onClick={this.handleSubmit}>Log In</button>
-                <NavLink to="/signup">
+                <NavLink to="/signup" onClick={this.resetScroll}>
                     <button>Not a user? Sign up instead!</button>
                 </NavLink>
                 <button onClick={this.handleDemoLogin}>Demo Login</button>

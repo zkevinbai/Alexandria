@@ -68,3 +68,7 @@
     font-weight: 600;
     font-family: "Source Sans Pro"
 }
+
+.modal-open{
+    overflow: hidden;
+}
