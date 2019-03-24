@@ -52,11 +52,15 @@ export default class BookShow extends Component {
                 )
     );
 
+    let classVal;
+    if (this.props.book.imageUrl === 'https://openclipart.org/image/2400px/svg_to_png/211628/Book_thick_generic.png') {
+      classVal = "default-book-show";
+    }
     return (
       <>
       <div className="show-page-wrapper">
         <div className="show-page-book-image">
-          <img src={this.props.book.imageUrl} alt=""/>
+          <img src={this.props.book.imageUrl} className={classVal} alt=""/>
         </div>
         <div className="show-page-buttons">
           {userActionButtons}
