@@ -21,6 +21,7 @@
 
 .session-form {
     width: 300px;
+    overflow-y: scroll;
     height: auto;
     padding: 20px 0;
     display: grid;
@@ -35,6 +36,10 @@
     background-color: #c6878f;
     font-family: "Source Sans Pro";
     margin-bottom: 20px;
+}
+
+.session-form::-webkit-scrollbar{
+    display: none;
 }
 
 .session-form i {
