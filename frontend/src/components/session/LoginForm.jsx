@@ -35,7 +35,6 @@ export default class LoginForm extends Component {
   
     handleSubmit(e) {
         e.preventDefault();
-        console.log('logging in!')
         this.props.login(this.state).then(() => {
             if (this.state.errors === {}) {
               this.props.history.replace("/")
@@ -49,14 +48,14 @@ export default class LoginForm extends Component {
         email: 'demo@user.com',
         password: 'booksrule'
       });
-      setTimeout(() => this.props.login({
+      this.props.login({
         email: 'demo@user.com',
         password: 'booksrule'
       }).then(() => {
         if (this.state.errors === {}) {
           this.props.history.replace("/")
         }
-    }) , 1000)
+    }) 
       
     }
   
@@ -94,7 +93,7 @@ export default class LoginForm extends Component {
                   onChange={this.handleChange('password')}
                   placeholder="Password" />
               <div className="session-form-buttons">
-                <button>Log In</button>
+                <button onClick={this.handleSubmit}>Log In</button>
                 <NavLink to="/signup">
                     <button>Not a user? Sign up instead!</button>
                 </NavLink>
