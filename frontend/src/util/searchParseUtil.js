@@ -17,7 +17,7 @@ const translateBook = bookResult => {
   book.user = null;
   book.title = bookResult.volumeInfo.title;
   book.volumeId = bookResult.id;
-  
+
   if (bookResult.volumeInfo.authors) {
     book.author = bookResult.volumeInfo.authors[0];
   } else {
