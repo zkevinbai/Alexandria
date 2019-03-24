@@ -1,5 +1,5 @@
 import * as d3 from 'd3';
-import React, { Component } from 'react';
+import React from 'react';
 import {withRouter} from 'react-router-dom';
 
 class Graph extends React.Component {
@@ -7,13 +7,14 @@ class Graph extends React.Component {
   constructor(props){
     super(props)
     this.getGenreArray = this.getGenreArray.bind(this);
-    this.books = this.props.books
   }
  
   makeChart(){
+    //clear outdated graphs
+    d3.selectAll("svg").remove();
     const colorScale = d3.scaleOrdinal(d3.schemePaired);
     const data = this.getGenreArray();
-    const r = 275; // outer radius 
+    const r = 250; // outer radius 
     //put pie chart in graph div from books index
     const svg = d3.select(".graph").append("svg")
       .attr("width", 600)
@@ -54,7 +55,7 @@ class Graph extends React.Component {
   }
   
   getGenreArray() {
-    let books =this.books;
+    let books =this.props.books;
     let hash = {};
     Object.values(books).forEach( book => {
       if(hash[book.genre]){
@@ -71,12 +72,13 @@ class Graph extends React.Component {
   }
 
   componentDidMount(){
-    debugger;
     this.makeChart();
   }
 
-  shouldComponentUpdate(){
-    debugger;    
+  componentDidUpdate(prevProps){
+    if(prevProps.books.length !== this.props.books.length){
+      this.makeChart();
+    } 
   }
   
   render(){

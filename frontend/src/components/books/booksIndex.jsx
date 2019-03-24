@@ -8,20 +8,18 @@ import Graph from '../graphs/graph';
 export default class BooksIndex extends Component {
   
     componentDidMount() {
-        this.props.fetchUserBooks(this.props.userId)
-        debugger;
+        if(this.props.books.length === 0){
+            this.props.fetchUserBooks(this.props.userId)
+        }
     }
 
     componentDidUpdate(prevProps) {
-        debugger;
         if(Object.keys(prevProps.books).length !== Object.keys(this.props.books).length){
             this.props.fetchUserBooks(this.props.userId)
         }
-        debugger;
     }
 
     renderBooks() {
-        debugger;
         return Object.values(this.props.books).map(book => <BooksIndexItem key={book.id} book={book}/>)
     }
 
@@ -31,8 +29,7 @@ export default class BooksIndex extends Component {
 
     render() {
         //only return the graph if books are loaded in state
-        debugger;
-        if(this.props.books && this.props.books.length > 1) {
+        if(this.props.books && this.props.books.length > 0) {
             return (
               <div className='book-shelf'>
                 <div className="books-index-wrapper">
@@ -43,15 +40,6 @@ export default class BooksIndex extends Component {
                     <Graph books={this.props.books} />
                 </div>
               </div>
-            )
-        }
-        if (this.props.books) {
-            return (
-                <div className='book-shelf'>
-                    <div className="books-index-wrapper">
-                        {this.renderBooks()}
-                    </div>
-                </div>
             )
         }
          else return <div></div>
