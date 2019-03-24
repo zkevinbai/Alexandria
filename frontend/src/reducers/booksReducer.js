@@ -10,16 +10,25 @@ const booksReducer = (oldState = {}, action) => {
 
     switch(action.type) {
         case RECEIVE_BOOKS:
-            newState = action.books.data;
-            return newState;
+            let changeState = {};
+            action.books.forEach(book => {
+                changeState[book._id] = book;
+            });
+            return changeState;
 
         case RECEIVE_BOOK:
-            newState[action.book.data._id] = action.book.data;
+            newState[action.book._id] = action.book;
             return newState;
 
         case REMOVE_BOOK:
-            delete newState(action.book._id);
-            return newState;
+            let changedState = {};
+            let shelf = Object.keys(newState);
+
+            for (let i = 0; i < shelf.length; i++) {
+                if (shelf[i] === action.bookId) continue;
+                changedState[shelf[i]] = newState[shelf[i]];
+            }
+            return changedState;
 
         default:
             return oldState;
