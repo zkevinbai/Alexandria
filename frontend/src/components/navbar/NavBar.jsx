@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Route, withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import LogoutButtonContainer from '../session/logoutButtonContainer';
 import SearchBarContainer from '../search/searchBarContainer';
 import './navBar.css';

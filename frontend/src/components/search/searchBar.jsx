@@ -5,9 +5,8 @@ export default class searchBar extends Component {
 
     constructor(props) {
         super(props);
-    
         this.state = {
-            queryString: ""
+            queryString: this.props.queryString
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,7 +15,7 @@ export default class searchBar extends Component {
     
     handleSubmit(e) {
         e.preventDefault();
-        this.props.queryGoogleBooks(this.state.queryString);
+        this.props.queryGoogleBooks(this.state.queryString)  
     }
 
     handleChange(e) {
@@ -32,9 +31,13 @@ export default class searchBar extends Component {
             // this.props.queryGoogleBooks(queryString);
         }
 
+        this.props.setQueryString(queryString);
+
         this.setState({
             queryString
         });
+
+
     }
 
     componentWillUnmount(){
@@ -42,30 +45,31 @@ export default class searchBar extends Component {
     }
 
     render() {
-        return (
-        <div className="query">
-            <form 
-                onSubmit={this.handleSubmit}
-                className="query-form"  
-            >
-                <span className="searchbar">
-                        <i className="fas fa-search"></i>
-                    <input 
-                        className="query-form-input"
-                        onChange={this.handleChange}
-                        type="text" 
-                        value={this.state.queryString}
-                        placeholder="Search for a book" 
-                    />
-                    <input 
-                        type="submit"
-                        className="query-form-submit"
-                    />
-                </span>
-                
-            </form>
-            <SearchBarDropdownContainer queryResults={this.props.searchResults} />
-        </div>
-        )
+            return (
+            <div className="query">
+                <form 
+                    onSubmit={this.handleSubmit}
+                    className="query-form"  
+                >
+                    <span className="searchbar">
+                            <i className="fas fa-search"></i>
+                        <input 
+                            className="query-form-input"
+                            onChange={this.handleChange}
+                            type="text" 
+                            value={this.props.queryString}
+                            placeholder="Search for a book" 
+                        />
+                        <input 
+                            type="submit"
+                            className="query-form-submit"
+                        />
+                    </span>
+                    
+                </form>
+                <SearchBarDropdownContainer queryResults={this.props.searchResults} />
+            </div>
+            )
+        // }
     }
 }
