@@ -17,7 +17,7 @@ export default class searchBarDropdownItem extends Component {
                 userId: this.props.userId,
                 book
             })
-                this.props.clearSearch()
+            .then(() => this.props.clearSearch())
             
         };
     }
