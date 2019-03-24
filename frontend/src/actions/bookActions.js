@@ -17,7 +17,7 @@ export const CLEAR_SEARCH = "CLEAR_SEARCH";
 
 export const RECEIVE_BOOKS = "RECEIVE_BOOKS";
 export const RECEIVE_BOOK = "RECEIVE_BOOK";
-export const REMOVE_BOOK = "REMOVE_BOOK";
+export const REMOVE_BOOK = "RECEIVE_BOOK";
 
 // Action Creators
 
@@ -37,24 +37,20 @@ export const clearSearch = () => ({
 });
 
     // Book Actions 
-export const receiveBooks = res => {
-    const books = res.data;
-    const type = RECEIVE_BOOKS;
-    return({type, books})  
-};
+export const receiveBooks = (books) => ({
+    type: RECEIVE_BOOKS,
+    books
+});
 
-export const receiveBook = res => {
-    const type = RECEIVE_BOOK;
-    const book = res.data;
-    return({type, book})
-};
+export const receiveBook = (book) => ({
+    type: RECEIVE_BOOK,
+    book
+});
 
-export const removeBook = res => {
-    const type = REMOVE_BOOK;
-    const urlArray = res.config.url.split('/');
-    const bookId = urlArray[urlArray.length-1];
-    return({type, bookId})
-};
+export const removeBook = (book) => ({
+    type: REMOVE_BOOK,
+    book
+});
 
 // Thunk Action Creators
 
