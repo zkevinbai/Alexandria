@@ -9,7 +9,6 @@ import {narrowSearchResults} from './util/searchParseUtil';
 import { queryGoogleBooks, queryGoogleBook } from './actions/bookActions';
 
 import * as BookApiUtil from './util/bookApiUtil';
-import * as BookActions from './actions/bookActions';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;

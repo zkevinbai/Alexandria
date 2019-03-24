@@ -14,6 +14,7 @@ import { translateBook } from '../util/singleBookSearchParseUtil';
 export const SEARCH_BOOKS = "SEARCH_BOOKS";
 export const SEARCH_BOOK = "SEARCH_BOOK";
 export const CLEAR_SEARCH = "CLEAR_SEARCH";
+export const RECEIVE_QUERY = "RECEIVE_QUERY";
 
 export const RECEIVE_BOOKS = "RECEIVE_BOOKS";
 export const RECEIVE_BOOK = "RECEIVE_BOOK";
@@ -35,6 +36,11 @@ export const searchBook = (book) => ({
 export const clearSearch = () => ({
     type: CLEAR_SEARCH
 });
+
+export const receiveQuery = query =>  ({
+    type: RECEIVE_QUERY,
+    query
+})
 
     // Book Actions 
 export const receiveBooks = res => ({
