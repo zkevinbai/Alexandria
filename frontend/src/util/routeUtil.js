@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Route, Redirect, withRouter } from 'react-router-dom';
 
 const Auth = ({ component: Component, path, loggedIn, exact, session }) => (
+  
   <Route path={path} exact={exact} render={(props) => (
     !loggedIn ? (
       <Component {...props} />
@@ -10,7 +11,8 @@ const Auth = ({ component: Component, path, loggedIn, exact, session }) => (
       <Redirect to={`/shelf/${session.user.id}`} />
     )
   )} />
-);
+  );
+  
 
 const Protected = ({ component: Component, loggedIn, ...rest }) => (
   <Route

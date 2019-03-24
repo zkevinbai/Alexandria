@@ -4,6 +4,8 @@ import {
     REMOVE_BOOK
 } from '../actions/bookActions';
 
+import { RECEIVE_USER_LOGOUT } from '../actions/sessionActions';
+
 const booksReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
     let newState = Object.assign({}, oldState);
@@ -29,6 +31,9 @@ const booksReducer = (oldState = {}, action) => {
                 changedState[shelf[i]] = newState[shelf[i]];
             }
             return changedState;
+
+        case RECEIVE_USER_LOGOUT:
+            return {};
 
         default:
             return oldState;
