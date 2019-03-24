@@ -24,6 +24,7 @@ export const addBook = (data) => {
 };
 
 export const deleteBook = (bookId) => {
+    
     return axios.delete(`api/books/${bookId}`);
 };
 

@@ -19,7 +19,7 @@ export default class LoginForm extends Component {
   
     componentWillReceiveProps(nextProps) {
       if (nextProps.currentUser === true) {
-        this.props.history.replace('/');
+        this.props.history.push('/');
       }
   
       this.setState({
@@ -36,9 +36,10 @@ export default class LoginForm extends Component {
     handleSubmit(e) {
         e.preventDefault();
         console.log('logging in!')
+        debugger;
         this.props.login(this.state).then(() => {
             if (this.state.errors === {}) {
-              this.props.history.replace("/")
+              this.props.history.push("/")
             }
         })
     }
@@ -54,7 +55,7 @@ export default class LoginForm extends Component {
         password: 'booksrule'
       }).then(() => {
         if (this.state.errors === {}) {
-          this.props.history.replace("/")
+          this.props.history.push("/")
         }
     }) , 1000)
       

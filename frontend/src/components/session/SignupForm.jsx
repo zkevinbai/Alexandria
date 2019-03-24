@@ -42,7 +42,7 @@ export default class SignupForm extends Component {
         // .then(() => this.props.login(this.state))
         .then(() => {
           if (this.state.errors === {}) {
-            this.props.history.push("/")
+            this.props.history.replace("/")
           }
       })
   }

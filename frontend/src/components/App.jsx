@@ -21,14 +21,14 @@ class App extends Component {
     return (
       <div className="App">
           <NavBarContainer />
-          <AuthRoute path="/" component={Splash} />
         <Switch>
-          <AuthRoute path="/book/:volumeId" component={BookPublicShowContainer} />
           <AuthRoute path="/login" component={LoginFormContainer} />
           <AuthRoute path="/signup" component={SignupFormContainer} />
-        </Switch>
+          <AuthRoute path="/book/:volumeId" component={BookPublicShowContainer} />
           <Route path="/shelf/:userId" component={BooksIndexContainer} />
           <Route path={"/books/:bookId"} component={BookShowContainer} />
+          <AuthRoute path="/" component={Splash} />
+        </Switch>
       </div>
     );
   }
