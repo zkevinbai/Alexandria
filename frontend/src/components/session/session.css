@@ -16,6 +16,7 @@
 
 .session-form {
     width: 300px;
+    overflow-y: scroll;
     height: auto;
     padding: 20px 0;
     display: grid;
@@ -24,11 +25,15 @@
     grid-row-gap: 1.5rem;
     grid-template-columns: 80%;
     border-radius: 5px;
-    top: 40px;
+    top: 20px;
     z-index: 2;
     position: relative;
     background-color: #c6878f;
     font-family: "Source Sans Pro";
+}
+
+.session-form::-webkit-scrollbar{
+    display: none;
 }
 
 .session-form i {
