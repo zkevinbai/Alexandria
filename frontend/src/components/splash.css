@@ -39,6 +39,7 @@
 }
 
 .splash-middle-text {
+    height: fit-content;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -47,6 +48,7 @@
     line-height: 2.5rem;
     text-align: center;
     margin: 40px;
+    margin-bottom: 60px;
 }
 
 .splash-info-box {

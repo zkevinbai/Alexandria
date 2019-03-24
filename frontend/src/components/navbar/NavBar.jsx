@@ -5,7 +5,6 @@ import SearchBarContainer from '../search/searchBarContainer';
 import './navBar.css';
 class NavBar extends Component {
 
-  
   render() {
     const authButtons = (
       this.props.session.isAuthenticated ? (
