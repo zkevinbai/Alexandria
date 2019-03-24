@@ -59,9 +59,11 @@
 
 .back-button:hover {
     text-decoration: underline;
+    cursor: pointer
 }
 .delete-button:hover {
     text-decoration: underline;
+    cursor: pointer
 }
 
 .show-page-buttons button:active {

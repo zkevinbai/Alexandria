@@ -20,11 +20,11 @@ export default class BooksIndex extends Component {
     }
 
     renderBooks() {
-        return Object.values(this.props.books).map(book => <BooksIndexItem key={book.id} book={book}/>)
+        return Object.values(this.props.books).map((book, i) => <BooksIndexItem key={i} book={book}/>)
     }
 
     userBookShowModal(book){
-        return < BookUserShowContainer book={book} /> 
+        return <BookUserShowContainer book={book} /> 
     }
 
     render() {

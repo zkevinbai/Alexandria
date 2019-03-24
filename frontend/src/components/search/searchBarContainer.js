@@ -2,13 +2,13 @@ import { connect } from 'react-redux';
 import { queryGoogleBooks, clearSearch } from '../../actions/bookActions';
 import SearchBar from './searchBar';
 
-const mapStateToProps = (storeState, ownProps) => {
+const mapStateToProps = state => {
     return {
-        searchResults: Object.values(storeState.search)
+        searchResults: Object.values(state.search),
     };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
     return {
         clearSearch: () => dispatch(clearSearch()),
         queryGoogleBooks: (queryString) => dispatch(queryGoogleBooks(queryString))
