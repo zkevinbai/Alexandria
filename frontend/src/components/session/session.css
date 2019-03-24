@@ -1,10 +1,14 @@
 .session-form-wrapper {
-    position: fixed;
+    position: absolute;
     display: grid;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     justify-content: center;
-    align-content: start
+    align-content: start;
+    overflow: scroll;
+    z-index: 2
 }
 
 .session-form-background {
@@ -12,6 +16,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.900);
+    z-index: 2
 }
 
 .session-form {
@@ -24,11 +29,12 @@
     grid-row-gap: 1.5rem;
     grid-template-columns: 80%;
     border-radius: 5px;
-    top: 40px;
+    top: 60px;
     z-index: 2;
     position: relative;
     background-color: #c6878f;
     font-family: "Source Sans Pro";
+    margin-bottom: 20px;
 }
 
 .session-form i {

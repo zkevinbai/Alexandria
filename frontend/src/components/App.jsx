@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
+import { AuthRoute } from '../util/routeUtil';
 import './app.css'
 
 // App
@@ -20,15 +20,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <NavBarContainer />
-          <AuthRoute path="/" component={Splash} />
+          <Route path="/" component={NavBarContainer} />
         <Switch>
-          <AuthRoute path="/book/:volumeId" component={BookPublicShowContainer} />
           <AuthRoute path="/login" component={LoginFormContainer} />
           <AuthRoute path="/signup" component={SignupFormContainer} />
         </Switch>
+          <AuthRoute path="/" component={Splash} />
+          <AuthRoute path="/book/:volumeId" component={BookPublicShowContainer} />
           <Route path="/shelf/:userId" component={BooksIndexContainer} />
-          <Route path={"/books/:bookId"} component={BookShowContainer} />
+          <Route path="/books/:bookId" component={BookShowContainer} />
       </div>
     );
   }
