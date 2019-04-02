@@ -45,7 +45,7 @@ export default class BookShowModal extends Component {
                         {this.props.book.description}
                     </p>
 
-                    {bookBuy(this.props.book.title)}
+                    {bookBuy(this.props.book.title, this.props.book.author)}
                 </div>
             </div>
         )
