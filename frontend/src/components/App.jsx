@@ -27,12 +27,12 @@ class App extends Component {
           <AuthRoute path="/signup" component={SignupFormContainer} />
         </Switch>
         <Switch>
+          <Route path="/books/:bookId" component={BookShowContainer} />
           <Route path="/shelf/:userId" component={BooksIndexContainer} />
           <AuthRoute path="/" component={Splash} />
         </Switch>
           <AuthRoute path="/book/:volumeId" component={BookPublicShowContainer} />
           <Route path="/shelf/:userId/book/:volumeId" component={BookUserNewShowContainer} />
-          <Route path="/books/:bookId" component={BookShowContainer} />
       </div>
     );
   }
