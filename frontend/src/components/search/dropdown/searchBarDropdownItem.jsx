@@ -45,7 +45,7 @@ export default class searchBarDropdownItem extends Component {
         return(
         <Link
             className="query-dropdown-index-item"
-            to={`shelf/${this.props.userId}/book/${this.props.book.volumeId}`}
+            to={`/shelf/${this.props.userId}/book/${this.props.book.volumeId}`}
         >
             <img src={this.props.book.imageUrl} />
             <div
@@ -71,29 +71,30 @@ export default class searchBarDropdownItem extends Component {
         if(this.props.modalType === "public"){
             return this.publicShow()
         } else if (this.props.modalType === "userNew"){
-            return(
-                <div
-                    className="query-dropdown-index-item"
-                    onClick={this.handleClick(this.props.book)}
-                >
-                    <img src={this.props.book.imageUrl} />
-                    <div
-                        className="query-dropdown-index-item-text"
-                    >
-                        <h1
-                            className="query-dropdown-index-item-title"
-                        >
-                            {this.props.book.title.slice(0, 50)}
-                        </h1>
+            return this.userNew();
+            // return(
+            //     <div
+            //         className="query-dropdown-index-item"
+            //         onClick={this.handleClick(this.props.book)}
+            //     >
+            //         <img src={this.props.book.imageUrl} />
+            //         <div
+            //             className="query-dropdown-index-item-text"
+            //         >
+            //             <h1
+            //                 className="query-dropdown-index-item-title"
+            //             >
+            //                 {this.props.book.title.slice(0, 50)}
+            //             </h1>
 
-                        <h1
-                            className="query-dropdown-index-item-author"
-                        >
-                            {this.props.book.author}
-                        </h1>
-                    </div>
-                </div>
-            )
+            //             <h1
+            //                 className="query-dropdown-index-item-author"
+            //             >
+            //                 {this.props.book.author}
+            //             </h1>
+            //         </div>
+            //     </div>
+            // )
         }
     }
 }

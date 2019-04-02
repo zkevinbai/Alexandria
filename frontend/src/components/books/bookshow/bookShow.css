@@ -1,35 +1,34 @@
-.book-show{
+.book-show-wrapper {
     position: absolute;
     z-index: 2;
-
+    top: 0;
+    left: 0;
     height: 100%;
-    background: rgba(26,26,26,0.35);
-
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 2fr 1fr;
-    justify-items: center;
+    background-color: rgba(0, 0, 0, 0.685);
 }
 
 .book-show-content{
-    grid-column: 2;
-    grid-row: 1;
-    height: 100%;
-    padding: 5px;
-    padding: 15px;
+    width: 60%;
+    position: relative;
+    top: 10vh;
+    height: 70vh;
+    margin: 0 auto;
+    padding: 30px;
     background: rgb(248, 248, 248);
     border-radius: 10px;
-
     display: grid;
     align-items: center;
     grid-template-rows: 1fr, 2fr 1fr;
-    grid-template-rows: 0.1fr, 2fr 1fr;
-
     font-family: "Source Sans Pro"
 }
 
-.book-show-content h1{
-    font-size: 30px;
+.book-show-content h2{
+    font-size: 20px;
+}
+
+.book-show-content h3 {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.795);
 }
 
 .book-show-headline{
@@ -37,7 +36,7 @@
     grid-template-columns: 15fr 1fr;
 
     align-self: center;
-    justify-items: center;
+    justify-items: start;
 }  
 
 .book-show-headline i{
@@ -54,7 +53,7 @@
 
     display: grid;
     align-items: center;
-    justify-items: center;
+    /* justify-items: start; */
     grid-template-columns: 1fr 1fr;
 }
 
@@ -64,8 +63,7 @@
 
 .book-show-head img{
     grid-column: 1;
-
-    margin-left: 25px;
+    justify-self: center;
     height: 120%;
     height: 250px;
 }
