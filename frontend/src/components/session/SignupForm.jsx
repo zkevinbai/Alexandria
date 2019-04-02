@@ -49,7 +49,6 @@ export default class SignupForm extends Component {
   }
 
   renderErrors() {
-    debugger;
       return(
           <ul>
               {Object.keys(this.state.errors).map((error, i) => (

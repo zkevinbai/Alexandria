@@ -1,5 +1,5 @@
 .book-show-wrapper {
-    position: absolute;
+    position: fixed;
     z-index: 2;
     top: 0;
     left: 0;
@@ -19,7 +19,8 @@
     display: grid;
     align-items: center;
     grid-template-rows: 1fr, 2fr 1fr;
-    font-family: "Source Sans Pro"
+    font-family: "Source Sans Pro";
+    background-color: #b79d94
 }
 
 .book-show-content h2{
