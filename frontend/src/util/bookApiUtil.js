@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+// Google Books Api
+
 export const queryBooks = (queryString) => {
     return fetch(`https://www.googleapis.com/books/v1/volumes?q={${queryString}}`)
         .then( res => res.json())
