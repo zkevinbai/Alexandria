@@ -75,3 +75,24 @@
 .book-show-description {
     grid-row: 3;
 }
+
+.book-show-modal-button {
+    border-radius: 5px;
+    padding: 7px;
+    text-align: center;
+    background-color: #969696;
+    color: white !important;
+    border: none;
+    font-size: 14px !important;
+    justify-self: center;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.book-show-modal-button:focus {
+    outline: none
+}
+
+.book-show-modal-button:hover {
+    cursor: pointer
+}

@@ -7,6 +7,6 @@ import amazonLink from '../../../util/amazonBookApiUtil';
 
 export default function bookBuyComponent(bookTitle, bookAuthor) {
   return (
-    <a href={amazonLink(bookTitle, bookAuthor)} target="_blank" >Buy now</a>
+    <a className="book-show-modal-button" href={amazonLink(bookTitle, bookAuthor)} target="_blank" >Buy now</a>
   )
 }

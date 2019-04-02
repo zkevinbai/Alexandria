@@ -23,7 +23,7 @@ export default class BookShowModal extends Component {
     renderButton() {
         if (this.props.modalType === "userBookShow") {
             return (
-                <button onClick={this.handleClick}>
+                <button className="book-show-modal-button" onClick={this.handleClick}>
                     Add book to shelf
                 </button>
             )
@@ -54,6 +54,7 @@ export default class BookShowModal extends Component {
                                 <h3>Page Count</h3>
                                 <h2>{this.props.book.pageCount}</h2>
                                 {this.renderButton()}
+                                {bookBuy(this.props.book.title, this.props.book.author)}
                             </div>
                         </div>
                     </div>
@@ -62,7 +63,6 @@ export default class BookShowModal extends Component {
                         {this.props.book.description}
                     </p>
 
-                    {bookBuy(this.props.book.title, this.props.book.author)}
                 </div>
             </div>
         )

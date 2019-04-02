@@ -8,7 +8,7 @@
     padding: 30px;
     padding-top: 50px;
     align-content: start;
-    min-height: 100%;
+    min-height: 85vh;
     box-shadow: inset 2px 0px 113px -12px rgb(253, 98, 98)
 }
 
@@ -55,13 +55,10 @@
     background-color: #969696;
     color: white;
     border: none;
+    font-size: 14px
 }
 
-.back-button:hover {
-    text-decoration: underline;
-    cursor: pointer
-}
-.delete-button:hover {
+.back-button:hover, .delete-button:hover {
     text-decoration: underline;
     cursor: pointer
 }
