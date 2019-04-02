@@ -4,7 +4,7 @@ import BookShowModal from './BookShowModal';
 
 const mapStateToProps = state => {
     return{
-        actionType: "publicBookShow",
+        modalType: "publicBookShow",
         book: state.searchBook
     }
 };
