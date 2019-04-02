@@ -12,7 +12,7 @@ export default class bookShow extends Component {
 
     render() {
         return (
-        <div className="book-show">
+        <div className="book-show-wrapper">
             <div className="book-show-content">
                 <div className="book-show-headline">                
                 <h1>{this.props.book.title}</h1>
@@ -23,28 +23,24 @@ export default class bookShow extends Component {
                 </div>
                 <div className="book-show-head">
                     <img src={this.props.book.imageUrl} />
-                    <div
-                        className="book-show-header"
-                    >
-                        <div
-                            className="book-show-heading-text"
-                        >
-                            <h1>{this.props.book.author}</h1>
+                    <div className="book-show-header">
+                        <div className="book-show-heading-text">
                         </div>
 
-                        <div
-                            className="book-show-info-text"
-                        >
-                            <h1>{this.props.book.publishedDate}</h1>
-                            <h1>Genre: {this.props.book.genre}</h1>
-                            <h1>Page Count: {this.props.book.pageCount}</h1>
+                        <div className="book-show-info-text">
+                            <h3>Author</h3>
+                            <h2>{this.props.book.author}</h2>
+                            <h3>Date Published</h3>
+                            <h2>{this.props.book.publishedDate}</h2>
+                            <h3>Genre</h3>
+                            <h2>{this.props.book.genre}</h2>
+                            <h3>Page Count</h3>
+                            <h2>{this.props.book.pageCount}</h2>
                         </div>
                     </div>
                 </div>
 
-                <p
-                    className="book-show-description-text"
-                >
+                <p className="book-show-description-text">
                     {this.props.book.description}
                 </p>
             </div>

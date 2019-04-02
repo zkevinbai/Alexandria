@@ -29,6 +29,7 @@ class App extends Component {
           <AuthRoute path="/book/:volumeId" component={BookPublicShowContainer} />
           <Route path="/shelf/:userId" component={BooksIndexContainer} />
           <Route path="/books/:bookId" component={BookShowContainer} />
+          <Route path="/shelf/:userId/book/:bookId" component={BookShowContainer} />
       </div>
     );
   }

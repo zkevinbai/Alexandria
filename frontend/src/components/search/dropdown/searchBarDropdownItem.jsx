@@ -45,7 +45,7 @@ export default class searchBarDropdownItem extends Component {
         return(
         <Link
             className="query-dropdown-index-item"
-            to={`shelf/${this.props.userId}/book/${this.props.book.volumeId}`}
+            to={`/shelf/${this.props.userId}/book/${this.props.book.volumeId}`}
         >
             <img src={this.props.book.imageUrl} />
             <div
