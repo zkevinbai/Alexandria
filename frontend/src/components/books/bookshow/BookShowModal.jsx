@@ -12,7 +12,7 @@ export default class BookShowModal extends Component {
     }
 
     render() {
-            return (
+        return (
             <div className="book-show-wrapper">
                 <div className="book-show-content">
                     <div className="book-show-headline">                
@@ -48,6 +48,6 @@ export default class BookShowModal extends Component {
                     {bookBuy(this.props.book.title)}
                 </div>
             </div>
-            )
-        }
+        )
+    }
 }
