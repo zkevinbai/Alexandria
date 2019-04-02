@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './bookShowModal.css';
+import bookBuy from '../bookBuy/bookBuyComponent';
 
 export default class BookShowModal extends Component {
     constructor(props) {
@@ -43,6 +44,8 @@ export default class BookShowModal extends Component {
                     <p className="book-show-description-text">
                         {this.props.book.description}
                     </p>
+
+                    {bookBuy(this.props.book.title)}
                 </div>
             </div>
             )
