@@ -1,5 +1,6 @@
 const amazonLink = (title) => {
-    return `https://www.amazon.com/s?k=${title}`;
+    let newTitle = title.split(" ").join("+");
+    return `https://www.amazon.com/s?k=${newTitle}`;
 };
 
 export default amazonLink;
