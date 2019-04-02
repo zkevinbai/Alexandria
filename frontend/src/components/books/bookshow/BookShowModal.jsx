@@ -7,13 +7,10 @@ export default class BookShowModal extends Component {
     }
 
     componentDidMount(){
-        debugger
         this.props.queryGoogleBook(this.props.match.params.volumeId)
     }
 
     render() {
-        if (!this.props.book) return <div></div>
-        else {
             return (
             <div className="book-show-wrapper">
                 <div className="book-show-content">
@@ -50,5 +47,4 @@ export default class BookShowModal extends Component {
             </div>
             )
         }
-    }
 }

@@ -3,7 +3,8 @@ import { removeUserBook, queryGoogleBook } from '../../../actions/bookActions';
 import BookShowModal from './BookShowModal';
 
 const mapStateToProps = state => ({
-        actionType: "removeUserBook"
+        actionType: "removeUserBook",
+        book: state.searchBook
 });
 
 
