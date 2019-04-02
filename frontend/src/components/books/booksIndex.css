@@ -2,7 +2,7 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     display: grid;
-    padding: 20px;
+    padding: 30px 0;
     background-color: #b79d94;
     align-self: stretch;
     justify-items: center;
