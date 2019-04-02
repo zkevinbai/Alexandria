@@ -14,8 +14,8 @@ import './app.css'
 // Book Related
   import BooksIndexContainer from './books/booksIndexContainer';
   import BookShowContainer from './books/bookShowContainer';
-  import BookPublicShowContainer from './books/bookshow/bookPublicShowContainer';
-  import BookUserNewShowContainer from './books/bookshow/bookUserNewShowContainer';
+  import BookPublicShowContainer from './books/bookShowModal/bookPublicShowContainer';
+  import BookUserNewShowContainer from './books/bookShowModal/bookUserNewShowContainer';
   
 class App extends Component {
   render() {
