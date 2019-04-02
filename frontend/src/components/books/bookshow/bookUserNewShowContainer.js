@@ -3,14 +3,14 @@ import { addUserBook, queryGoogleBook } from '../../../actions/bookActions';
 import BookShowModal from './BookShowModal';
 
 const mapStateToProps = (state, ownProps) => ({
-        actionType: "addUserBook",
+        modalType: "userBookShow",
         userId: state.session.user.id,
         book: state.searchBook
 });
 
 
 const mapDispatchToProps = (dispatch) => ({
-    action: (data) => dispatch(addUserBook(data)),
+    addUserBook: (data) => dispatch(addUserBook(data)),
     queryGoogleBook: (queryBookId) => dispatch(queryGoogleBook(queryBookId))
 });
 

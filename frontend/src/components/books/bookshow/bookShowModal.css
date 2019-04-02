@@ -11,20 +11,23 @@
     width: 60%;
     position: relative;
     top: 10vh;
-    height: 70vh;
+    min-height: 50vh;
+    max-height: 80vh;
+    overflow: scroll;
     margin: 0 auto;
     padding: 30px;
     background: rgb(248, 248, 248);
     border-radius: 10px;
     display: grid;
     align-items: center;
-    grid-template-rows: 1fr, 2fr 1fr;
+    grid-template-rows: 20px 325px auto;
     font-family: "Source Sans Pro";
     background-color: #b79d94
 }
 
 .book-show-content h2{
     font-size: 20px;
+    padding-bottom: 8px
 }
 
 .book-show-content h3 {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import BooksIndexItem from './booksIndexItem';
-import BookUserShowContainer from '../books/bookshow/bookUserShowContainer';
 import './booksIndex.css'
 import Graph from '../graphs/graph';
 
@@ -22,10 +21,6 @@ export default class BooksIndex extends Component {
 
     renderBooks() {
         return Object.values(this.props.books).map((book, i) => <BooksIndexItem key={i} book={book}/>)
-    }
-
-    userBookShowModal(book){
-        return <BookUserShowContainer book={book} /> 
     }
 
     render() {
