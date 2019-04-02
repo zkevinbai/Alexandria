@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import BookShow from './bookShow';
 import { queryGoogleBook } from '../../../actions/bookActions';
+import BookShowModal from './BookShowModal';
 
 const mapStateToProps = (storeState) => {
     return{
@@ -15,4 +15,4 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(BookShow);
+export default connect(mapStateToProps, mapDispatchToProps)(BookShowModal);

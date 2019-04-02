@@ -1,18 +1,16 @@
 import { connect } from 'react-redux';
-import BookShow from './bookShow';
-import { addUserBook } from '../../../actions/bookActions';
+import { addUserBook, queryGoogleBook } from '../../../actions/bookActions';
+import BookShowModal from './BookShowModal';
 
-const mapStateToProps = (storeState, ownProps) => {
-    return {
+const mapStateToProps = (state, ownProps) => ({
         actionType: "addUserBook",
-        userId: storeState.session.user.id
-    };
-};
+        userId: state.session.user.id
+});
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        action: (data) => dispatch(addUserBook(data))
-    };
-};
 
-export default connect(mapStateToProps, mapDispatchToProps)(BookShow);
+const mapDispatchToProps = (dispatch) => ({
+    action: (data) => dispatch(addUserBook(data)),
+    queryGoogleBook: (queryBookId) => dispatch(queryGoogleBook(queryBookId))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BookShowModal);

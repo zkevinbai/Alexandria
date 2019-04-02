@@ -15,6 +15,7 @@ import './app.css'
   import BooksIndexContainer from './books/booksIndexContainer';
   import BookShowContainer from './books/bookShowContainer';
   import BookPublicShowContainer from './books/bookshow/bookPublicShowContainer';
+  import BookUserNewShowContainer from './books/bookshow/bookUserNewShowContainer';
   
 class App extends Component {
   render() {
@@ -27,9 +28,9 @@ class App extends Component {
         </Switch>
           <AuthRoute path="/" component={Splash} />
           <AuthRoute path="/book/:volumeId" component={BookPublicShowContainer} />
+          <Route exact path="/shelf/:userId/book/:volumeId" component={BookUserNewShowContainer} />
           <Route path="/shelf/:userId" component={BooksIndexContainer} />
           <Route path="/books/:bookId" component={BookShowContainer} />
-          <Route path="/shelf/:userId/book/:bookId" component={BookShowContainer} />
       </div>
     );
   }
