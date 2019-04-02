@@ -15,6 +15,7 @@ export default class searchBarDropdownItem extends Component {
         return(
         <Link
             className="query-dropdown-index-item"
+            onClick={this.props.clearSearch}
             to={`/book/${this.props.book.volumeId}`}
         >
             <img src={this.props.book.imageUrl} />

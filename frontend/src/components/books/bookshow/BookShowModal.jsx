@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './bookShow.css';
+import './bookShowModal.css';
 
 export default class BookShowModal extends Component {
     constructor(props) {
