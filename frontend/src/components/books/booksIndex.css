@@ -1,4 +1,18 @@
-.books-index-wrapper {
+.sorting-menu {
+    background-color: #b79d94;
+    padding: 20px 10px 0 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.sorting-menu select {
+    margin: 0 5px;
+    background-color: #A6CDE3;
+    font-size: 14px;
+    color: black;
+}
+
+.books-index-wrapper-grid {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     display: grid;
