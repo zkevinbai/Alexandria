@@ -5,8 +5,8 @@
 import React from 'react'
 import amazonLink from '../../../util/amazonBookApiUtil';
 
-export default function bookBuyComponent(bookTitle) {
+export default function bookBuyComponent(bookTitle, bookAuthor) {
   return (
-    <a href={amazonLink(bookTitle)} target="_blank" >Buy now</a>
+    <a href={amazonLink(bookTitle, bookAuthor)} target="_blank" >Buy now</a>
   )
 }
