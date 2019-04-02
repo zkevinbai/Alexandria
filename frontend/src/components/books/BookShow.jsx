@@ -10,6 +10,7 @@ export default class BookShow extends Component {
   }
 
   componentDidMount(){
+    window.scrollTo(0, 0);
     this.props.fetchBook(this.props.bookId)
       .then(book => (this.props.book = book))
       .catch(err => console.log(err))
