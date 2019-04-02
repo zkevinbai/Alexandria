@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import {Link, Redirect} from 'react-router-dom';
-// import BookPublicShowContainer from '../../books/bookshow/bookPublicShowContainer';
-// import BookUserNewShowContainer from '../../books/bookshow/bookUserNewShowContainer';
 export default class searchBarDropdownItem extends Component {
     constructor(props) {
         super(props);

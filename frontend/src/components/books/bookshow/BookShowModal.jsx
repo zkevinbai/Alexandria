@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './bookShowModal.css';
+import bookBuy from '../bookBuy/bookBuyComponent';
 
 export default class BookShowModal extends Component {
     constructor(props) {
@@ -11,7 +12,7 @@ export default class BookShowModal extends Component {
     }
 
     render() {
-            return (
+        return (
             <div className="book-show-wrapper">
                 <div className="book-show-content">
                     <div className="book-show-headline">                
@@ -43,8 +44,10 @@ export default class BookShowModal extends Component {
                     <p className="book-show-description-text">
                         {this.props.book.description}
                     </p>
+
+                    {bookBuy(this.props.book.title, this.props.book.author)}
                 </div>
             </div>
-            )
-        }
+        )
+    }
 }
