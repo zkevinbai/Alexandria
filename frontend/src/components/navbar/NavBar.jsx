@@ -12,8 +12,9 @@ class NavBar extends Component {
           <div className="nav-search-bar">
           <SearchBarContainer />
           </div>
-
-          <div className='logout-button'>
+          
+          <div className="logout-and-greeting">
+            <p className="nav-bar-greeting">Hello, reader!</p>
             <LogoutButtonContainer />
           </div>
 
