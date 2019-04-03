@@ -39,6 +39,7 @@ export default class BooksIndex extends Component {
         let books = Object.values(this.props.books)
         switch(this.state.sort) {
             case 'date':
+                books.reverse();
                 break;
             case 'title':
                 books.sort((a, b) => {
