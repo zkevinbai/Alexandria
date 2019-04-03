@@ -32,6 +32,7 @@ export default class BookShow extends Component {
   }
 
   render () {
+    debugger
     if(!this.props.book){
       return null;
     }
