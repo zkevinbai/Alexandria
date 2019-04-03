@@ -132,7 +132,6 @@ export default class BooksIndex extends Component {
                         {this.renderBooks()}
                 </div>
                 
-                <h2>Your Recommendations</h2>
                 <RecommendationsContainer recWanted={this.state.recWanted}/>
                 
                 <div className='graph'>
