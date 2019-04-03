@@ -64,7 +64,7 @@ class Recommendations extends React.Component {
     return (
       <>
         <h2>Your Recommendations</h2>
-        <div className={`books-index-wrapper-${this.props.display}`}>
+        <div className={`books-index-wrapper-grid`}>
           {renderedRecs}
         </div>
       </>
