@@ -14,8 +14,13 @@ class RecItem extends Component {
   
     return (
       <Link to={`/shelf/${this.props.match.params.userId}/book/${this.props.book.volumeId}`} >
+<<<<<<< HEAD
         <div className="books-index-item">
           <img src={this.props.book.imageUrl} className={classVal} alt="" />
+=======
+        <div className="books-index-item-grid">
+          <img src={this.props.book.imageUrl}  alt="" />
+>>>>>>> c8b2d2b2c3502dd805b70164b97657da7b3dbed4
         </div>
       </Link>
     )

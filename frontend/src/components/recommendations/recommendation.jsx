@@ -64,7 +64,11 @@ class Recommendation extends React.Component {
     return (
       <>
         <h2>Your Recommendations</h2>
+<<<<<<< HEAD:frontend/src/components/recommendations/recommendation.jsx
         <div className="recs-wrapper">
+=======
+        <div className={`books-index-wrapper-${this.props.display}`}>
+>>>>>>> c8b2d2b2c3502dd805b70164b97657da7b3dbed4:frontend/src/components/recommendations/recommendations.jsx
           {renderedRecs}
         </div>
       </>
