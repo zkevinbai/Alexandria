@@ -37,7 +37,8 @@ class Graph extends React.Component {
       
       arcs.append("path")
       .attr("d", arc) 
-      .attr("fill", function (d, i) { return colorScale(i); });
+      .attr("fill", function (d, i) { return colorScale(i); })
+      .attr("opacity", "0.85");
     
     //add own elements for text so data doesn't cover it
     const labels = group.selectAll(".arc2")
