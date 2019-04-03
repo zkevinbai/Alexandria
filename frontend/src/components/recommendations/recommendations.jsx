@@ -1,6 +1,6 @@
 import React from 'react';
-import BooksIndexItem from '../books/booksIndexItem';
-import { parseRec, parseSingleRec } from '../../util/searchParseUtil';
+import RecItem from './recItem';
+import { parseSingleRec } from '../../util/searchParseUtil';
 import { queryAuthor } from '../../util/bookApiUtil';
 
 class Recommendations extends React.Component {
@@ -50,20 +50,16 @@ class Recommendations extends React.Component {
   }
   
   renderRecs(recs){
-    return recs.map((rec, i) => <BooksIndexItem key={i} book={rec} />)
+    return recs.map((rec, i) => <RecItem key={i} book={rec} />)
   }
 
   render(){
     if(this.state.recs.length === 0){
       return null;
     }
-    
-    let parsedRecs = this.state.recs.map(rec => {
-        let id = rec.volumeId;
-        delete rec["volumeId"];
-        rec["_id"] = id;
-        return rec;
-      })
+    // debugger;
+    let parsedRecs = this.state.recs.filter(rec => rec)
+    // debugger;
     let renderedRecs = this.renderRecs(parsedRecs);
     return (
       <div>
