@@ -39,7 +39,7 @@
 }
 
 .splash-middle-text {
-    height: fit-content;
+    /* height: fit-content; */
     display: grid;
     justify-content: center;
     align-content: center;
