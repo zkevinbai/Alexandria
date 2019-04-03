@@ -31,6 +31,8 @@ export default class BookShowModal extends Component {
     }
 
     render() {
+        let description;
+        (this.props.book.description) ? description = this.props.book.description : description = "";
         return (
             <div className="book-show-wrapper">
                 <div className="book-show-content">
@@ -60,7 +62,7 @@ export default class BookShowModal extends Component {
                     </div>
     
                     <p className="book-show-description-text">
-                        {this.props.book.description}
+                        {description.replace(/<(?:.|\n)*?>/gm, '')}
                     </p>
 
                 </div>
