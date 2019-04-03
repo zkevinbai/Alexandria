@@ -14,7 +14,8 @@ import './app.css'
 // Book Related
   import BooksIndexContainer from './books/booksIndexContainer';
   import BookShowContainer from './books/bookShowContainer';
-  import BookPublicShowContainer from './books/bookshow/bookPublicShowContainer';
+  import BookPublicShowContainer from './books/bookShowModal/bookPublicShowContainer';
+  import BookUserNewShowContainer from './books/bookShowModal/bookUserNewShowContainer';
   
 class App extends Component {
   render() {
@@ -24,11 +25,14 @@ class App extends Component {
         <Switch>
           <AuthRoute path="/login" component={LoginFormContainer} />
           <AuthRoute path="/signup" component={SignupFormContainer} />
+        </Switch>
+        <Switch>
+          <Route path="/books/:bookId" component={BookShowContainer} />
+          <Route path="/shelf/:userId" component={BooksIndexContainer} />
           <AuthRoute path="/" component={Splash} />
         </Switch>
-          <Route path="/shelf/:userId" component={BooksIndexContainer} />
-          <Route path="/books/:bookId" component={BookShowContainer} />
           <AuthRoute path="/book/:volumeId" component={BookPublicShowContainer} />
+          <Route path="/shelf/:userId/book/:volumeId" component={BookUserNewShowContainer} />
       </div>
     );
   }
