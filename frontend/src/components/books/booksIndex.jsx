@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BooksIndexItem from './booksIndexItem';
 import './booksIndex.css'
+import '../recommendations/recommendations.css';
 import Graph from '../graphs/graph';
 import RecommendationsContainer from '../recommendations/recommendationsContainer';
 import StaffRec from '../recommendations/staffRec'
@@ -26,11 +27,11 @@ export default class BooksIndex extends Component {
         }
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if(Object.keys(prevProps.books).length !== Object.keys(this.props.books).length){
-    //         this.props.fetchUserBooks(this.props.userId)
-    //     }
-    // }
+    componentDidUpdate(prevProps) {
+        if(Object.keys(prevProps.books).length !== Object.keys(this.props.books).length){
+            this.props.fetchUserBooks(this.props.userId)
+        }
+    }
 
     renderBooks() {
         let books = Object.values(this.props.books)

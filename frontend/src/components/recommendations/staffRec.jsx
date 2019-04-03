@@ -2,9 +2,11 @@ import React from 'react';
 import { queryBook } from '../../util/bookApiUtil';
 import { parseBook } from '../../util/searchParseUtil';
 import RecItem from './recItem';
+// import './recommendations.css';
 
 class StaffRec extends React.Component {
   constructor(props) {
+    // 5ca536c65eedc9284b03a839
     super(props);
     this.bookIds = [
       // "Don Quixote"
@@ -41,6 +43,14 @@ class StaffRec extends React.Component {
     })
   }
 
+  componentDidUpdate(){
+    if(this.books.length < 10){
+      this.bookIds.forEach( bookId => {
+        this.getAPICall(bookId)
+      })
+    }
+  }
+
   getAPICall(bookId){
     queryBook(bookId)
       .then(res => this.handleAPICall(parseBook(res)))
@@ -62,11 +72,11 @@ class StaffRec extends React.Component {
   }
 
   render(){
-    if(this.state.bookRecs.length < 10){
+    if(this.books.length < 10){
       return null;
     }
     return(
-      <div className = "books-index-wrapper">
+      <div className = "recs-wrapper">
         {this.renderRecs(this.state.bookRecs)}
       </div>
     )

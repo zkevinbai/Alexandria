@@ -2,6 +2,7 @@ import React from 'react';
 import RecItem from './recItem';
 import { parseSingleRec } from '../../util/searchParseUtil';
 import { queryAuthor } from '../../util/bookApiUtil';
+// import './recommendations.css';
 
 class Recommendation extends React.Component {
 
@@ -63,7 +64,7 @@ class Recommendation extends React.Component {
     return (
       <>
         <h2>Your Recommendations</h2>
-        <div className="books-index-wrapper">
+        <div className="recs-wrapper">
           {renderedRecs}
         </div>
       </>
