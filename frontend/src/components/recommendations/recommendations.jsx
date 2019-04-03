@@ -62,7 +62,7 @@ class Recommendations extends React.Component {
     // debugger;
     let renderedRecs = this.renderRecs(parsedRecs);
     return (
-      <div>
+      <div className="books-index-wrapper">
         {renderedRecs}
       </div>
     )

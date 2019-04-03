@@ -1,6 +1,24 @@
+.book-shelf {
+    overflow-y: scroll;
+    background-color: #b79d94
+}
+
+.book-shelf-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 15px;
+    grid-gap: .5rem;
+}
+
+.book-shelf-header h1 {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    align-self: center;
+    font-family: "Source Sans Pro"
+}
+
 .sorting-menu {
-    background-color: #b79d94;
-    padding: 20px 10px 0 0;
     display: flex;
     flex-direction: row-reverse;
 }
@@ -10,14 +28,26 @@
     background-color: #A6CDE3;
     font-size: 14px;
     color: black;
+    font-family: "Source Sans Pro"
 }
 
-.books-index-wrapper-grid {
+.recs-button {
+    background-color: #A6CDE3;
+    border-radius: 5px;
+    font-family: "Source Sans Pro";
+    font-size: 14px;
+    justify-self: end
+}
+
+.recs-button:focus {
+    outline: none
+}
+
+.books-index-wrapper {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     display: grid;
     padding: 30px 0;
-    background-color: #b79d94;
     align-self: stretch;
     justify-items: center;
     grid-gap: 1.5rem;
@@ -25,6 +55,7 @@
     width: 100vw;
     -webkit-align-items: baseline;
     align-items: center;
+    border: 1px solid black
 }
 
 .books-index-item {
@@ -32,9 +63,7 @@
     border-radius: 5px;
 }
 
-.book-shelf {
-    overflow-y: scroll;
-}
+
 
 .graph {
     background-color: rgb(90, 151, 151);

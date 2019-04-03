@@ -11,10 +11,10 @@ export default class BooksIndex extends Component {
         super(props)
         this.state = {
             display: 'grid',
-            sort: 'date'
+            sort: 'date',
+            recWanted: false
         }
         this.getRecs = this.getRecs.bind(this);
-        this.state = { recWanted: false }
         this.handleSortChange = this.handleSortChange.bind(this)
         this.handleDisplayChange = this.handleDisplayChange.bind(this)
     }
@@ -115,23 +115,33 @@ export default class BooksIndex extends Component {
         if(this.props.books && this.props.books.length > 0) {
             return (
               <div className='book-shelf'>
-                <button onClick={this.getRecs}>
-                    Get Recommendations by Author
-                </button>
-                <div className="books-index-wrapper">
+
+                <div className='book-shelf-header'>
+                    <h1>Your Shelf</h1>
                     {this.renderSortingMenu()}
-                    <div className={`books-index-wrapper-${this.state.display}`}>
-                        {this.renderBooks()}
-                    </div>
-                    <div className='rec-div'>
-                        <RecommendationsContainer recWanted={this.state.recWanted}/>
-                    </div>
-                    <div className='graph'>
-                    <div className= "graph-label">Your Books by Genre</div>
-                    <Graph books={this.props.books} />
+                    <button 
+                        className="recs-button"
+                        onClick={this.getRecs}>
+                        Get Recommendations by Author
+                    </button>
                 </div>
+                
+                
+                <h2>Your Library</h2>
+                <div className="books-index-wrapper">
+                        {this.renderBooks()}
+                </div>
+                
+                <h2>Your Recommendations</h2>
+                <RecommendationsContainer recWanted={this.state.recWanted}/>
+                
+                <div className='graph'>
+                        <div className= "graph-label">Your Books by Genre</div>
+                        <Graph books={this.props.books} />
+                </div>
+              
               </div>
-              </div>
+                    
             )
         } else return <div></div>
     }
