@@ -36,7 +36,7 @@ export default class BooksIndex extends Component {
         let books = Object.values(this.props.books)
         switch(this.state.sort) {
             case 'date':
-                return books.map((book, i) => <BooksIndexItem key={i} book={book}/>);
+                return books.map((book, i) => <BooksIndexItem key={i} userId={this.props.userId} book={book}/>);
             case 'title':
                 books.sort((a, b) => {
                     if (a.title < b.title) return -1;
@@ -69,9 +69,9 @@ export default class BooksIndex extends Component {
                 })
                 break;
             default:
-                return books.map((book, i) => <BooksIndexItem key={i} book={book}/>)
+                return books.map((book, i) => <BooksIndexItem key={i} userId={this.props.userId} book={book}/>)
         }
-        return books.map((book, i) => <BooksIndexItem key={i} book={book}/>)
+        return books.map((book, i) => <BooksIndexItem key={i} userId={this.props.userId} book={book}/>)
     }
 
     handleSortChange(e) {

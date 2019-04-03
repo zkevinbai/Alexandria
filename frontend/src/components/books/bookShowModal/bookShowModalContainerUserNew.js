@@ -4,6 +4,7 @@ import BookShowModal from './BookShowModal';
 
 const mapStateToProps = (state, ownProps) => ({
         modalType: "userBookShow",
+        actionType: "addBook",
         userId: state.session.user.id,
         book: state.searchBook
 });
