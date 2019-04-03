@@ -50,7 +50,7 @@ class Graph extends React.Component {
       .attr("transform", function (d) { return "translate(" + arc.centroid(d) + ")"; }) // put text at the center of every arc
       .attr("text-anchor", "middle")
       .attr("font-size", "1em")
-      // .attr("font-family", "Source Sans Pro")
+      .attr("font-family", "Source Sans Pro")
       .text( function (d, i) { return data.label[i]; });
   }
   
