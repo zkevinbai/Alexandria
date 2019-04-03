@@ -6,12 +6,6 @@ import RecommendationsContainer from '../recommendations/recommendationsContaine
 
 
 export default class BooksIndex extends Component {
-
-    constructor(){
-        super();
-        this.getRecs = this.getRecs.bind(this);
-        this.state = { recWanted: false}
-    }
   
     constructor(props) {
         super(props)
@@ -19,6 +13,8 @@ export default class BooksIndex extends Component {
             display: 'grid',
             sort: 'date'
         }
+        this.getRecs = this.getRecs.bind(this);
+        this.state = { recWanted: false }
         this.handleSortChange = this.handleSortChange.bind(this)
         this.handleDisplayChange = this.handleDisplayChange.bind(this)
     }
@@ -123,17 +119,18 @@ export default class BooksIndex extends Component {
                     Get Recommendations by Author
                 </button>
                 <div className="books-index-wrapper">
-                {this.renderSortingMenu()}
-                <div className={`books-index-wrapper-${this.state.display}`}>
-                    {this.renderBooks()}
-                </div>
-                <div className='rec-div'>
-                    <RecommendationsContainer recWanted={this.state.recWanted}/>
-                </div>
-                <div className='graph'>
+                    {this.renderSortingMenu()}
+                    <div className={`books-index-wrapper-${this.state.display}`}>
+                        {this.renderBooks()}
+                    </div>
+                    <div className='rec-div'>
+                        <RecommendationsContainer recWanted={this.state.recWanted}/>
+                    </div>
+                    <div className='graph'>
                     <div className= "graph-label">Your Books by Genre</div>
                     <Graph books={this.props.books} />
                 </div>
+              </div>
               </div>
             )
         } else return <div></div>
