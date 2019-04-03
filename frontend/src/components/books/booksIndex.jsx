@@ -4,12 +4,9 @@ import './booksIndex.css'
 import '../recommendations/recommendations.css';
 import Graph from '../graphs/graph';
 import RecommendationsContainer from '../recommendations/recommendationsContainer';
-<<<<<<< HEAD
 import StaffRec from '../recommendations/staffRec'
-=======
 import BooksIndexItemList from './BooksIndexItemList';
 
->>>>>>> c8b2d2b2c3502dd805b70164b97657da7b3dbed4
 
 export default class BooksIndex extends Component {
   
