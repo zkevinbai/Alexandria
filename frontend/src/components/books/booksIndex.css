@@ -31,6 +31,10 @@
     font-family: "Source Sans Pro"
 }
 
+.sorting-menu select:focus {
+    outline: none
+}
+
 .recs-button {
     background-color: #A6CDE3;
     border-radius: 5px;
@@ -43,11 +47,17 @@
     outline: none
 }
 
+.book-shelf h2 {
+    border-top: 1px solid black;
+    padding: 15px;
+    font-family: "Source Sans Pro"
+}
+
 .books-index-wrapper {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     display: grid;
-    padding: 30px 0;
+    padding-bottom: 30px;
     align-self: stretch;
     justify-items: center;
     grid-gap: 1.5rem;
@@ -55,15 +65,12 @@
     width: 100vw;
     -webkit-align-items: baseline;
     align-items: center;
-    border: 1px solid black
 }
 
 .books-index-item {
     border: 10px solid rgba(103, 105, 124, .4);
     border-radius: 5px;
 }
-
-
 
 .graph {
     background-color: rgb(90, 151, 151);

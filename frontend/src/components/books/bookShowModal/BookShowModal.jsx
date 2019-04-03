@@ -10,29 +10,46 @@ export default class BookShowModal extends Component {
     }
 
     componentDidMount(){
-        this.props.queryGoogleBook(this.props.match.params.volumeId)
+        if (this.props.actionType === "addBook") {
+            this.props.queryGoogleBook(this.props.match.params.volumeId)
+        } else {
+            this.props.fetchBook(this.props.bookId)
+        }
     }
 
     handleClick() {
         let book = this.props.book;
         book.description = book.description.replace(/<(?:.|\n)*?>/gm, '');
-        this.props.addUserBook({
-            userId: this.props.userId, 
-            book
-        })
+        if (this.props.actionType === "addBook") {
+            this.props.addUserBook ({
+                userId: this.props.userId, 
+                book
+            })
+        } else {
+            this.props.removeUserBook(book._id)
+        }
+        this.props.history.push(`/shelf/${this.props.match.params.userId}`)
     }
 
     renderButton() {
-        if (this.props.modalType === "userBookShow") {
+        if (this.props.actionType === "addBook") {
             return (
                 <button className="book-show-modal-button" onClick={this.handleClick}>
                     Add book to shelf
                 </button>
             )
-        } else return <div></div>
+        } else if (this.props.actionType === "deleteBook") {
+            return (
+                <button className="book-show-modal-button" onClick={this.handleClick}>
+                    Remove book from shelf
+                </button>
+            )
+        }
+        else return <div></div>
     }
 
     render() {
+        if (!this.props.book) return <div></div>;
         let description;
         (this.props.book.description) ? description = this.props.book.description : description = "";
         return (

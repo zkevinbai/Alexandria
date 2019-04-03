@@ -51,13 +51,16 @@
 
 .session-form h1 {
     font-weight: 600;
-    /* color: #9199da */
 }
 
 .session-form input {
     padding-left: 10px;
     height: 40px;
     font-size: 20px
+}
+
+.session-form input:focus {
+    outline: none
 }
 
 .session-form ::placeholder {
