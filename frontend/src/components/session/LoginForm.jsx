@@ -35,11 +35,8 @@ export default class LoginForm extends Component {
   
     handleSubmit(e) {
         e.preventDefault();
-        debugger;
         this.props.login(this.state).then(() => {
-          debugger;
           if (Object.keys(this.state.errors).length === 0) {
-            debugger;
               document.body.className = "";
               this.props.history.replace("/")
             }
