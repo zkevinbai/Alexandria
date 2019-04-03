@@ -20,6 +20,7 @@ export default class BookShowModal extends Component {
             userId: this.props.userId, 
             book
         })
+        this.props.history.push(`/shelf/${this.props.userId}`)
     }
 
     renderButton() {
