@@ -7,24 +7,24 @@ export const narrowSearchResults = searchResults => {
   return firstTenBooks;
 };
 
-export const parseRec = searchResults => {
-  let items = searchResults.data.items;
-  if(!items){
-    return [];
-  }
-  let bookRecs = [];
-  let i = 0;
-  while (bookRecs.length < 5 && i < items.length) {
-    bookRecs.push(translateBook(items[i]))
-    i++;
-  }
-  return bookRecs;
-}
+// export const parseRec = searchResults => {
+//   let items = searchResults.data.items;
+//   if(!items){
+//     return [];
+//   }
+//   let bookRecs = [];
+//   let i = 0;
+//   while (bookRecs.length < 5 && i < items.length) {
+//     bookRecs.push(translateBook(items[i]))
+//     i++;
+//   }
+//   return bookRecs;
+// }
 
 export const parseSingleRec = searchResults => {
   let items = searchResults.data.items;
   if (!items) {
-    return [];
+    return null;
   }
   return translateBook(items[0]);
 }
