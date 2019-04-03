@@ -3,6 +3,7 @@ import BooksIndexItem from './booksIndexItem';
 import './booksIndex.css'
 import Graph from '../graphs/graph';
 import RecommendationsContainer from '../recommendations/recommendationsContainer';
+import BooksIndexItemList from './BooksIndexItemList';
 
 
 export default class BooksIndex extends Component {
@@ -20,7 +21,7 @@ export default class BooksIndex extends Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
         if(this.props.books.length === 0){
             this.props.fetchUserBooks(this.props.userId)
         }
@@ -36,7 +37,7 @@ export default class BooksIndex extends Component {
         let books = Object.values(this.props.books)
         switch(this.state.sort) {
             case 'date':
-                return books.map((book, i) => <BooksIndexItem key={i} userId={this.props.userId} book={book}/>);
+                break;
             case 'title':
                 books.sort((a, b) => {
                     if (a.title < b.title) return -1;
@@ -71,6 +72,14 @@ export default class BooksIndex extends Component {
             default:
                 return books.map((book, i) => <BooksIndexItem key={i} userId={this.props.userId} book={book}/>)
         }
+
+        switch (this.state.display) {
+            case "grid":
+              return books.map((book, i) => <BooksIndexItem key={i} userId={this.props.userId} book={book}/>)
+            case "list":
+              return books.map((book, i) => <BooksIndexItemList key={i} userId={this.props.userId} book={book}/>)
+        }
+
         return books.map((book, i) => <BooksIndexItem key={i} userId={this.props.userId} book={book}/>)
     }
 
@@ -107,7 +116,7 @@ export default class BooksIndex extends Component {
     }
 
     getRecs(){
-       this.setState({ recWanted: true})
+       this.setState({recWanted: true})
     }
 
     render() {
@@ -128,11 +137,13 @@ export default class BooksIndex extends Component {
                 
                 
                 <h2>Your Library</h2>
-                <div className="books-index-wrapper">
+                <div className={`books-index-wrapper-${this.state.display}`}>
                         {this.renderBooks()}
                 </div>
                 
+                <section id="recommendations">
                 <RecommendationsContainer recWanted={this.state.recWanted}/>
+                </section>
                 
                 <div className='graph'>
                         <div className= "graph-label">Your Books by Genre</div>

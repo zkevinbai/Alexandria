@@ -10,7 +10,7 @@ class BooksIndexItem extends Component {
 
     return (
       <Link to={`/shelf/${this.props.userId}/books/${this.props.book._id}`} >
-        <div className="books-index-item">
+        <div className="books-index-item-grid">
           <img src={this.props.book.imageUrl} className={classVal} alt=""/>
         </div>
       </Link>

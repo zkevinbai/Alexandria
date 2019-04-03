@@ -50,10 +50,11 @@
 .book-shelf h2 {
     border-top: 1px solid black;
     padding: 15px;
-    font-family: "Source Sans Pro"
+    font-family: "Source Sans Pro";
+    text-align: center
 }
 
-.books-index-wrapper {
+.books-index-wrapper-grid {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     display: grid;
@@ -67,9 +68,26 @@
     align-items: center;
 }
 
-.books-index-item {
+.books-index-wrapper-list {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 0 30px;
+    margin-bottom: 30px
+}
+
+.books-index-item-grid {
     border: 10px solid rgba(103, 105, 124, .4);
     border-radius: 5px;
+}
+
+.books-index-item-list {
+    height: 60px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 2fr 2fr 1fr 4fr;
+    grid-gap: .5rem;
+    border: 1px solid black;
+    padding: 10px;
 }
 
 .graph {
