@@ -12,7 +12,7 @@ export const translateBook = bookResult => {
     if (bookResult.authors) {
         book.author = bookResult.authors[0];
     } else {
-        book.author = 'Unkown Author';
+        book.author = 'Unknown Author';
     }
 
     if (bookResult.categories) {

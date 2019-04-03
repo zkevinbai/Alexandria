@@ -55,6 +55,7 @@ export const receiveBook = res => ({
 
 export const removeBook = res => {
     const type = REMOVE_BOOK;
+    //get book id from url
     const urlArray = res.config.url.split('/');
     const bookId = urlArray[urlArray.length - 1];
     return ({ type, bookId })

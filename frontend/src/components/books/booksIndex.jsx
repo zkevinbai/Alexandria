@@ -3,19 +3,24 @@ import BooksIndexItem from './booksIndexItem';
 import BookUserShowContainer from '../books/bookshow/bookUserShowContainer';
 import './booksIndex.css'
 import Graph from '../graphs/graph';
+import RecommendationsContainer from '../recommendations/recommendationsContainer';
 
 
 export default class BooksIndex extends Component {
+
+    constructor(){
+        super();
+        this.getRecs = this.getRecs.bind(this);
+        this.state = { recWanted: false}
+    }
   
     componentDidMount() {
-        debugger;
         if(this.props.books.length === 0){
             this.props.fetchUserBooks(this.props.userId)
         }
     }
 
     componentDidUpdate(prevProps) {
-        debugger;
         if(Object.keys(prevProps.books).length !== Object.keys(this.props.books).length){
             this.props.fetchUserBooks(this.props.userId)
         }
@@ -29,14 +34,23 @@ export default class BooksIndex extends Component {
         return <BookUserShowContainer book={book} /> 
     }
 
+    getRecs(){
+       this.setState({ recWanted: true})
+    }
+
     render() {
         //only return the graph if books are loaded in state
-        debugger;
         if(this.props.books && this.props.books.length > 0) {
             return (
               <div className='book-shelf'>
+                <button onClick={this.getRecs}>
+                    Get Recommendations by Author
+                </button>
                 <div className="books-index-wrapper">
                     {this.renderBooks()}
+                </div>
+                <div className='rec-div'>
+                    <RecommendationsContainer recWanted={this.state.recWanted}/>
                 </div>
                 <div className='graph'>
                     <div className= "graph-label">Your Books by Genre</div>
@@ -45,16 +59,7 @@ export default class BooksIndex extends Component {
               </div>
             )
         }
-        // if (this.props.books) {
-        //     return (
-        //         <div className='book-shelf'>
-        //             <div className="books-index-wrapper">
-        //                 {this.renderBooks()}
-        //             </div>
-        //         </div>
-        //     )
-        // }
-         else return <div></div>
+        else return <div></div>
     }
 }
 
