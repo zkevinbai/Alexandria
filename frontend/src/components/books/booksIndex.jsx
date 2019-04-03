@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BooksIndexItem from './booksIndexItem';
+import BooksIndexItemGrid from './BooksIndexItemGrid';
 import './booksIndex.css'
 import Graph from '../graphs/graph';
 import RecommendationsContainer from '../recommendations/recommendationsContainer';
@@ -70,17 +70,15 @@ export default class BooksIndex extends Component {
                 })
                 break;
             default:
-                return books.map((book, i) => <BooksIndexItem key={i} userId={this.props.userId} book={book}/>)
+                break;
         }
 
         switch (this.state.display) {
             case "grid":
-              return books.map((book, i) => <BooksIndexItem key={i} userId={this.props.userId} book={book}/>)
+              return books.map((book, i) => <BooksIndexItemGrid key={i} userId={this.props.userId} book={book}/>)
             case "list":
               return books.map((book, i) => <BooksIndexItemList key={i} userId={this.props.userId} book={book}/>)
         }
-
-        return books.map((book, i) => <BooksIndexItem key={i} userId={this.props.userId} book={book}/>)
     }
 
     handleSortChange(e) {
@@ -142,7 +140,10 @@ export default class BooksIndex extends Component {
                 </div>
                 
                 <section id="recommendations">
-                <RecommendationsContainer recWanted={this.state.recWanted}/>
+                <RecommendationsContainer 
+                    recWanted={this.state.recWanted}
+                    userId={this.props.userId}
+                    display={this.state.display}/>
                 </section>
                 
                 <div className='graph'>
