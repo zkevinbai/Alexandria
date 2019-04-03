@@ -14,8 +14,6 @@ export default class BookShowModal extends Component {
             this.props.queryGoogleBook(this.props.match.params.volumeId)
         } else {
             this.props.fetchBook(this.props.bookId)
-            .then(book => (this.props.book = book))
-            .catch(err => console.log(err))
         }
     }
 
@@ -28,9 +26,9 @@ export default class BookShowModal extends Component {
                 book
             })
         } else {
-            this.props.removeUserBook(book.id)
+            this.props.removeUserBook(book._id)
         }
-        this.props.history.push(`/shelf/${this.props.userId}`)
+        this.props.history.push(`/shelf/${this.props.match.params.userId}`)
     }
 
     renderButton() {
