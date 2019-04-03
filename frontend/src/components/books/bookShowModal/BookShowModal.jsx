@@ -14,9 +14,11 @@ export default class BookShowModal extends Component {
     }
 
     handleClick() {
+        let book = this.props.book;
+        book.description = book.description.replace(/<(?:.|\n)*?>/gm, '');
         this.props.addUserBook({
             userId: this.props.userId, 
-            book: this.props.book
+            book
         })
     }
 
