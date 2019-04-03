@@ -10,10 +10,10 @@ export default class BookShowModal extends Component {
     }
 
     componentDidMount(){
-        if (this.props.actionType === "addBook") {
-            this.props.queryGoogleBook(this.props.match.params.volumeId)
-        } else {
+        if (this.props.actionType === "deleteBook") {
             this.props.fetchBook(this.props.bookId)
+        } else if (this.props.actionType === "addBook" || "publicBookShow" )  {
+            this.props.queryGoogleBook(this.props.match.params.volumeId)
         }
     }
 
