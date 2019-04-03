@@ -8,6 +8,7 @@ class BooksIndexItem extends Component {
     if (this.props.book.imageUrl === 'https://openclipart.org/image/2400px/svg_to_png/211628/Book_thick_generic.png') {
       classVal = "default-book";
     }
+
     return (
       <Link to={`/books/${this.props.book._id}`} >
         <div className="books-index-item">

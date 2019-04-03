@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BooksIndexItem from './booksIndexItem';
 import './booksIndex.css'
 import Graph from '../graphs/graph';
+import RecommendationsContainer from '../recommendations/recommendationsContainer';
 
 
 export default class BooksIndex extends Component {
@@ -12,6 +13,8 @@ export default class BooksIndex extends Component {
             display: 'grid',
             sort: 'date'
         }
+        this.getRecs = this.getRecs.bind(this);
+        this.state = { recWanted: false }
         this.handleSortChange = this.handleSortChange.bind(this)
         this.handleDisplayChange = this.handleDisplayChange.bind(this)
     }
@@ -103,19 +106,31 @@ export default class BooksIndex extends Component {
         )
     }
 
+    getRecs(){
+       this.setState({ recWanted: true})
+    }
+
     render() {
         //only return the graph if books are loaded in state
-        if(this.props.books && this.props.books.length > 1) {
+        if(this.props.books && this.props.books.length > 0) {
             return (
               <div className='book-shelf'>
-                {this.renderSortingMenu()}
-                <div className={`books-index-wrapper-${this.state.display}`}>
-                    {this.renderBooks()}
-                </div>
-                <div className='graph'>
+                <button onClick={this.getRecs}>
+                    Get Recommendations by Author
+                </button>
+                <div className="books-index-wrapper">
+                    {this.renderSortingMenu()}
+                    <div className={`books-index-wrapper-${this.state.display}`}>
+                        {this.renderBooks()}
+                    </div>
+                    <div className='rec-div'>
+                        <RecommendationsContainer recWanted={this.state.recWanted}/>
+                    </div>
+                    <div className='graph'>
                     <div className= "graph-label">Your Books by Genre</div>
                     <Graph books={this.props.books} />
                 </div>
+              </div>
               </div>
             )
         } else return <div></div>
