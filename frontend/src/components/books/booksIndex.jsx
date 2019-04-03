@@ -3,7 +3,7 @@ import BooksIndexItem from './booksIndexItem';
 import './booksIndex.css'
 import Graph from '../graphs/graph';
 import RecommendationsContainer from '../recommendations/recommendationsContainer';
-
+import StaffRec from '../recommendations/staffRec'
 
 export default class BooksIndex extends Component {
   
@@ -132,6 +132,11 @@ export default class BooksIndex extends Component {
                         {this.renderBooks()}
                 </div>
                 
+                <div className="staff-rec-container">
+                    <h2>Our Recommendations</h2>
+                    <StaffRec />
+                </div>
+
                 <h2>Your Recommendations</h2>
                 <RecommendationsContainer recWanted={this.state.recWanted}/>
                 

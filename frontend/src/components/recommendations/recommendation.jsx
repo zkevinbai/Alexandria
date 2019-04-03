@@ -3,7 +3,7 @@ import RecItem from './recItem';
 import { parseSingleRec } from '../../util/searchParseUtil';
 import { queryAuthor } from '../../util/bookApiUtil';
 
-class Recommendations extends React.Component {
+class Recommendation extends React.Component {
 
   constructor(props){
     super(props);
@@ -57,9 +57,8 @@ class Recommendations extends React.Component {
     if(this.state.recs.length === 0){
       return null;
     }
-    // debugger;
+
     let parsedRecs = this.state.recs.filter(rec => rec)
-    // debugger;
     let renderedRecs = this.renderRecs(parsedRecs);
     return (
       <div className="books-index-wrapper">
@@ -69,4 +68,4 @@ class Recommendations extends React.Component {
   }
 }
 
-export default Recommendations;
+export default Recommendation;

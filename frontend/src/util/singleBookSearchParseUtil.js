@@ -38,7 +38,7 @@ export const translateBook = bookResult => {
     } else {
         book.pageCount = 'Unknown';
     }
-
+   
     if (bookResult.imageLinks) {
         if (bookResult.imageLinks.thumbnail) {
             book.imageUrl = bookResult.imageLinks.thumbnail;
