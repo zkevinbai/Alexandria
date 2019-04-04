@@ -142,7 +142,7 @@ export default class BooksIndex extends Component {
                     {this.renderSortingMenu()}
                     <Link to="#recommendations" className="recs-button">
                         <button 
-                            className="recs-button"
+                            className="recs-button white-button"
                             onClick={this.getRecs}>
                             Get Recommendations by Author
                         </button>
