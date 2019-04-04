@@ -24,7 +24,7 @@ class StaffRec extends React.Component {
   }
   
   renderRecs(bookRecs){
-    return bookRecs.map((rec, i) => <RecItem key={i} book={rec} />)
+    return bookRecs.map((rec, i) => <RecItem key={i} book={rec} path="bookrec"/>)
   }
 
   render(){

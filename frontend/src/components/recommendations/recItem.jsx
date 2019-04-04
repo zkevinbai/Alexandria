@@ -17,11 +17,12 @@ class RecItem extends Component {
     } else {
       bookId = this.props.book.volumeId;
     }
+    const path = this.props.path;
    
     return (
-      <Link to={`${this.props.match.url}/bookrec/${bookId}`} book={this.props.book}>
+      <Link to={`${this.props.match.url}/${path}/${bookId}`} book={this.props.book}>
         <div className="books-index-item-grid">
-          <img src={this.props.book.imageUrl}  alt="" />
+          <img src={this.props.book.imageUrl}  className={classVal} alt="" />
         </div>
       </Link>
     )

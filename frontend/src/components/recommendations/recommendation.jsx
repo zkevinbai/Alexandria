@@ -51,7 +51,7 @@ class Recommendation extends React.Component {
   }
   
   renderRecs(recs){
-    return recs.map((rec, i) => <RecItem key={i} book={rec} />)
+    return recs.map((rec, i) => <RecItem key={i} book={rec} path="book"/>)
   }
 
   render(){
