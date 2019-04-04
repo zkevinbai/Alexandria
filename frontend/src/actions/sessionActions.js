@@ -25,6 +25,7 @@ export const receiveUserLogin = () => ({
 })
 
 export const login = user => dispatch => (
+    
     ApiUtil.login(user).then(res => {
         const { token } = res.data;
         localStorage.setItem('jwtToken', token);

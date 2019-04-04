@@ -2,12 +2,14 @@ import { connect } from 'react-redux';
 import { addUserBook, queryGoogleBook } from '../../../actions/bookActions';
 import BookShowModal from './BookShowModal';
 
-const mapStateToProps = (state, ownProps) => ({
+const mapStateToProps = (state, ownProps) => {
+    return({
         modalType: "userBookShow",
         actionType: "addBook",
         userId: state.session.user.id,
         book: state.searchBook
-});
+    })
+};
 
 
 const mapDispatchToProps = (dispatch) => ({

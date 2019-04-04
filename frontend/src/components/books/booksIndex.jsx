@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import BooksIndexItemGrid from './BooksIndexItemGrid';
 import './booksIndex.css'
+import '../recommendations/recommendations.css';
 import Graph from '../graphs/graph';
 import RecommendationsContainer from '../recommendations/recommendationsContainer';
+import StaffRec from '../recommendations/staffRec'
 import BooksIndexItemList from './BooksIndexItemList';
 import { HashLink as Link } from 'react-router-hash-link';
 
@@ -28,11 +30,11 @@ export default class BooksIndex extends Component {
         }
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if(Object.keys(prevProps.books).length !== Object.keys(this.props.books).length){
-    //         this.props.fetchUserBooks(this.props.userId)
-    //     }
-    // }
+    componentDidUpdate(prevProps) {
+        if(Object.keys(prevProps.books).length !== Object.keys(this.props.books).length){
+            this.props.fetchUserBooks(this.props.userId)
+        }
+    }
 
     renderBooks() {
         let books = Object.values(this.props.books)
@@ -144,10 +146,14 @@ export default class BooksIndex extends Component {
                 </div>
                 
                 <section id="recommendations">
-                    <RecommendationsContainer 
-                        recWanted={this.state.recWanted}
-                        userId={this.props.userId}
-                        display={this.state.display}/>
+                <RecommendationsContainer 
+                    recWanted={this.state.recWanted}
+                    userId={this.props.userId}
+                    display={this.state.display}/>
+                <div className="staff-rec-container">
+                    <h2>Our Recommendations</h2>
+                    <StaffRec />
+                </div>
                 </section>
                 
                 <div className='graph'>

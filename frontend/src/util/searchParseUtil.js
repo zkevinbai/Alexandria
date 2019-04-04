@@ -2,7 +2,7 @@ export const narrowSearchResults = searchResults => {
   const firstTenResults = searchResults.data.items;
   let firstTenBooks = [];
   for (let i = 0; i < 10; i++) {
-    firstTenBooks.push(translateBook(firstTenResults[i]));
+    firstTenBooks.push(parseBook(firstTenResults[i]));
   }
   return firstTenBooks;
 };
@@ -26,12 +26,11 @@ export const parseSingleRec = searchResults => {
   if (!items) {
     return null;
   }
-  return translateBook(items[0]);
+  return parseBook(items[0]);
 }
 
-const translateBook = bookResult => {
+export const parseBook = bookResult => {
   let book = {};
-
   if(!bookResult.volumeInfo || !bookResult.volumeInfo.title){
     return book;
   }

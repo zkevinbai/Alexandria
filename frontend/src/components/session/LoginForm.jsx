@@ -56,7 +56,7 @@ export default class LoginForm extends Component {
       }).then(() => {
         if (Object.keys(this.state.errors).length === 0) {
           document.body.className = "";
-          // this.props.history.replace("/")
+          this.props.history.replace("/")
         }
     }) 
       

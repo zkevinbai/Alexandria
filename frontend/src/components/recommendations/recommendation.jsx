@@ -2,8 +2,9 @@ import React from 'react';
 import RecItem from './recItem';
 import { parseSingleRec } from '../../util/searchParseUtil';
 import { queryAuthor } from '../../util/bookApiUtil';
+// import './recommendations.css';
 
-class Recommendations extends React.Component {
+class Recommendation extends React.Component {
 
   constructor(props){
     super(props);
@@ -50,16 +51,15 @@ class Recommendations extends React.Component {
   }
   
   renderRecs(recs){
-    return recs.map((rec, i) => <RecItem key={i} book={rec} />)
+    return recs.map((rec, i) => <RecItem key={i} book={rec} path="book"/>)
   }
 
   render(){
     if(this.state.recs.length === 0){
       return null;
     }
-    // debugger;
+
     let parsedRecs = this.state.recs.filter(rec => rec)
-    // debugger;
     let renderedRecs = this.renderRecs(parsedRecs);
     return (
       <>
@@ -72,4 +72,4 @@ class Recommendations extends React.Component {
   }
 }
 
-export default Recommendations;
+export default Recommendation;

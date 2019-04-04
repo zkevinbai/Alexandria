@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import Recommendations from './recommendations';
+import Recommendation from './recommendation';
 
 const mapStateToProps = (state, ownProps) => {
   const books = Object.values(state.books)
@@ -17,4 +17,4 @@ const mapStateToProps = (state, ownProps) => {
   return(newProps)
 }
 
-export default connect(mapStateToProps)(Recommendations);
+export default connect(mapStateToProps)(Recommendation);
