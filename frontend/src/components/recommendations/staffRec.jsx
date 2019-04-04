@@ -26,17 +26,22 @@ class StaffRec extends React.Component {
   }
 
   siftUserBooksByTitle(){
+    let uBooks = Object.values(this.props.userBooks);
 
+    let titles = [];
+
+    uBooks.forEach( bookHash => titles.push(bookHash.title) );
+
+    return titles;
   }
 
-  
   renderRecs(bookRecs){
-    let userBookTitles = this.siftUserBooksByTitle;
+    let userBookTitles = this.siftUserBooksByTitle();
+        debugger
     return bookRecs.map((rec, i) => <RecItem key={i} book={rec} path="bookrec"/>)
   }
 
   render(){
-    debugger
     if(!this.booksReceived){
       return null;
     }
