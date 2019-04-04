@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { AuthRoute } from '../util/routeUtil';
+import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
 import RecShowContainer from './recommendations/recShowContainer';
 import './app.css'
 
@@ -28,13 +28,13 @@ class App extends Component {
           <AuthRoute path="/signup" component={SignupFormContainer} />
         </Switch>
         <Switch>
-          <Route path="/shelf/:userId" component={BooksIndexContainer} />
+          <ProtectedRoute path="/shelf/:userId" component={BooksIndexContainer} />
           <AuthRoute path="/" component={Splash} />
         </Switch>
-          <Route path="/shelf/:userId/bookrec/:recId" component={RecShowContainer} />
-          <Route path="/shelf/:userId/books/:bookId" component={BookShowModalContainerUserLibrary} />
-          <Route path="/shelf/:userId/book/:volumeId" component={BookShowModalContainerUserNew} />
-          <AuthRoute path="/book/:volumeId" component={BookPublicShowContainer} />
+          <ProtectedRoute path="/shelf/:userId/bookrec/:recId" component={RecShowContainer} />
+          <ProtectedRoute path="/shelf/:userId/books/:bookId" component={BookShowModalContainerUserLibrary} />
+          <ProtectedRoute path="/shelf/:userId/book/:volumeId" component={BookShowModalContainerUserNew} />
+          <ProtectedRoute path="/book/:volumeId" component={BookPublicShowContainer} />
       </div>
     );
   }
