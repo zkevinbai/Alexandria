@@ -72,6 +72,8 @@
   align-content: center;
   border: none;
   height: 25px;
+  justify-self: end;
+
 }
 
 .nav-buttons > *, .logout-button {
@@ -89,9 +91,19 @@
   text-decoration: underline;
 }
 
-.logout-button{
-  justify-self: end;
+.logout-and-greeting {
+  display: grid;
+  grid-gap: .5rem;
+  grid-template-columns: auto auto
 }
+
+.nav-bar-greeting {
+  justify-self: end;
+  align-self: center;
+  font-size: 18px;
+  padding-top: 10px;
+}
+
 
 .logout-button button {
   background: none;
