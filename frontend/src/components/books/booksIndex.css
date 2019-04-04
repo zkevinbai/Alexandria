@@ -104,25 +104,25 @@
     height: 60px
 }
 
-.graph {
-    background-color: rgb(90, 151, 151);
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-}
-
-.graph-label {
-    font-size: 28px;
-    margin-top: 50px;
-    font-family: "Source Sans Pro";
-}
 
 .default-book{
     height: 208px;
     width: 128px;
     background-color: lightsteelblue;
+}
+
+.graph-label {
+    padding-top: 30px;
+    font-family: "Source Sans Pro";
+    text-align: center
+}
+
+.graph {
+    background-color: rgb(90, 151, 151);
+    position: relative; 
+    height: 0; 
+    width: 100%; 
+    padding-bottom: 66%; 
 }
 
 .staff-book {
@@ -132,4 +132,15 @@
 
 .staff-book:hover {
     border: 10px solid rgba(37, 61, 91, 0.75);
+}
+.graph svg {
+    position: absolute; 
+    height: 100%; 
+    width: 100%; 
+    left: 0; 
+    top: 0;
+}
+
+.graph svg > g:first-child {
+    margin: 0 auto
 }
