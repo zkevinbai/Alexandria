@@ -80,7 +80,18 @@ export default class BooksIndex extends Component {
             case "grid":
               return books.map((book, i) => <BooksIndexItemGrid key={i} userId={this.props.userId} book={book}/>)
             case "list":
-              return books.map((book, i) => <BooksIndexItemList key={i} userId={this.props.userId} book={book}/>)
+              let booksList = books.map((book, i) => <BooksIndexItemList key={i} userId={this.props.userId} book={book}/>)
+              booksList.unshift(
+                <div className="books-index-list-toolbar">
+                    <div></div>
+                    <p>Title</p>
+                    <p>Author</p>
+                    <p>Genre</p>
+                    <p>Page Count</p>
+                    <p>Description</p>
+                </div>
+              )
+              return booksList
         }
     }
 
@@ -131,35 +142,39 @@ export default class BooksIndex extends Component {
                     {this.renderSortingMenu()}
                     <Link to="#recommendations" className="recs-button">
                         <button 
-                            className="recs-button"
+                            className="recs-button white-button"
                             onClick={this.getRecs}>
                             Get Recommendations by Author
                         </button>
                     </Link>
                 </div>
                 
-                
-                <h2>Your Library</h2>
-                <div className={`books-index-wrapper-${this.state.display}`}>
-                        {this.renderBooks()}
+                <div className='books-index-wrapper'>
+                    <h2>Your Library</h2>
+                        <div className={`books-index-wrapper-intermediate-container-${this.state.display}`}>
+                            <div className={`books-index-container-${this.state.display}`}>
+                                    {this.renderBooks()}
+                            </div>
+                        </div>
                 </div>
                 
-                <section id="recommendations">
+                <div id="recommendations">
+                    <div className="books-index-wrapper">
+                        <h2>Our Recommendations</h2>
+                        <StaffRec userBooks={Object.values(this.props.books)} />
+                    </div>
                     <RecommendationsContainer 
                         recWanted={this.state.recWanted}
                         userId={this.props.userId}
                         display={this.state.display}/>
-                    <div className="staff-rec-container">
-                        <h2>Our Recommendations</h2>
-                        <StaffRec userBooks= {Object.values(this.props.books)} />
-                    </div>
-                </section>
-                
-                <div className='graph'>
-                    <h1 className= "graph-label">Your Books by Genre</h1>
-                    <Graph books={this.props.books} />
                 </div>
-              
+                
+                <div className="books-index-wrapper">
+                    <div className='graph'>
+                        <h2 className= "graph-label">Your Books by Genre</h2>
+                        <Graph books={this.props.books} />
+                    </div>
+                </div>
               </div>
                     
             )

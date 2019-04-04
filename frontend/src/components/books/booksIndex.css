@@ -9,6 +9,8 @@
     grid-template-rows: 1fr 1fr;
     padding: 15px;
     grid-gap: .5rem;
+    background-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 1px 2px 3px rgba(0, 0, 0, .3);
 }
 
 .book-shelf-header h1 {
@@ -25,7 +27,7 @@
 
 .sorting-menu select {
     margin: 0 5px;
-    background-color: #A6CDE3;
+    background-color: rgba(255, 255, 255, 0.8);
     font-size: 14px;
     color: black;
     font-family: "Source Sans Pro"
@@ -36,7 +38,7 @@
 }
 
 .recs-button {
-    background-color: #A6CDE3;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     font-family: "Source Sans Pro";
     font-size: 14px;
@@ -52,33 +54,79 @@
 }
 
 .book-shelf h2 {
-    border-top: 1px solid rgba(0, 0, 0, 0.5);
     padding: 20px;
     font-family: "Source Sans Pro";
     text-align: center;
 }
 
-.books-index-wrapper-grid {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    display: grid;
+.books-index-wrapper {
+    background: rgba(255, 255, 255, 0.5);
     padding-bottom: 30px;
+    margin: 30px;
+    box-shadow: 0px 0px 8px 5px rgba(104, 103, 103, 0.329);
+}
+
+.books-index-container-grid {
+    margin: 0 auto;
+    height: 100%;
+    overflow-y: scroll;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: auto; */
+    display: grid;
     align-self: stretch;
     justify-items: center;
     grid-gap: 1.5rem;
-    height: fit-content;
-    width: 100vw;
     -webkit-align-items: baseline;
     align-items: center;
 }
 
-.books-index-wrapper-list {
+.books-index-wrapper-intermediate-container-grid {
+    width: 80%;
+    margin: 0 auto;
+    height: 50vh;
+    border: 1px solid rgba(0, 0, 0, 0.425);
+    background-color: rgba(255, 255, 255, 0.514);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.books-index-wrapper-intermediate-container-list {
+    width: 80%;
+    margin: 0 auto;
+    height: 80vh;
+    border: 1px solid rgba(0, 0, 0, 0.425);
+    background-color: rgba(255, 255, 255, 0.514);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.books-index-container-list {
     display: grid;
+    height: 100%;
     grid-template-columns: 100%;
-    margin: 0 30px 30px 30px;
-    border-left: 1px solid rgba(0, 0, 0, 0.5);
-    border-right: 1px solid rgba(0, 0, 0, 0.5);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    grid-gap: 5px;
+    overflow-y: scroll;
+}
+
+.books-index-container-list::-webkit-scrollbar {
+    display: none
+}
+
+.books-index-list-toolbar {
+    font-weight: bold;
+    display: grid;
+    -webkit-align-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 4fr;
+    grid-gap: .5rem;
+    padding: 6px;
+    box-shadow: inset 0px 0px 3px 0px rgb(146, 114, 103);
+    border-radius: 4px;
+    position: sticky;
+    top: 0px;
+    background-color: rgb(250, 247, 236);
 }
 
 .books-index-item-grid {
@@ -96,8 +144,9 @@
     align-items: center;
     grid-template-columns: 1fr 2fr 1fr 2fr 1fr 4fr;
     grid-gap: .5rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.5);
     padding: 10px;
+    box-shadow: inset 0px 0px 5px 0px rgb(146, 114, 103);
+    border-radius: 4px
 }
 
 .books-index-item-list img {
@@ -118,21 +167,12 @@
 }
 
 .graph {
-    background-color: rgb(90, 151, 151);
     position: relative; 
     height: 0; 
-    width: 100%; 
-    padding-bottom: 66%; 
+    padding: 0 30px 66% 30px; 
+    margin: 0 auto;
 }
 
-.staff-book {
-    border: 10px solid rgba(209, 88, 88, 0.5);
-    border-radius: 5px;
-}
-
-.staff-book:hover {
-    border: 10px solid rgba(37, 61, 91, 0.75);
-}
 .graph svg {
     position: absolute; 
     height: 100%; 
@@ -141,6 +181,20 @@
     top: 0;
 }
 
-.graph svg > g:first-child {
-    margin: 0 auto
+.staff-book-grid {
+    border: 10px solid rgba(209, 88, 88, 0.5);
+    border-radius: 5px;
+}
+
+.staff-book-grid:hover {
+    border: 10px solid rgba(37, 61, 91, 0.75);
+}
+
+.staff-book-list {
+    border: 3px solid rgba(209, 88, 88, 0.5);
+    border-radius: 5px;
+}
+
+.staff-book-list:hover {
+    border: 3px solid rgba(37, 61, 91, 0.75);
 }
