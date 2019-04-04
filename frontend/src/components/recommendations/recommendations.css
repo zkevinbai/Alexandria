@@ -17,3 +17,7 @@
 .recs-container .books-index-item-grid {
     margin: 0 20px;
 }
+
+.staff-book {
+    border: 10px solid rgba(209, 88, 88, 0.5);
+}
