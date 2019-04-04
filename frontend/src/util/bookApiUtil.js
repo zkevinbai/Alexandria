@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+// Google Books Api
+
 export const queryBooks = (queryString) => {
     return fetch(`https://www.googleapis.com/books/v1/volumes?q={${queryString}}`)
         .then( res => res.json())
@@ -26,4 +28,11 @@ export const addBook = (data) => {
 export const deleteBook = (bookId) => {
     return axios.delete(`api/books/${bookId}`);
 };
+
+export const queryAuthor = (queryParams) => {
+    return fetch(`https://www.googleapis.com/books/v1/volumes?q=-${queryParams.title}+inauthor:{${queryParams.author}}`)
+        .then(res => res.json())
+        .then(json => ({ data: json }));
+};
+
 

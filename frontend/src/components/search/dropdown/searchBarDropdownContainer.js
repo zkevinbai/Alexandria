@@ -2,10 +2,10 @@ import { connect } from 'react-redux';
 import { addUserBook, clearSearch } from '../../../actions/bookActions';
 import SearchBarDropdown from './searchBarDropdown';
 
-const mapStateToProps = (storeState, ownProps) => {
-    if (storeState.session.isAuthenticated){
+const mapStateToProps = (state, ownProps) => {
+    if (state.session.isAuthenticated){
         return {
-            userId: storeState.session.user.id,
+            userId: state.session.user.id,
             modalType: "userNew"
         } 
     } else {

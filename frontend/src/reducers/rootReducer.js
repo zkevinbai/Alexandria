@@ -7,7 +7,7 @@ import errors from './errorsReducer';
 
 const RootReducer = combineReducers({
     session,
-    books, 
+    books,
     search,
     searchBook,
     errors

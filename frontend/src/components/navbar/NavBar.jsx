@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import SignupFormContainer from '../session/signupFormContainer';
-import LoginFormContainer from '../session/loginFormContainer';
+import { Link, withRouter } from 'react-router-dom';
 import LogoutButtonContainer from '../session/logoutButtonContainer';
 import SearchBarContainer from '../search/searchBarContainer';
 import './navBar.css';
-export default class NavBar extends Component {
+class NavBar extends Component {
 
-  
   render() {
     const authButtons = (
-      this.props.signedIn ? (
+      this.props.session.isAuthenticated ? (
         <div className="nav-content">
           <div className="nav-search-bar">
           <SearchBarContainer />
           </div>
-
-          <div>
+          
+          <div className="logout-and-greeting">
+            <p className="nav-bar-greeting">Hello, reader!</p>
             <LogoutButtonContainer />
           </div>
 
@@ -27,7 +25,7 @@ export default class NavBar extends Component {
             <img src="./Great_Library.png" />
             <a href="/"><h3>Alexandria</h3></a>
           </div>
-          <div className='login-signup-buttons'>
+          <div className='nav-buttons'>
             <Link to='/login'>Login</Link>
             <Link to='/signup'>Sign Up</Link>
           </div>
@@ -41,3 +39,5 @@ export default class NavBar extends Component {
     )
   }
 }
+
+export default withRouter(NavBar)

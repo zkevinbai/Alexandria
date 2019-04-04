@@ -10,7 +10,8 @@ const Auth = ({ component: Component, path, loggedIn, exact, session }) => (
       <Redirect to={`/shelf/${session.user.id}`} />
     )
   )} />
-);
+  );
+  
 
 const Protected = ({ component: Component, loggedIn, ...rest }) => (
   <Route

@@ -2,14 +2,35 @@ export const narrowSearchResults = searchResults => {
   const firstTenResults = searchResults.data.items;
   let firstTenBooks = [];
   for (let i = 0; i < 10; i++) {
-    firstTenBooks.push(translateBook(firstTenResults[i]));
+    firstTenBooks.push(parseBook(firstTenResults[i]));
   }
   return firstTenBooks;
 };
 
-const translateBook = bookResult => {
-  let book = {};
+// export const parseRec = searchResults => {
+//   let items = searchResults.data.items;
+//   if(!items){
+//     return [];
+//   }
+//   let bookRecs = [];
+//   let i = 0;
+//   while (bookRecs.length < 5 && i < items.length) {
+//     bookRecs.push(translateBook(items[i]))
+//     i++;
+//   }
+//   return bookRecs;
+// }
 
+export const parseSingleRec = searchResults => {
+  let items = searchResults.data.items;
+  if (!items) {
+    return null;
+  }
+  return parseBook(items[0]);
+}
+
+export const parseBook = bookResult => {
+  let book = {};
   if(!bookResult.volumeInfo || !bookResult.volumeInfo.title){
     return book;
   }
@@ -17,11 +38,11 @@ const translateBook = bookResult => {
   book.user = null;
   book.title = bookResult.volumeInfo.title;
   book.volumeId = bookResult.id;
-  
+
   if (bookResult.volumeInfo.authors) {
     book.author = bookResult.volumeInfo.authors[0];
   } else {
-    book.author = 'Unkown Author';
+    book.author = 'Unknown Author';
   }
   
   if (bookResult.volumeInfo.categories){

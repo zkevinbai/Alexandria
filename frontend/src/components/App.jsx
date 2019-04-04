@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
+import RecShowContainer from './recommendations/recShowContainer';
 import './app.css'
 
 // App
@@ -13,22 +14,27 @@ import './app.css'
   
 // Book Related
   import BooksIndexContainer from './books/booksIndexContainer';
-  import BookShowContainer from './books/bookShowContainer';
-  import BookPublicShowContainer from './books/bookshow/bookPublicShowContainer';
+  import BookPublicShowContainer from './books/bookShowModal/bookPublicShowContainer';
+  import BookShowModalContainerUserLibrary from './books/bookShowModal/bookShowModalContainerUserLibrary';
+  import BookShowModalContainerUserNew from './books/bookShowModal/bookShowModalContainerUserNew';
   
 class App extends Component {
   render() {
     return (
       <div className="App">
-          <NavBarContainer />
-          <AuthRoute path="/" component={Splash} />
+          <Route path="/" component={NavBarContainer} />
         <Switch>
-          <AuthRoute path="/book/:volumeId" component={BookPublicShowContainer} />
           <AuthRoute path="/login" component={LoginFormContainer} />
           <AuthRoute path="/signup" component={SignupFormContainer} />
         </Switch>
-          <Route path="/shelf/:userId" component={BooksIndexContainer} />
-          <Route path={"/books/:bookId"} component={BookShowContainer} />
+        <Switch>
+          <ProtectedRoute path="/shelf/:userId" component={BooksIndexContainer} />
+          <AuthRoute path="/" component={Splash} />
+        </Switch>
+          <ProtectedRoute path="/shelf/:userId/bookrec/:recId" component={RecShowContainer} />
+          <ProtectedRoute path="/shelf/:userId/books/:bookId" component={BookShowModalContainerUserLibrary} />
+          <ProtectedRoute path="/shelf/:userId/book/:volumeId" component={BookShowModalContainerUserNew} />
+          <ProtectedRoute path="/book/:volumeId" component={BookPublicShowContainer} />
       </div>
     );
   }

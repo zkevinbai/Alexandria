@@ -14,10 +14,11 @@ import { translateBook } from '../util/singleBookSearchParseUtil';
 export const SEARCH_BOOKS = "SEARCH_BOOKS";
 export const SEARCH_BOOK = "SEARCH_BOOK";
 export const CLEAR_SEARCH = "CLEAR_SEARCH";
+export const RECEIVE_QUERY = "RECEIVE_QUERY";
 
 export const RECEIVE_BOOKS = "RECEIVE_BOOKS";
 export const RECEIVE_BOOK = "RECEIVE_BOOK";
-export const REMOVE_BOOK = "RECEIVE_BOOK";
+export const REMOVE_BOOK = "REMOVE_BOOK";
 
 // Action Creators
 
@@ -36,21 +37,29 @@ export const clearSearch = () => ({
     type: CLEAR_SEARCH
 });
 
+export const receiveQuery = query =>  ({
+    type: RECEIVE_QUERY,
+    query
+})
+
     // Book Actions 
-export const receiveBooks = (books) => ({
+export const receiveBooks = res => ({
     type: RECEIVE_BOOKS,
-    books
+    books: res.data
 });
 
-export const receiveBook = (book) => ({
+export const receiveBook = res => ({
     type: RECEIVE_BOOK,
-    book
+    book: res.data
 });
 
-export const removeBook = (book) => ({
-    type: REMOVE_BOOK,
-    book
-});
+export const removeBook = res => {
+    const type = REMOVE_BOOK;
+    //get book id from url
+    const urlArray = res.config.url.split('/');
+    const bookId = urlArray[urlArray.length - 1];
+    return ({ type, bookId })
+};
 
 // Thunk Action Creators
 
@@ -74,11 +83,13 @@ export const fetchUserBooks = (userId) => (dispatch) => (
         .catch( resErr => console.log(resErr) )
 );
 
-export const addUserBook = (data) => (dispatch) => (
+export const addUserBook = (data) => (dispatch) => {
+    return (
     addBook(data)
-        .then( resBook => dispatch(receiveBook(resBook)) )
+        .then( resBook => {
+            dispatch(receiveBook(resBook)) })
         .catch( resErr => console.log(resErr) )
-);
+)};
 
 export const fetchUserBook = bookId => (dispatch) => {
     return (

@@ -1,0 +1,19 @@
+.recs-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    overflow-x: scroll;
+    border: 1px solid rgba(0, 0, 0, 0.425);
+    background-color: rgba(255, 255, 255, 0.514);
+    border-radius: 10px
+}
+
+.recs-container > div {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline
+}
+
+.recs-container .books-index-item-grid {
+    margin: 0 20px;
+}

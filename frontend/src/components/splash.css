@@ -3,13 +3,13 @@
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 643px 200px 500px;
+    grid-template-rows: 643px auto 500px;
     justify-content: stretch;
 }
 
 .splash-image {
     background-image: url('../assets/Alexandria.jpg');
-    background-size: 134%;
+    background-size: cover;    
     background-repeat: no-repeat;
     display: inherit;
     background-position: center 0%;
@@ -19,6 +19,7 @@
 
 .splash-image-text {
     align-self: end;
+    text-align: center;
     color: white;
     font-family: "Arbutus Slab";
     font-size: 20px;
@@ -47,6 +48,7 @@
     line-height: 2.5rem;
     text-align: center;
     margin: 40px;
+    margin-bottom: 60px;
 }
 
 .splash-info-box {

@@ -21,7 +21,7 @@ export default class Splash extends Component {
           
           <div className="splash-middle-text">
             <p>
-              The Library of Alexandria was the most significant library of antiquity, we aim to bring it back.  Alexandria is built by readers for readers.  We help you keep track of your reading interest.  Share your books with your friends, and recommend you new books based on what you’ve read. 
+              The Library of Alexandria was the most significant library of antiquity, we aim to bring it back.  Alexandria is built by readers for readers.  We help you keep track of your reading interests, share your books with your friends, and discover new books based on what you’ve read. 
             </p>
           </div>
           

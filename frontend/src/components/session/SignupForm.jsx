@@ -14,7 +14,7 @@ export default class SignupForm extends Component {
           password2: '',
           errors: {}
       }
-
+    document.body.className += ' modal-open';
       this.handleChange = this.handleChange.bind(this)
       this.handleSubmit = this.handleSubmit.bind(this)
       this.renderErrors = this.renderErrors.bind(this)
@@ -41,8 +41,9 @@ export default class SignupForm extends Component {
       this.props.signup(this.state)
         // .then(() => this.props.login(this.state))
         .then(() => {
-          if (this.state.errors === {}) {
-            this.props.history.push("/")
+          if (Object.keys(this.state.errors).length === 0) {
+            // this.props.history.push("/")
+            document.body.className = "";
           }
       })
   }
@@ -58,15 +59,20 @@ export default class SignupForm extends Component {
           </ul>
       )
   }
+
+  resetScroll() {
+    document.body.className = "";
+  }
   
   render() {
+    
     return (
       <div className="session-form-wrapper">
         <div className="session-form-background"></div>
         <form
             className="session-form" 
             onSubmit={this.handleSubmit}>
-            <NavLink to="/">
+          <NavLink to="/" onClick={this.resetScroll}>
               <i className="fas fa-window-close"></i>
             </NavLink>
             <h1>Sign Up</h1>
