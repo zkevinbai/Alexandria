@@ -70,10 +70,6 @@
     width: 100vw;
     -webkit-align-items: baseline;
     align-items: center;
-
-    /* new stuff
-    max-height: 500px;
-    overflow: scroll; */
 }
 
 .books-index-wrapper-list {
@@ -88,6 +84,10 @@
 .books-index-item-grid {
     border: 10px solid rgba(103, 105, 124, .4);
     border-radius: 5px;
+}
+
+.books-index-item-grid:hover {
+    border: 10px solid rgba(37, 61, 91, 0.75);
 }
 
 .books-index-item-list {
