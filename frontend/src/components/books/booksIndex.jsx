@@ -151,7 +151,7 @@ export default class BooksIndex extends Component {
                     display={this.state.display}/>
                 <div className="staff-rec-container">
                     <h2>Our Recommendations</h2>
-                    <StaffRec />
+                    <StaffRec userBooks= {Object.values(this.props.books)} />
                 </div>
                 </section>
                 
