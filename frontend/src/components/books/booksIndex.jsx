@@ -4,6 +4,7 @@ import './booksIndex.css'
 import Graph from '../graphs/graph';
 import RecommendationsContainer from '../recommendations/recommendationsContainer';
 import BooksIndexItemList from './BooksIndexItemList';
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 export default class BooksIndex extends Component {
@@ -127,11 +128,13 @@ export default class BooksIndex extends Component {
                 <div className='book-shelf-header'>
                     <h1>Your Shelf</h1>
                     {this.renderSortingMenu()}
-                    <button 
-                        className="recs-button"
-                        onClick={this.getRecs}>
-                        Get Recommendations by Author
-                    </button>
+                    <Link to="#recommendations" className="recs-button">
+                        <button 
+                            className="recs-button"
+                            onClick={this.getRecs}>
+                            Get Recommendations by Author
+                        </button>
+                    </Link>
                 </div>
                 
                 
@@ -141,10 +144,10 @@ export default class BooksIndex extends Component {
                 </div>
                 
                 <section id="recommendations">
-                <RecommendationsContainer 
-                    recWanted={this.state.recWanted}
-                    userId={this.props.userId}
-                    display={this.state.display}/>
+                    <RecommendationsContainer 
+                        recWanted={this.state.recWanted}
+                        userId={this.props.userId}
+                        display={this.state.display}/>
                 </section>
                 
                 <div className='graph'>

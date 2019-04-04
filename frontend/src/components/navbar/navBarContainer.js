@@ -6,6 +6,7 @@ const mstp = state => ({
 })
 
 const mdtp = dispatch => ({
+  
 })
 
 export default connect(mstp, mdtp)(NavBar);
