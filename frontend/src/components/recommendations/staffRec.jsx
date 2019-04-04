@@ -37,8 +37,9 @@ class StaffRec extends React.Component {
 
   renderRecs(bookRecs){
     let userBookTitles = this.siftUserBooksByTitle();
-        debugger
-    return bookRecs.map((rec, i) => <RecItem key={i} book={rec} path="bookrec"/>)
+    return bookRecs.map((rec, i) => {
+      return <RecItem key={i} book={rec} isUserBook={userBookTitles.includes(rec.title)} path="bookrec"/>
+    })
   }
 
   render(){
