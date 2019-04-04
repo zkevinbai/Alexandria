@@ -58,6 +58,7 @@ class Graph extends React.Component {
       .attr("text-anchor", "middle")
       .attr("font-size", "1em")
       .attr("font-family", "Source Sans Pro")
+      .attr("font-weight", "500")
       .text( function (d, i) { 
         return data.label[i]; })
       .attr('dy', '.35em')
