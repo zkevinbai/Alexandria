@@ -34,7 +34,7 @@ class App extends Component {
           <ProtectedRoute path="/shelf/:userId/bookrec/:recId" component={RecShowContainer} />
           <ProtectedRoute path="/shelf/:userId/books/:bookId" component={BookShowModalContainerUserLibrary} />
           <ProtectedRoute path="/shelf/:userId/book/:volumeId" component={BookShowModalContainerUserNew} />
-          <ProtectedRoute path="/book/:volumeId" component={BookPublicShowContainer} />
+          <AuthRoute path="/book/:volumeId" component={BookPublicShowContainer} />
       </div>
     );
   }
