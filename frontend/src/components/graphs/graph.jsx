@@ -16,18 +16,24 @@ class Graph extends React.Component {
     const r = 250; // outer radius 
     //put pie chart in graph div from books index
     const svg = d3.select(".graph").append("svg")
-      .attr("width", 600)
-      .attr("height", 600);
+      .attr("width", 1100)
+      .attr("height", 600)
+      .attr('viewBox', '-550 -300 1100 600');
+      
     const group = svg.append("g")
-      .attr("transform", "translate(300, 300)"); // set center of pie to 300,300
 
     const arc = d3.arc()
       // .innerRadius(0)//makes a closed pie chart
       .innerRadius(120)//makes a donut chart
       .outerRadius(r);
 
+    const outerArc = d3.arc()
+      .outerRadius(r * 0.9)
+      .innerRadius(r * 0.9);
+
     const pie = d3.pie()
-      .value(function (d) { return d; }); 
+      .value(function (d) { 
+        return d; }); 
 
     const arcs = group.selectAll(".arc")
       .data(pie(data.value))
@@ -48,11 +54,45 @@ class Graph extends React.Component {
       .attr('class', 'labels');
 
     labels.append("text")
-      .attr("transform", function (d) { return "translate(" + arc.centroid(d) + ")"; }) // put text at the center of every arc
+      // .attr("transform", function (d) { return "translate(" + arc.centroid(d) + ")"; }) // put text at the center of every arc
       .attr("text-anchor", "middle")
       .attr("font-size", "1em")
       .attr("font-family", "Source Sans Pro")
-      .text( function (d, i) { return data.label[i]; });
+      .text( function (d, i) { 
+        return data.label[i]; })
+      .attr('dy', '.35em')
+      .attr('transform', function(d) {
+
+          // effectively computes the centre of the slice.
+          // see https://github.com/d3/d3-shape/blob/master/README.md#arc_centroid
+          var pos = outerArc.centroid(d);
+
+          // changes the point to be on left or right depending on where label is.
+          pos[0] = r * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
+          return 'translate(' + pos + ')';
+      })
+      .style('text-anchor', function(d) {
+          // if slice centre is on the left, anchor text to start, otherwise anchor to end
+          return (midAngle(d)) < Math.PI ? 'start' : 'end';
+      });
+
+    const lines = group.append('g').attr('class', 'lines')
+
+    const polyline = lines.selectAll('polyline')
+      .data(pie(data.value))
+      .enter().append('polyline')
+      .attr('stroke','black')
+      .attr('fill', 'none')
+      .attr('points', function(d) {
+
+          // see label transform function for explanations of these three lines.
+          var pos = outerArc.centroid(d);
+          pos[0] = r * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
+          return [arc.centroid(d), outerArc.centroid(d), pos]
+      });
+
+      function midAngle(d) { return d.startAngle + (d.endAngle - d.startAngle) / 2; }
+
   }
   
   getGenreArray() {
