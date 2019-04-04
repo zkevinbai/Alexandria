@@ -55,7 +55,7 @@
     border-top: 1px solid rgba(0, 0, 0, 0.5);
     padding: 20px;
     font-family: "Source Sans Pro";
-    text-align: center
+    text-align: center;
 }
 
 .books-index-wrapper-grid {
@@ -96,6 +96,10 @@
     border-radius: 5px;
 }
 
+.books-index-item-grid:hover {
+    border: 10px solid rgba(37, 61, 91, 0.75);
+}
+
 .books-index-item-list {
     min-height: 60px;
     display: grid;
@@ -132,6 +136,14 @@
     padding-bottom: 66%; 
 }
 
+.staff-book {
+    border: 10px solid rgba(209, 88, 88, 0.5);
+    border-radius: 5px;
+}
+
+.staff-book:hover {
+    border: 10px solid rgba(37, 61, 91, 0.75);
+}
 .graph svg {
     position: absolute; 
     height: 100%; 

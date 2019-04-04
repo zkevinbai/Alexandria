@@ -15,6 +15,5 @@ const mapDispatchToProps = dispatch => ({
   addUserBook: data => dispatch(addUserBook(data))
 })
 
-
 export default connect(mapStateToProps, mapDispatchToProps)(BookShowModal);
 

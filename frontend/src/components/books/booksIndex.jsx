@@ -156,19 +156,19 @@ export default class BooksIndex extends Component {
                 </div>
                 
                 <section id="recommendations">
-                <RecommendationsContainer 
-                    recWanted={this.state.recWanted}
-                    userId={this.props.userId}
-                    display={this.state.display}/>
-                <div className="staff-rec-container">
-                    <h2>Our Recommendations</h2>
-                    <StaffRec />
-                </div>
+                    <RecommendationsContainer 
+                        recWanted={this.state.recWanted}
+                        userId={this.props.userId}
+                        display={this.state.display}/>
+                    <div className="staff-rec-container">
+                        <h2>Our Recommendations</h2>
+                        <StaffRec userBooks= {Object.values(this.props.books)} />
+                    </div>
                 </section>
                 
                 <div className='graph'>
-                        <h1 className= "graph-label">Your Books by Genre</h1>
-                        <Graph books={this.props.books} />
+                    <h1 className= "graph-label">Your Books by Genre</h1>
+                    <Graph books={this.props.books} />
                 </div>
               
               </div>
