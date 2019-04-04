@@ -11,7 +11,7 @@ const BooksIndexItemList = props => {
   let divClassVal;
 
   if (isStaffBook(props.book.title) ) {
-    divClassVal = "staff-book";
+    divClassVal = "staff-book-list";
   }
 
   return (

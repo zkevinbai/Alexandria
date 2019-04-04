@@ -12,7 +12,7 @@ class BooksIndexItem extends Component {
     let divClassVal;
 
     if (isStaffBook(this.props.book.title)) {
-      divClassVal = "staff-book";
+      divClassVal = "staff-book-grid";
     }
 
     return (

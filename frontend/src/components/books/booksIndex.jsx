@@ -149,14 +149,17 @@ export default class BooksIndex extends Component {
                     </Link>
                 </div>
                 
-                
-                <h2>Your Library</h2>
-                <div className={`books-index-wrapper-${this.state.display}`}>
-                        {this.renderBooks()}
+                <div className='books-index-wrapper'>
+                    <h2>Your Library</h2>
+                        <div className={`books-index-wrapper-intermediate-container-${this.state.display}`}>
+                            <div className={`books-index-container-${this.state.display}`}>
+                                    {this.renderBooks()}
+                            </div>
+                        </div>
                 </div>
                 
                 <div id="recommendations">
-                    <div className="recs-wrapper">
+                    <div className="books-index-wrapper">
                         <h2>Our Recommendations</h2>
                         <StaffRec userBooks={Object.values(this.props.books)} />
                     </div>
