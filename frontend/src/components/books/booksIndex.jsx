@@ -155,16 +155,16 @@ export default class BooksIndex extends Component {
                         {this.renderBooks()}
                 </div>
                 
-                <section id="recommendations">
+                <div id="recommendations">
+                    <div className="recs-wrapper">
+                        <h2>Our Recommendations</h2>
+                        <StaffRec userBooks={Object.values(this.props.books)} />
+                    </div>
                     <RecommendationsContainer 
                         recWanted={this.state.recWanted}
                         userId={this.props.userId}
                         display={this.state.display}/>
-                    <div className="staff-rec-container">
-                        <h2>Our Recommendations</h2>
-                        <StaffRec userBooks= {Object.values(this.props.books)} />
-                    </div>
-                </section>
+                </div>
                 
                 <div className='graph'>
                     <h1 className= "graph-label">Your Books by Genre</h1>

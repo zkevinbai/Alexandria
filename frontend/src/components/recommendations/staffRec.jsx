@@ -48,8 +48,10 @@ class StaffRec extends React.Component {
     }
 
     return(
-      <div className = "recs-wrapper">
-        {this.renderRecs(this.state.bookRecs)}
+      <div className="recs-container">
+        <div>
+          {this.renderRecs(this.state.bookRecs)}
+        </div>
       </div>
     )
   }

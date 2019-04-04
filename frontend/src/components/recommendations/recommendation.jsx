@@ -64,12 +64,14 @@ class Recommendation extends React.Component {
     let parsedRecs = this.state.recs.filter(rec => rec)
     let renderedRecs = this.renderRecs(parsedRecs);
     return (
-      <>
+      <div className="recs-wrapper">
         <h2>Your Recommendations</h2>
-        <div className={`books-index-wrapper-grid`}>
-          {renderedRecs}
+        <div className='recs-container'>
+          <div>
+            {renderedRecs}
+          </div>
         </div>
-      </>
+      </div>
     )
   }
 }
