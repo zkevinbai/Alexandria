@@ -11,3 +11,7 @@
     -webkit-align-items: baseline;
     align-items: center;
 }
+
+.staff-rec-container{
+    background: rgba(209, 88, 88, 0.33);
+}
