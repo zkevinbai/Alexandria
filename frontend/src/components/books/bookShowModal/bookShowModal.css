@@ -21,7 +21,7 @@
     border-radius: 10px;
     display: grid;
     align-items: center;
-    grid-template-rows: 20px 325px auto;
+    grid-template-rows: auto 325px auto;
     font-family: "Source Sans Pro";
     background-color: #b79d94
 }
@@ -48,7 +48,6 @@
     grid-row: 1;
     grid-column: 2;
     justify-self: end;
-    padding-right: 3vw;
     font-size: 35px;
     cursor: pointer;
 }
