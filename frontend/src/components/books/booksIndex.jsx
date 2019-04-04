@@ -156,10 +156,8 @@ export default class BooksIndex extends Component {
                 </section>
                 
                 <div className='graph'>
-                    <div className= "graph-label">Your Books by Genre</div>
+                    <h1 className= "graph-label">Your Books by Genre</h1>
                     <Graph books={this.props.books} />
-                        <h1 className= "graph-label">Your Books by Genre</h1>
-                        <Graph books={this.props.books} />
                 </div>
               
               </div>
