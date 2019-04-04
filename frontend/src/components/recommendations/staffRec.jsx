@@ -10,6 +10,8 @@ class StaffRec extends React.Component {
     this.booksReceived = false;
     this.state = { bookRecs: [] }
     this.parseBooks = this.parseBooks.bind(this);
+    this.siftUserBooksByTitle = this.siftUserBooksByTitle.bind(this);
+
   }
 
   componentDidMount(){
@@ -22,9 +24,22 @@ class StaffRec extends React.Component {
     const books = Object.values(res.data);
     this.setState({ bookRecs: books })
   }
-  
+
+  siftUserBooksByTitle(){
+    let uBooks = Object.values(this.props.userBooks);
+
+    let titles = [];
+
+    uBooks.forEach( bookHash => titles.push(bookHash.title) );
+
+    return titles;
+  }
+
   renderRecs(bookRecs){
-    return bookRecs.map((rec, i) => <RecItem key={i} book={rec} path="bookrec"/>)
+    let userBookTitles = this.siftUserBooksByTitle();
+    return bookRecs.map((rec, i) => {
+      return <RecItem key={i} book={rec} isUserBook={userBookTitles.includes(rec.title)} path="bookrec"/>
+    })
   }
 
   render(){

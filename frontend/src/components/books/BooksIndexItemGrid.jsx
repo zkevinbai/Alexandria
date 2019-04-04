@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {withRouter, Link} from 'react-router-dom';
+import { isStaffBook } from '../../util/componentUtils/bookIndexItemUtil';
 class BooksIndexItem extends Component {
 
   render(){
@@ -8,9 +9,15 @@ class BooksIndexItem extends Component {
       classVal = "default-book";
     }
 
+    let divClassVal;
+
+    if (isStaffBook(this.props.book.title)) {
+      divClassVal = "staff-book";
+    }
+
     return (
       <Link to={`/shelf/${this.props.userId}/books/${this.props.book._id}`} >
-        <div className="books-index-item-grid">
+        <div className={"books-index-item-grid " + divClassVal }>
           <img src={this.props.book.imageUrl} className={classVal} alt=""/>
         </div>
       </Link>

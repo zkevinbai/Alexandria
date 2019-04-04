@@ -13,7 +13,11 @@ const mapStateToProps = (state, ownProps) => {
     }
   })
   const recWanted = ownProps.recWanted;
-  const newProps = ({authorHash, recWanted});
+  const newProps = ({
+    authorHash, 
+    recWanted
+  });
+  
   return(newProps)
 }
 
