@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { isStaffBook } from '../../util/componentUtils/bookIndexItemUtil';
 
 const BooksIndexItemList = props => {
   let classVal;
@@ -7,9 +8,15 @@ const BooksIndexItemList = props => {
     classVal = "default-book";
   }
 
+  let divClassVal;
+
+  if (isStaffBook(props.book.title) ) {
+    divClassVal = "staff-book";
+  }
+
   return (
     <Link to={`/shelf/${props.userId}/books/${props.book._id}`} >
-      <div className="books-index-item-list">
+      <div className={"books-index-item-list " + divClassVal }>
         <img src={props.book.imageUrl} className={classVal} alt=""/>
         <p>{props.book.title}</p>
         <p>{props.book.author}</p>
