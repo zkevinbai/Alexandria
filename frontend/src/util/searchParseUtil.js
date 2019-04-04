@@ -31,7 +31,6 @@ export const parseSingleRec = searchResults => {
 
 export const parseBook = bookResult => {
   let book = {};
-  debugger;
   if(!bookResult.volumeInfo || !bookResult.volumeInfo.title){
     return book;
   }

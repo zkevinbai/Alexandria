@@ -83,11 +83,13 @@ export const fetchUserBooks = (userId) => (dispatch) => (
         .catch( resErr => console.log(resErr) )
 );
 
-export const addUserBook = (data) => (dispatch) => (
+export const addUserBook = (data) => (dispatch) => {
+    return (
     addBook(data)
-        .then( resBook => dispatch(receiveBook(resBook)) )
+        .then( resBook => {
+            dispatch(receiveBook(resBook)) })
         .catch( resErr => console.log(resErr) )
-);
+)};
 
 export const fetchUserBook = bookId => (dispatch) => {
     return (

@@ -11,16 +11,17 @@ class RecItem extends Component {
     if (this.props.book.imageUrl === 'https://openclipart.org/image/2400px/svg_to_png/211628/Book_thick_generic.png') {
       classVal = "default-book";
     }
-  
+    let bookId = null;
+    if(this.props.book._id){
+      bookId = this.props.book._id;
+    } else {
+      bookId = this.props.book.volumeId;
+    }
+   
     return (
-      <Link to={`/shelf/${this.props.match.params.userId}/book/${this.props.book.volumeId}`} >
-<<<<<<< HEAD
-        <div className="books-index-item">
-          <img src={this.props.book.imageUrl} className={classVal} alt="" />
-=======
+      <Link to={`${this.props.match.url}/bookrec/${bookId}`} book={this.props.book}>
         <div className="books-index-item-grid">
           <img src={this.props.book.imageUrl}  alt="" />
->>>>>>> c8b2d2b2c3502dd805b70164b97657da7b3dbed4
         </div>
       </Link>
     )

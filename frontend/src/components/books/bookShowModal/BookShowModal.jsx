@@ -1,24 +1,38 @@
 import React, { Component } from 'react';
 import './bookShowModal.css';
 import bookBuy from '../bookBuy/bookBuyComponent';
+import { fetchBook } from '../../../util/bookApiUtil';
 
 export default class BookShowModal extends Component {
     constructor(props) {
         super(props);
         this.renderButton = this.renderButton.bind(this)
         this.handleClick = this.handleClick.bind(this)
+        this.receiveBook = this.receiveBook.bind(this)
+        this.state = { book: null }
     }
 
     componentDidMount(){
-        if (this.props.actionType === "deleteBook") {
+        if(this.props.isRec){
+            fetchBook(this.props.bookId)
+                .then(book => this.receiveBook(book))
+        } else if (this.props.actionType === "deleteBook") {
             this.props.fetchBook(this.props.bookId)
-        } else if (this.props.actionType === "addBook" || "publicBookShow" )  {
+        } else if (this.props.actionType === "addBook" || this.props.modalType === "publicBookShow" )  {
             this.props.queryGoogleBook(this.props.match.params.volumeId)
         }
     }
 
+    receiveBook(res){
+        this.setState({ book: res.data})
+    }
+
     handleClick() {
         let book = this.props.book;
+        if(!book){
+            book = this.state.book;
+            book.user = null;
+        }
         book.description = book.description.replace(/<(?:.|\n)*?>/gm, '');
         if (this.props.actionType === "addBook") {
             this.props.addUserBook ({
@@ -49,33 +63,37 @@ export default class BookShowModal extends Component {
     }
 
     render() {
-        if (!this.props.book) return <div></div>;
+        let book = this.state.book;
+        if(!book){
+            book = this.props.book;
+        }
+        if (!book) return <div></div>;
         let description;
-        (this.props.book.description) ? description = this.props.book.description : description = "";
+        (book.description) ? description = book.description : description = "";
         return (
             <div className="book-show-wrapper">
                 <div className="book-show-content">
                     <div className="book-show-headline">                
-                    <h1>{this.props.book.title}</h1>
+                    <h1>{book.title}</h1>
                     <i 
                         className="fas fa-times"
                         onClick={() => this.props.history.goBack()}
                     ></i>
                     </div>
                     <div className="book-show-head">
-                        <img src={this.props.book.imageUrl} />
+                        <img src={book.imageUrl} />
                         <div className="book-show-header">
                             <div className="book-show-info-text">
                                 <h3>Author</h3>
-                                <h2>{this.props.book.author}</h2>
+                                <h2>{book.author}</h2>
                                 <h3>Date Published</h3>
-                                <h2>{this.props.book.publishedDate}</h2>
+                                <h2>{book.publishedDate}</h2>
                                 <h3>Genre</h3>
-                                <h2>{this.props.book.genre}</h2>
+                                <h2>{book.genre}</h2>
                                 <h3>Page Count</h3>
-                                <h2>{this.props.book.pageCount}</h2>
+                                <h2>{book.pageCount}</h2>
                                 {this.renderButton()}
-                                {bookBuy(this.props.book.title, this.props.book.author)}
+                                {bookBuy(book.title, book.author)}
                             </div>
                         </div>
                     </div>
