@@ -9,7 +9,8 @@
 
 .splash-image {
     background-image: url('../assets/Alexandria.jpg');
-    background-size: 134%;
+    /* background-size: 134%; */
+    background-size: cover;    
     background-repeat: no-repeat;
     display: inherit;
     background-position: center 0%;
@@ -39,7 +40,7 @@
 }
 
 .splash-middle-text {
-    height: fit-content;
+    /* height: fit-content; */
     display: grid;
     justify-content: center;
     align-content: center;

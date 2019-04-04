@@ -40,16 +40,20 @@
     border-radius: 5px;
     font-family: "Source Sans Pro";
     font-size: 14px;
-    justify-self: end
+    justify-self: end;
 }
 
 .recs-button:focus {
     outline: none
 }
 
+.recs-button:hover {
+    cursor: pointer
+}
+
 .book-shelf h2 {
-    border-top: 1px solid black;
-    padding: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 20px;
     font-family: "Source Sans Pro";
     text-align: center
 }
@@ -71,8 +75,10 @@
 .books-index-wrapper-list {
     display: grid;
     grid-template-columns: 100%;
-    padding: 0 30px;
-    margin-bottom: 30px
+    margin: 0 30px 30px 30px;
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .books-index-item-grid {
@@ -81,13 +87,17 @@
 }
 
 .books-index-item-list {
-    height: 60px;
+    min-height: 60px;
     display: grid;
     align-items: center;
-    grid-template-columns: 2fr 2fr 2fr 1fr 4fr;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 4fr;
     grid-gap: .5rem;
-    border: 1px solid black;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
     padding: 10px;
+}
+
+.books-index-item-list img {
+    height: 60px
 }
 
 .graph {

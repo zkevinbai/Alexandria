@@ -22,7 +22,8 @@ class Graph extends React.Component {
       .attr("transform", "translate(300, 300)"); // set center of pie to 300,300
 
     const arc = d3.arc()
-      .innerRadius(0)//makes a closed pie chart
+      // .innerRadius(0)//makes a closed pie chart
+      .innerRadius(120)//makes a donut chart
       .outerRadius(r);
 
     const pie = d3.pie()
@@ -36,7 +37,8 @@ class Graph extends React.Component {
       
       arcs.append("path")
       .attr("d", arc) 
-      .attr("fill", function (d, i) { return colorScale(i); });
+      .attr("fill", function (d, i) { return colorScale(i); })
+      .attr("opacity", "0.85");
     
     //add own elements for text so data doesn't cover it
     const labels = group.selectAll(".arc2")
@@ -49,8 +51,8 @@ class Graph extends React.Component {
       .attr("transform", function (d) { return "translate(" + arc.centroid(d) + ")"; }) // put text at the center of every arc
       .attr("text-anchor", "middle")
       .attr("font-size", "1em")
+      .attr("font-family", "Source Sans Pro")
       .text( function (d, i) { return data.label[i]; });
-
   }
   
   getGenreArray() {
