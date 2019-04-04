@@ -169,11 +169,12 @@ export default class BooksIndex extends Component {
                         display={this.state.display}/>
                 </div>
                 
-                <div className='graph'>
-                    <h1 className= "graph-label">Your Books by Genre</h1>
-                    <Graph books={this.props.books} />
+                <div className="books-index-wrapper">
+                    <div className='graph'>
+                        <h2 className= "graph-label">Your Books by Genre</h2>
+                        <Graph books={this.props.books} />
+                    </div>
                 </div>
-              
               </div>
                     
             )

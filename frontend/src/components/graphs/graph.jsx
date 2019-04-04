@@ -16,9 +16,9 @@ class Graph extends React.Component {
     const r = 250; // outer radius 
     //put pie chart in graph div from books index
     const svg = d3.select(".graph").append("svg")
-      .attr("width", 1100)
+      .attr("width", 1200)
       .attr("height", 600)
-      .attr('viewBox', '-550 -300 1100 600');
+      .attr('viewBox', '-650 -300 1300 600');
 
     const group = svg.append("g")
 
@@ -53,8 +53,9 @@ class Graph extends React.Component {
       .append('g')
       .attr('class', 'labels');
 
+
+    // Code for labels based on Michael Hall's at https://bl.ocks.org/mbhall88/b2504f8f3e384de4ff2b9dfa60f325e2
     labels.append("text")
-      // .attr("transform", function (d) { return "translate(" + arc.centroid(d) + ")"; }) // put text at the center of every arc
       .attr("text-anchor", "middle")
       .attr("font-size", "1em")
       .attr("font-family", "Source Sans Pro")

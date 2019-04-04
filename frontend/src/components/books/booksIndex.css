@@ -9,7 +9,8 @@
     grid-template-rows: 1fr 1fr;
     padding: 15px;
     grid-gap: .5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.301)
+    background-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 1px 2px 3px rgba(0, 0, 0, .3);
 }
 
 .book-shelf-header h1 {
@@ -69,8 +70,8 @@
     margin: 0 auto;
     height: 100%;
     overflow-y: scroll;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: auto; */
     display: grid;
     align-self: stretch;
     justify-items: center;
@@ -106,7 +107,11 @@
     height: 100%;
     grid-template-columns: 100%;
     grid-gap: 5px;
-    overflow: scroll;
+    overflow-y: scroll;
+}
+
+.books-index-container-list::-webkit-scrollbar {
+    display: none
 }
 
 .books-index-list-toolbar {
@@ -162,11 +167,18 @@
 }
 
 .graph {
-    background-color: rgb(90, 151, 151);
     position: relative; 
     height: 0; 
+    padding: 0 30px 66% 30px; 
+    margin: 0 auto;
+}
+
+.graph svg {
+    position: absolute; 
+    height: 100%; 
     width: 100%; 
-    padding-bottom: 66%; 
+    left: 0; 
+    top: 0;
 }
 
 .staff-book-grid {
@@ -185,12 +197,4 @@
 
 .staff-book-list:hover {
     border: 3px solid rgba(37, 61, 91, 0.75);
-}
-
-.graph svg {
-    position: absolute; 
-    height: 100%; 
-    width: 100%; 
-    left: 0; 
-    top: 0;
 }
