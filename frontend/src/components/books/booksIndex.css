@@ -76,9 +76,19 @@
     display: grid;
     grid-template-columns: 100%;
     margin: 0 30px 30px 30px;
-    border-left: 1px solid rgba(0, 0, 0, 0.5);
-    border-right: 1px solid rgba(0, 0, 0, 0.5);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    grid-gap: 5px
+}
+
+.books-index-list-toolbar {
+    font-weight: bold;
+    display: grid;
+    -webkit-align-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 4fr;
+    grid-gap: .5rem;
+    padding: 6px;
+    box-shadow: inset 0px 0px 3px 0px rgb(146, 114, 103);
+    border-radius: 4px;
 }
 
 .books-index-item-grid {
@@ -92,8 +102,9 @@
     align-items: center;
     grid-template-columns: 1fr 2fr 1fr 2fr 1fr 4fr;
     grid-gap: .5rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.5);
     padding: 10px;
+    box-shadow: inset 0px 0px 5px 0px rgb(146, 114, 103);
+    border-radius: 4px
 }
 
 .books-index-item-list img {

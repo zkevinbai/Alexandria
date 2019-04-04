@@ -80,7 +80,18 @@ export default class BooksIndex extends Component {
             case "grid":
               return books.map((book, i) => <BooksIndexItemGrid key={i} userId={this.props.userId} book={book}/>)
             case "list":
-              return books.map((book, i) => <BooksIndexItemList key={i} userId={this.props.userId} book={book}/>)
+              let booksList = books.map((book, i) => <BooksIndexItemList key={i} userId={this.props.userId} book={book}/>)
+              booksList.unshift(
+                <div className="books-index-list-toolbar">
+                    <div></div>
+                    <p>Title</p>
+                    <p>Author</p>
+                    <p>Genre</p>
+                    <p>Page Count</p>
+                    <p>Description</p>
+                </div>
+              )
+              return booksList
         }
     }
 
