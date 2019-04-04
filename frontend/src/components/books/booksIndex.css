@@ -40,16 +40,20 @@
     border-radius: 5px;
     font-family: "Source Sans Pro";
     font-size: 14px;
-    justify-self: end
+    justify-self: end;
 }
 
 .recs-button:focus {
     outline: none
 }
 
+.recs-button:hover {
+    cursor: pointer
+}
+
 .book-shelf h2 {
-    border-top: 1px solid black;
-    padding: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 20px;
     font-family: "Source Sans Pro";
     text-align: center
 }
