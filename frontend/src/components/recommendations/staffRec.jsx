@@ -10,6 +10,8 @@ class StaffRec extends React.Component {
     this.booksReceived = false;
     this.state = { bookRecs: [] }
     this.parseBooks = this.parseBooks.bind(this);
+    this.siftUserBooksByTitle = this.siftUserBooksByTitle.bind(this);
+
   }
 
   componentDidMount(){
@@ -22,12 +24,19 @@ class StaffRec extends React.Component {
     const books = Object.values(res.data);
     this.setState({ bookRecs: books })
   }
+
+  siftUserBooksByTitle(){
+
+  }
+
   
   renderRecs(bookRecs){
+    let userBookTitles = this.siftUserBooksByTitle;
     return bookRecs.map((rec, i) => <RecItem key={i} book={rec} path="bookrec"/>)
   }
 
   render(){
+    debugger
     if(!this.booksReceived){
       return null;
     }
