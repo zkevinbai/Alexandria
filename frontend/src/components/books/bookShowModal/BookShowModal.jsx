@@ -43,6 +43,7 @@ export default class BookShowModal extends Component {
             this.props.removeUserBook(book._id)
         }
         this.props.history.push(`/shelf/${this.props.match.params.userId}`)
+        window.scrollTo(0, 0);
     }
 
     renderButton() {

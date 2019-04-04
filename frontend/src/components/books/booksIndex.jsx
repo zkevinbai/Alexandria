@@ -24,7 +24,6 @@ export default class BooksIndex extends Component {
     }
 
     componentDidMount() {
-        // window.scrollTo(0, 0);
         if(this.props.books.length === 0){
             this.props.fetchUserBooks(this.props.userId)
         }
