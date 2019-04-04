@@ -19,7 +19,7 @@ class Graph extends React.Component {
       .attr("width", 1100)
       .attr("height", 600)
       .attr('viewBox', '-550 -300 1100 600');
-      
+
     const group = svg.append("g")
 
     const arc = d3.arc()
