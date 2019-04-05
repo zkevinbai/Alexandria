@@ -55,11 +55,14 @@ Feature GIFs
 ## Full User Authentication
 <img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/dynamicUpdate.gif" align="center"/>
 
-## Book Search Engine
+## Book Search Engine - Regular Search
 <img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/liveRender.gif" align="center"/>
 
-## Book Buy Now Button
-<img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/dragAndDrop.gif" align="center"/>
+## Book Search Engine - Mispelled Search
+<img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/liveRender.gif" align="center"/>
+
+## Book Search Engine - Chinese Search
+<img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/liveRender.gif" align="center"/>
 
 ## Book Library
 <img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/dragAndDrop.gif" align="center"/>
