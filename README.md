@@ -10,24 +10,45 @@ Technologies
 ---
 * MERN stack
   * Mongo DB, Express, React, NodeJS
-* Google books API
+* Google Books API
   * authenticated calls to the volumes API for collections of books
   * authenticated calls to the book API for single books
-* Amazon affiliate API
+* Amazon Affiliate API
   * link to amazon page for any given book returned by our search
+* D3 
+  * dynamic render of user book analyses
 * Git 
   * git workflow with master, dev, and feature branches
 
 Design
 ---
-Alexandria was designed with the theme of a timeless library.  Muted colors, and a simple interface make 
-I want the user experience to be seemless and intuitive.
+Alexandria was designed with the theme of a timeless library.  Muted colors, and a simple interface make books the focus of the application. 
 
 Features
 ---
-* Dynamic update of finacial fields next to sliders
-* Live rerender of D3 Sankey visualization on new user input
-* Fully repositionable nodes to allow for easy drag and drop comparision
+* full user authentication
+    * create accounts, login, logout 
+    * use JSON web token strategy to authenticate
+    * automatic logout after a set period of inactivity
+* book search engine
+    * search for any book in the world using Google Books api
+    * can handle searches for books in any language
+    * can handle spelling mistakes in any language
+* book buy now button
+    * link to the exact book the using Amazon affiliate api
+    * can handle books with the same title
+    * can handle books which have yet to be released
+* book library
+    * add books to book shelf
+    * remove books from book shelf
+    * ability to sort books in library by date added, author, title, book length
+* recommendations on books to read
+    * dynamically generated from the books the user currently has in their library
+    * see other books we think you would enjoy
+    * also check out staff picks
+* analysis on the book in library on books to read
+    * dynamically generated from the books the user currently has in their library
+    * see the genre percentage breakdown of the books you are reading
 
 Feature GIFs
 ---
