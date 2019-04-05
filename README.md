@@ -66,14 +66,17 @@ Feature GIFs
 ## Book Search Engine - Chinese Search
 <img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/1.75-searchEngine.gif" align="center"/>
 
+## Book Buy Button - Chinese Search
+<img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/2-bookBuy.gif" align="center"/>
+
 ## Book Library
-<img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/2-bookLibrary.gif" align="center"/>
+<img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/3-bookLibrary.gif" align="center"/>
 
 ## Book Recommendations
-<img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/3-bookRecommendations.gif" align="center"/>
+<img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/4-bookRecommendations.gif" align="center"/>
 
 ## Book Analysis
-<img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/4-bookAnalysis.png" align="center"/>
+<img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/5-bookAnalysis.png" align="center"/>
 
 Code Snippets
 ---
