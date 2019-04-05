@@ -72,11 +72,15 @@ Feature GIFs
 
 Code Snippets
 ---
-## Queries to Google Api for search
+## Search Bar Component
 
 <img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/code/dataFromInput.png" align="center"/>
 
-## API response parser
+## Search Response Parser
+
+<img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/code/urlFromJSON.png" align="center"/>
+
+## Book Sorting Algorithim
 
 <img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/code/urlFromJSON.png" align="center"/>
 
