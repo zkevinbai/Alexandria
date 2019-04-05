@@ -3,8 +3,10 @@ Alexandria <img src="https://github.com/zkevinbai/Alexandria/blob/master/fronten
 
 [Alexandria](https://alexandria-book.herokuapp.com/#/) is a book search engine, and reading tracker designed by readers for readers.
 
-We built this app to both learn the MERN stack, and learn to work with other coders.
-
+Team Githubs:
+* [Kevin](https://github.com/zkevinbai) 
+* [Sam](https://github.com/sdodonnell) 
+* [Corinne](https://github.com/chickey96) 
 
 Technologies
 ---
