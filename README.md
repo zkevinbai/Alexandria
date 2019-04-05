@@ -74,16 +74,16 @@ Code Snippets
 ---
 ## Search Bar Component
 
-<img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/code/dataFromInput.png" align="center"/>
+<img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/code/searchBar.png" align="center"/>
 
 ## Search Response Parser
 
-<img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/code/urlFromJSON.png" align="center"/>
+<img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/code/bookParser.png" align="center"/>
 
 ## Book Sorting Algorithim
 
-<img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/code/urlFromJSON.png" align="center"/>
+<img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/code/bookSorting.png" align="center"/>
 
 ## D3 Visualization
 
-<img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/code/sankeyP1.png" align="center"/>
+<img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/code/d3Chart.png" align="center"/>
