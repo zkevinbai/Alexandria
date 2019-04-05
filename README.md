@@ -66,7 +66,7 @@ Feature GIFs
 ## Book Search Engine - Chinese Search
 <img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/1.75-searchEngine.gif" align="center"/>
 
-## Book Buy Button - Chinese Search
+## Book Buy Button
 <img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/2-bookBuy.gif" align="center"/>
 
 ## Book Library
