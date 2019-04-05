@@ -52,27 +52,34 @@ Features
 
 Feature GIFs
 ---
-## Dynamic Update
+## Full User Authentication
 <img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/dynamicUpdate.gif" align="center"/>
 
-## Live Rerender
+## Book Search Engine
 <img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/liveRender.gif" align="center"/>
 
-## Fully Repositionable Nodes
+## Book Buy Now Button
+<img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/dragAndDrop.gif" align="center"/>
+
+## Book Library
+<img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/dragAndDrop.gif" align="center"/>
+
+## Book Recommendations
+<img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/dragAndDrop.gif" align="center"/>
+
+## Book Analysis
 <img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/dragAndDrop.gif" align="center"/>
 
 Code Snippets
 ---
-## Input data to JSON
+## Queries to Google Api for search
 
 <img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/code/dataFromInput.png" align="center"/>
 
-## JSON to URL
+## API response parser
 
 <img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/code/urlFromJSON.png" align="center"/>
 
-## URL to Sankey Visualization
+## D3 Visualization
 
 <img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/code/sankeyP1.png" align="center"/>
-
-<img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/code/sankeyP2.png" align="center"/>
