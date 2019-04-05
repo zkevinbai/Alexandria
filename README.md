@@ -68,7 +68,7 @@ Feature GIFs
 <img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/2-bookLibrary.gif" align="center"/>
 
 ## Book Recommendations
-<img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/dragAndDrop.gif" align="center"/>
+<img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/3-bookRecommendations.gif" align="center"/>
 
 ## Book Analysis
 <img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/dragAndDrop.gif" align="center"/>
