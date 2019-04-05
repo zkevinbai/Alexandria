@@ -62,7 +62,7 @@ Feature GIFs
 <img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/1.5-searchEngine.gif" align="center"/>
 
 ## Book Search Engine - Chinese Search
-<img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/liveRender.gif" align="center"/>
+<img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/1.75-searchEngine.gif" align="center"/>
 
 ## Book Library
 <img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/dragAndDrop.gif" align="center"/>
