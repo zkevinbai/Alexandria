@@ -53,7 +53,7 @@ Features
 Feature GIFs
 ---
 ## Full User Authentication
-<img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/dynamicUpdate.gif" align="center"/>
+<img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/0-userAuth.gif" align="center"/>
 
 ## Book Search Engine - Regular Search
 <img src="https://github.com/zkevinbai/Aurelian/blob/master/assets/gifs/liveRender.gif" align="center"/>
