@@ -63,7 +63,7 @@ Feature GIFs
 ## Book Search Engine - Mispelled Search
 <img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/1.5-searchEngine.gif" align="center"/>
 
-## Book Search Engine - Chinese Search
+## Book Search Engine - Multilingual Search
 <img src="https://github.com/zkevinbai/Alexandria/blob/master/Assets/screenshots/features/1.75-searchEngine.gif" align="center"/>
 
 ## Book Buy Button
