@@ -3,6 +3,8 @@ Alexandria <img src="https://github.com/zkevinbai/Alexandria/blob/master/fronten
 
 [Alexandria](https://alexandria-book.herokuapp.com/#/) is a book search engine and reading tracker designed by readers for readers.
 
+We built this in 5 days time: March 11 - March 12 and April 2 - April 4 2019.  
+
 Team Githubs:
 * [Kevin](https://github.com/zkevinbai) 
 * [Sam](https://github.com/sdodonnell) 
