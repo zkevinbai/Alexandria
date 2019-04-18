@@ -1,5 +1,4 @@
 # Alexandria <img src="https://github.com/zkevinbai/Alexandria/blob/master/frontend/public/Great_Library.png" alt="Alexandria Logo" align="center" height="50px" />
-======
 
 [Alexandria](https://alexandria-book.herokuapp.com/#/) is a book search engine and reading tracker designed by readers for readers.
 
