@@ -4,7 +4,7 @@ import { isStaffBook } from '../../util/componentUtils/bookIndexItemUtil';
 
 const BooksIndexItemList = props => {
   let classVal;
-  if (props.book.imageUrl === 'https://openclipart.org/image/2400px/svg_to_png/211628/Book_thick_generic.png') {
+  if (props.book.imageUrl === 'https://cdn.pixabay.com/photo/2016/03/31/18/29/book-1294406_960_720.png') {
     classVal = "default-book";
   }
 
