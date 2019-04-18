@@ -46,7 +46,7 @@ export const translateBook = bookResult => {
             book.imageUrl = bookResult.imageLinks.smallThumbnail;
         }
     } else {
-        book.imageUrl = 'https://openclipart.org/image/2400px/svg_to_png/211628/Book_thick_generic.png';
+        book.imageUrl = 'https://github.com/zkevinbai/Alexandria/blob/master/Assets/defaultBook.png?raw=true';
     }
 
     return book;
