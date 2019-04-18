@@ -13,7 +13,7 @@ class RecItem extends Component {
     }
 
     let classVal;
-    if (this.props.book.imageUrl === 'https://cdn.pixabay.com/photo/2016/03/31/18/29/book-1294406_960_720.png') {
+    if (this.props.book.imageUrl === 'https://github.com/zkevinbai/Alexandria/blob/master/Assets/defaultBook.png?raw=true') {
       classVal = "default-book";
     }
 

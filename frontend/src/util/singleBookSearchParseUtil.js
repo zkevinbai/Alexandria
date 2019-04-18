@@ -46,7 +46,7 @@ export const translateBook = bookResult => {
             book.imageUrl = bookResult.imageLinks.smallThumbnail;
         }
     } else {
-        book.imageUrl = 'https://cdn.pixabay.com/photo/2016/03/31/18/29/book-1294406_960_720.png';
+        book.imageUrl = 'https://github.com/zkevinbai/Alexandria/blob/master/Assets/defaultBook.png?raw=true';
     }
 
     return book;
