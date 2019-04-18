@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SearchBarDropdownContainer from './dropdown/searchBarDropdownContainer';
 import './searchBar.css';
-export default class searchBar extends Component {
+export default class SearchBar extends Component {
 
     constructor(props) {
         super(props);
@@ -70,6 +70,5 @@ export default class searchBar extends Component {
                 <SearchBarDropdownContainer queryResults={this.props.searchResults} />
             </div>
             )
-        // }
     }
 }

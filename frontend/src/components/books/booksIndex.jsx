@@ -175,9 +175,36 @@ export default class BooksIndex extends Component {
                         <Graph books={this.props.books} />
                     </div>
                 </div>
-              </div>
-                    
+              </div>     
             )
+        } else if (this.props.books.length === 0) {
+            return (
+                <div className='book-shelf'>
+  
+                  <div className='book-shelf-header'>
+                      <h1>Your Shelf</h1>
+                  </div>
+                  
+                  <div className='books-index-wrapper'>
+                      <h2>Your Library</h2>
+                          <div className={`books-index-wrapper-intermediate-container-${this.state.display}`}>
+                                <h2>Add a book using the search bar above, or choose from our recommendations below.</h2>
+                          </div>
+                  </div>
+                  
+                  <div id="recommendations">
+                      <div className="books-index-wrapper">
+                          <h2>Our Recommendations</h2>
+                          <StaffRec userBooks={Object.values(this.props.books)} />
+                      </div>
+                      <RecommendationsContainer 
+                          recWanted={this.state.recWanted}
+                          userId={this.props.userId}
+                          display={this.state.display}/>
+                  </div>
+                  
+                </div>
+            )          
         } else return <div></div>
     }
 }
